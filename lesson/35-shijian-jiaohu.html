@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>第 35 课 · 事件与交互 —— 蓝兔巴迪·电脑第一课</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script>(function(){try{var t=localStorage.getItem('dn-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('dn-stage');document.documentElement.setAttribute('data-stage',(s==='high'?'high':'low'));}catch(e){})();</script>
+</head>
+<body data-root="../" data-page="L35" data-lesson="35" data-stage="low">
+
+<div class="readbar"></div>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <button class="icon-btn menu-btn" data-menu-toggle aria-label="打开目录">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="brand" href="../index.html">
+      <span class="brand-logo">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <ellipse cx="9" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(-14 9 6)"/>
+          <ellipse cx="17" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(14 17 6)"/>
+          <circle cx="13" cy="15.5" r="7.2" fill="#fff"/>
+          <circle cx="10.3" cy="14.4" r="1.15" fill="#1565C0"/>
+          <circle cx="15.7" cy="14.4" r="1.15" fill="#1565C0"/>
+          <path d="M13 17.4c-.9 0-1.6.5-1.6.5s.7.9 1.6.9 1.6-.9 1.6-.9-.7-.5-1.6-.5z" fill="#F0864F"/>
+        </svg>
+      </span>
+      <span class="brand-txt"><strong>蓝兔巴迪 · 电脑第一课</strong><span>COMPUTER FIRST LESSON</span></span>
+    </a>
+    <div class="topbar-spacer"></div>
+    <div class="stage-switch" role="group" aria-label="选择学段">
+      <button data-set-stage="low">🌱 三四年级</button>
+      <button data-set-stage="high">🚀 五六年级</button>
+    </div>
+    <button class="icon-btn" data-theme-toggle aria-label="切换深浅色"></button>
+  </div>
+</header>
+
+<div class="mask"></div>
+
+<div class="shell">
+  <aside class="sidebar" data-render="sidebar"></aside>
+
+  <main class="main">
+
+    <nav class="crumb">
+      <a href="../index.html">首页</a><span class="sep">/</span>
+      <a href="../juan7.html">第七辑</a><span class="sep">/</span>第 35 课
+    </nav>
+
+    <div class="lesson-head">
+      <div class="lesson-no">📦 第七辑 · 第 35 课</div>
+      <h1>事件与交互</h1>
+      <div class="lesson-meta">
+        <span>🕐 约 6 分钟</span>
+        <span>🎯 计算思维 · 人机交互</span>
+        <span>🧰 能开机的电脑 + 编程软件</span>
+      </div>
+    </div>
+
+    <!-- 🎯 目标 -->
+    <div class="block">
+      <div class="goal">
+        <div class="k">🎯 一句话目标</div>
+        <p data-stage="low">学完这课，你能用「当绿旗被点击」「当按下空格键」「当角色被点击」这些「事件」积木，让程序听懂你的操作，和你玩起来。</p>
+        <p data-stage="high">学完这课，你还能用「广播消息」让两个角色互相喊话、用「当碰到…」做碰撞触发，做一个真正能对话的小作品。</p>
+      </div>
+    </div>
+
+    <!-- 📖 故事 -->
+    <div class="block">
+      <div class="block-h"><span class="em">📖</span>小故事</div>
+      <div class="story">
+        <p class="narr">巴迪做了只小猫，可它站那儿一动不动——巴迪按键盘、点鼠标，小猫都没反应，像在装睡。</p>
+        <div class="dialog">
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">我按键盘小猫也不理我，它怎么才能"听指挥"？</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">要给它<b>事件</b>积木，比如「当按下空格键」。事件是程序的<b>耳朵</b>——听见某件事发生，才去执行下面的脚本。</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">常用的耳朵有：绿旗被点、按键被按、角色被点、碰到某样东西。<b>交互</b>就是「你做、它应」——这正是游戏好玩的地方。</div></div>
+          </div>
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">那两只小猫能互相喊话吗？比如一个说"出发"，另一个就走。</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">用<b>广播</b>！一只发「出发」消息，另一只「当接收到出发」就行动。高年级还能用广播做双人配合、过场动画。</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🖼️ 图解 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖼️</span>一张图看懂</div>
+      <figure class="figure">
+        <svg viewBox="0 0 680 300" role="img" aria-label="事件与交互：当绿旗被点/当按下空格/当角色被点 触发脚本；广播消息让两角色互相喊话">
+          <defs>
+            <style>
+              .cn{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+              .cname{font-size:13px;font-weight:700;fill:var(--ink)}
+              .ctag{font-size:11.5px;font-weight:600;fill:var(--ink2)}
+            </style>
+            <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="var(--g600)"/></marker>
+          </defs>
+          <!-- 三个事件帽子 -->
+          <rect x="20" y="40" width="200" height="34" rx="8" style="fill:var(--g700)"/>
+          <text x="120" y="62" text-anchor="middle" class="cn" style="font-size:12.5px;fill:#fff">🟢 当绿旗被点击</text>
+          <rect x="20" y="90" width="200" height="34" rx="8" style="fill:var(--g700)"/>
+          <text x="120" y="112" text-anchor="middle" class="cn" style="font-size:12.5px;fill:#fff">⌨ 当按下 空格 键</text>
+          <rect x="20" y="140" width="200" height="34" rx="8" style="fill:var(--g700)"/>
+          <text x="120" y="162" text-anchor="middle" class="cn" style="font-size:12.5px;fill:#fff">🖱 当角色被点击</text>
+          <text x="120" y="200" text-anchor="middle" class="cn ctag">事件＝程序的"耳朵"</text>
+          <!-- 触发动作 -->
+          <path d="M220 57 H260" stroke="var(--g600)" stroke-width="3" marker-end="url(#ar)"/>
+          <path d="M220 107 H260" stroke="var(--g600)" stroke-width="3" marker-end="url(#ar)"/>
+          <path d="M220 157 H260" stroke="var(--g600)" stroke-width="3" marker-end="url(#ar)"/>
+          <rect x="268" y="120" width="120" height="34" rx="8" style="fill:var(--g500)"/>
+          <text x="328" y="142" text-anchor="middle" class="cn" style="font-size:12px;fill:#fff">执行脚本</text>
+          <!-- 广播互相喊话 -->
+          <rect x="420" y="40" width="240" height="100" rx="12" style="fill:#fff;stroke:var(--g300)" stroke-width="1.6"/>
+          <text x="540" y="64" text-anchor="middle" class="cn cname">📣 广播消息</text>
+          <rect x="440" y="74" width="200" height="24" rx="6" style="fill:var(--purple)"/>
+          <text x="540" y="91" text-anchor="middle" class="cn" style="font-size:11.5px;fill:#fff">广播「出发」</text>
+          <rect x="440" y="104" width="200" height="24" rx="6" style="fill:var(--g500)"/>
+          <text x="540" y="121" text-anchor="middle" class="cn" style="font-size:11.5px;fill:#fff">当接收到「出发」→走</text>
+          <text x="540" y="148" text-anchor="middle" class="cn ctag">一个喊，另一个应</text>
+          <path d="M388 137 C400 137 410 137 420 90" stroke="var(--g600)" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+          <!-- 交互说明 -->
+          <rect x="420" y="170" width="240" height="70" rx="10" style="fill:var(--g100);stroke:var(--g300)" stroke-width="1.4"/>
+          <text x="540" y="198" text-anchor="middle" class="cn cname">交互 = 你做，它应</text>
+          <text x="540" y="220" text-anchor="middle" class="cn ctag">按键·点击·碰撞·消息</text>
+          <text x="540" y="244" text-anchor="middle" class="cn ctag">都是"事件"</text>
+          <text x="340" y="284" text-anchor="middle" class="cn ctag">没有事件，程序是哑巴；有了事件，它才和你对话。</text>
+        </svg>
+        <figcaption class="figcaption">
+          用「当…」事件积木给程序装耳朵；绿旗、按键、点击、碰撞、广播，都能触发动作。
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- 🖱️ 动手做 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖱️</span>动手做</div>
+      <div class="steps" data-stage="low">
+        <div class="step"><b>装耳朵。</b>拖「当按下空格键」，下面接「移动 10 步」。</div>
+        <div class="step"><b>点我动。</b>给角色加「当角色被点击 → 说你好 2 秒」。</div>
+        <div class="step"><b>试一试。</b>按空格小猫走、点它它说话，交互就成了。</div>
+      </div>
+      <div class="steps" data-stage="high">
+        <div class="step"><b>碰就动。</b>加「当碰到苹果 → 隐藏并加分」，做碰撞反应。</div>
+        <div class="step"><b>互相喊话。</b>角色 A「广播出发」，角色 B「当接收到出发」就走。</div>
+        <div class="step"><b>双人玩。</b>A 用←→键、B 用 A/D 键，各控一只小猫。</div>
+        <div class="step"><b>小挑战。</b>做「点按钮→小猫翻跟头→发广播→小狗拍手」的联动。</div>
+      </div>
+    </div>
+
+    <!-- 💡 贴士 -->
+    <div class="block">
+      <div class="block-h"><span class="em">💡</span>素养小贴士</div>
+      <div class="tip">
+        <div class="hd">好软件，都听得懂人话</div>
+        <p>你点一下图标它就开、按一下回车它就发——这些背后全是「事件」。我们早把「你做、它应」当成理所当然，可这恰恰是工程师反复设计的结果。</p>
+        <p>反过来想：<b>交互要讲礼貌</b>。按钮要点得动、提示要说得清、错了要给退路。你以后做作品，也要让用的人觉得「它听得懂我」——这才是好设计。</p>
+      </div>
+    </div>
+
+    <!-- 🏆 闯关 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🏆</span>闯关任务</div>
+      <div class="quest">
+        <div class="hd">关卡：会听话的小猫</div>
+        <p data-stage="low">用「绿旗 / 空格键 / 点角色」三种事件，让小猫分别做出不同反应。闯关成功。</p>
+        <p data-stage="high">用「广播」让两个角色互相喊话、用碰撞做反应，做出能真正互动的小作品。闯关成功。</p>
+      </div>
+    </div>
+
+    <!-- 小测验 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🧩</span>试试看</div>
+      <div class="quiz">
+        <div class="hd">两道小题，选一个你觉得对的</div>
+        <div class="q" data-hint="想让程序『听见按键』再行动，用哪类积木？">
+          <div class="qt">1. 想让小猫「按下空格键就走」，该用哪块？</div>
+          <div class="qopts">
+            <button class="qopt">移动 10 步</button>
+            <button class="qopt" data-ok="1" data-fb="「当按下空格键」是事件积木，像耳朵一样听到操作才触发动作。">当按下空格键</button>
+            <button class="qopt">重复执行</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+        <div class="q" data-hint="一个角色想『通知另一个角色』，用什么？">
+          <div class="qt">2. 小猫想「通知小狗一起走」，该用什么？</div>
+          <div class="qopts">
+            <button class="qopt">广播消息</button>
+            <button class="qopt" data-ok="1" data-fb="广播像喊话：一个角色发消息，另一个「当接收到」就行动。">广播消息</button>
+            <button class="qopt">说 你好</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ⭐ 自评 -->
+    <div class="block">
+      <div class="block-h"><span class="em">⭐</span>自评卡</div>
+      <div class="selfcheck">
+        <div class="hd">做到了就打勾（打勾会被记住，下次打开还在）</div>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会用"当…"事件积木</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我知道事件是程序的"耳朵"</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我做出能交互的小猫</span></label>
+        <label class="check" data-stage="high"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会用广播做角色联动</span></label>
+      </div>
+    </div>
+
+    <div class="done-wrap">
+      <button class="done-btn" data-done-btn></button>
+    </div>
+
+    <div class="lesson-nav" data-nav="auto"></div>
+
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="fl">
+    <a href="../index.html">首页</a>
+    <a href="../juan7.html">第七辑导读</a>
+    <a href="../teacher.html">给老师和家长</a>
+    <a href="../about.html">关于本课</a>
+  </div>
+  蓝兔巴迪 · 电脑第一课　|　常州市新北区汤庄桥小学　教师发展处
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>

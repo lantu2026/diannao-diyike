@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>第 34 课 · 变量与计数器 —— 蓝兔巴迪·电脑第一课</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script>(function(){try{var t=localStorage.getItem('dn-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('dn-stage');document.documentElement.setAttribute('data-stage',(s==='high'?'high':'low'));}catch(e){})();</script>
+</head>
+<body data-root="../" data-page="L34" data-lesson="34" data-stage="low">
+
+<div class="readbar"></div>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <button class="icon-btn menu-btn" data-menu-toggle aria-label="打开目录">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="brand" href="../index.html">
+      <span class="brand-logo">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <ellipse cx="9" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(-14 9 6)"/>
+          <ellipse cx="17" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(14 17 6)"/>
+          <circle cx="13" cy="15.5" r="7.2" fill="#fff"/>
+          <circle cx="10.3" cy="14.4" r="1.15" fill="#1565C0"/>
+          <circle cx="15.7" cy="14.4" r="1.15" fill="#1565C0"/>
+          <path d="M13 17.4c-.9 0-1.6.5-1.6.5s.7.9 1.6.9 1.6-.9 1.6-.9-.7-.5-1.6-.5z" fill="#F0864F"/>
+        </svg>
+      </span>
+      <span class="brand-txt"><strong>蓝兔巴迪 · 电脑第一课</strong><span>COMPUTER FIRST LESSON</span></span>
+    </a>
+    <div class="topbar-spacer"></div>
+    <div class="stage-switch" role="group" aria-label="选择学段">
+      <button data-set-stage="low">🌱 三四年级</button>
+      <button data-set-stage="high">🚀 五六年级</button>
+    </div>
+    <button class="icon-btn" data-theme-toggle aria-label="切换深浅色"></button>
+  </div>
+</header>
+
+<div class="mask"></div>
+
+<div class="shell">
+  <aside class="sidebar" data-render="sidebar"></aside>
+
+  <main class="main">
+
+    <nav class="crumb">
+      <a href="../index.html">首页</a><span class="sep">/</span>
+      <a href="../juan7.html">第七辑</a><span class="sep">/</span>第 34 课
+    </nav>
+
+    <div class="lesson-head">
+      <div class="lesson-no">📦 第七辑 · 第 34 课</div>
+      <h1>变量与计数器</h1>
+      <div class="lesson-meta">
+        <span>🕐 约 7 分钟</span>
+        <span>🎯 计算思维 · 数据意识</span>
+        <span>🧰 能开机的电脑 + 编程软件</span>
+      </div>
+    </div>
+
+    <!-- 🎯 目标 -->
+    <div class="block">
+      <div class="goal">
+        <div class="k">🎯 一句话目标</div>
+        <p data-stage="low">学完这课，你能建一个「盒子」装数字——比如「得分」，让小猫吃到苹果分数就加 1，屏幕上一眼看见分变了。</p>
+        <p data-stage="high">学完这课，你还能用变量记录「速度、次数、名字」等，用「计数器」数清循环跑了几遍，理解程序是怎么「记东西」的。</p>
+      </div>
+    </div>
+
+    <!-- 📖 故事 -->
+    <div class="block">
+      <div class="block-h"><span class="em">📖</span>小故事</div>
+      <div class="story">
+        <p class="narr">巴迪做了个接苹果的小游戏，可小猫接了几个它自己都数不清，更别说比谁接得多。</p>
+        <div class="dialog">
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">小猫接了苹果，可我数不清它接了几个，怎么办？</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">给程序一个<b>变量</b>——就像一个贴了名字的小盒子。我们叫它「得分」，开始写上 0，每接一个苹果就「把得分加 1」。</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">把这块「得分」显示到舞台，分一变你立刻看得见。这种「每发生一次就 +1」的盒子，叫<b>计数器</b>。</div></div>
+          </div>
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">那盒子只能装数字吗？能不能装「名字」？</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">高年级可以！变量能装数字也能装字。比如「玩家名字」装文字、「速度」装数字——程序靠这些盒子记住信息，才不像鱼只有七秒记忆。</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🖼️ 图解 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖼️</span>一张图看懂</div>
+      <figure class="figure">
+        <svg viewBox="0 0 680 300" role="img" aria-label="变量与计数器：建得分盒子=0，接到苹果加1，舞台显示记分牌；计数器数循环次数">
+          <defs>
+            <style>
+              .cn{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+              .cname{font-size:13px;font-weight:700;fill:var(--ink)}
+              .ctag{font-size:11.5px;font-weight:600;fill:var(--ink2)}
+            </style>
+            <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="var(--g600)"/></marker>
+          </defs>
+          <!-- 变量盒子 -->
+          <rect x="24" y="40" width="180" height="100" rx="12" style="fill:#fff;stroke:var(--g500)" stroke-width="2"/>
+          <text x="114" y="64" text-anchor="middle" class="cn cname" style="fill:var(--g600)">变量盒子「得分」</text>
+          <text x="114" y="100" text-anchor="middle" class="cn" style="font-size:30px;font-weight:800;fill:var(--g700)">0</text>
+          <text x="114" y="128" text-anchor="middle" class="cn ctag">开始 = 0</text>
+          <!-- 加1 -->
+          <rect x="24" y="160" width="180" height="40" rx="8" style="fill:var(--g500)"/>
+          <text x="114" y="185" text-anchor="middle" class="cn" style="font-size:13px;fill:#fff">接到苹果 → 得分 + 1</text>
+          <path d="M114 140 V160" stroke="var(--g600)" stroke-width="3" marker-end="url(#ar)"/>
+          <!-- 循环连加 -->
+          <path d="M204 60 H240" stroke="var(--g600)" stroke-width="3" marker-end="url(#ar)"/>
+          <rect x="248" y="40" width="150" height="44" rx="8" style="fill:var(--purple)"/>
+          <text x="323" y="67" text-anchor="middle" class="cn" style="font-size:12px;fill:#fff">↻ 重复执行</text>
+          <path d="M248 84 V160 H204" stroke="var(--purple)" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+          <text x="230" y="130" text-anchor="middle" class="cn ctag">每次 +1</text>
+          <!-- 舞台记分牌 -->
+          <rect x="430" y="40" width="220" height="120" rx="12" style="fill:#fff;stroke:var(--g700)" stroke-width="2"/>
+          <text x="540" y="66" text-anchor="middle" class="cn cname" style="fill:var(--g700)">舞台记分牌</text>
+          <text x="540" y="118" text-anchor="middle" class="cn" style="font-size:34px;font-weight:800;fill:var(--orange)">得分: 5</text>
+          <text x="540" y="146" text-anchor="middle" class="cn ctag">盒子一变，屏幕就跟着变</text>
+          <path d="M204 80 C320 80 330 100 430 100" stroke="var(--g600)" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+          <!-- 计数器说明 -->
+          <rect x="430" y="180" width="220" height="60" rx="10" style="fill:var(--g100);stroke:var(--g300)" stroke-width="1.4"/>
+          <text x="540" y="208" text-anchor="middle" class="cn cname">计数器 = 会数的变量</text>
+          <text x="540" y="228" text-anchor="middle" class="cn ctag">数清「循环跑了几次」</text>
+          <text x="340" y="284" text-anchor="middle" class="cn ctag">变量＝程序的小盒子，帮它记住数字和名字。</text>
+        </svg>
+        <figcaption class="figcaption">
+          建一个变量盒子（如「得分」），用「+1」做计数器；盒子一变，舞台记分牌跟着变。
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- 🖱️ 动手做 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖱️</span>动手做</div>
+      <div class="steps" data-stage="low">
+        <div class="step"><b>建盒子。</b>点「建立一个变量」，起名「得分」，打勾让它显示在舞台上。</div>
+        <div class="step"><b>归零。</b>绿旗一按，先用「把得分设为 0」清空。</div>
+        <div class="step"><b>接瓜 +1。</b>「如果碰到苹果，就把得分加 1」——接一个长一分。</div>
+      </div>
+      <div class="steps" data-stage="high">
+        <div class="step"><b>数次数。</b>建「步数」变量，循环里「步数 + 1」，数清小猫走了几步。</div>
+        <div class="step"><b>装文字。</b>建「玩家名字」变量装文字，开场让它显示在屏幕上。</div>
+        <div class="step"><b>做关卡。</b>「得分达到 10 就胜利」——用变量当过关条件。</div>
+        <div class="step"><b>小挑战。</b>接苹果游戏：接 10 个进下一关，漏 3 个就算失败。</div>
+      </div>
+    </div>
+
+    <!-- 💡 贴士 -->
+    <div class="block">
+      <div class="block-h"><span class="em">💡</span>素养小贴士</div>
+      <div class="tip">
+        <div class="hd">会"记东西"，程序才帮得上忙</div>
+        <p>人的脑子会记「今天接了几个苹果」，可程序不会——除非你给它一个变量盒子。变量让我们把<b>变化的信息</b>交给电脑管：分数、次数、名字、温度……</p>
+        <p>生活里也一样：记账本记的是「花了多少」，日历记的是「第几天」。学会用变量，你就懂了「数据」是怎么来的——这正是人工智能、大数据这些大词最底下的那块砖。</p>
+      </div>
+    </div>
+
+    <!-- 🏆 闯关 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🏆</span>闯关任务</div>
+      <div class="quest">
+        <div class="hd">关卡：会记分的小游戏</div>
+        <p data-stage="low">建一个「得分」变量，接到苹果 +1，舞台上看得到分数变化。闯关成功。</p>
+        <p data-stage="high">加上「步数」计数器、用「得分=10 胜利」做关卡，做出能计分的完整小游戏。闯关成功。</p>
+      </div>
+    </div>
+
+    <!-- 小测验 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🧩</span>试试看</div>
+      <div class="quiz">
+        <div class="hd">两道小题，选一个你觉得对的</div>
+        <div class="q" data-hint="程序要记住会变的数字，靠什么？">
+          <div class="qt">1. 想让程序记住「得分」并且能变，该用？</div>
+          <div class="qopts">
+            <button class="qopt">重复执行</button>
+            <button class="qopt" data-ok="1" data-fb="变量像一个贴名的小盒子，能存放并随时改变数字或文字。">变量</button>
+            <button class="qopt">移动 10 步</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+        <div class="q" data-hint="每接一个就 +1，这种用法叫什么？">
+          <div class="qt">2. 「每接到一个苹果就把得分加 1」，这个盒子其实是？</div>
+          <div class="qopts">
+            <button class="qopt">一只猫</button>
+            <button class="qopt" data-ok="1" data-fb="每发生一次就 +1 的变量，就是计数器，用来数清次数。">计数器</button>
+            <button class="qopt">一张图片</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ⭐ 自评 -->
+    <div class="block">
+      <div class="block-h"><span class="em">⭐</span>自评卡</div>
+      <div class="selfcheck">
+        <div class="hd">做到了就打勾（打勾会被记住，下次打开还在）</div>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会建一个变量</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会让分数 +1 并显示</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我知道变量是"装东西的盒子"</span></label>
+        <label class="check" data-stage="high"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会用变量做计数器与过关</span></label>
+      </div>
+    </div>
+
+    <div class="done-wrap">
+      <button class="done-btn" data-done-btn></button>
+    </div>
+
+    <div class="lesson-nav" data-nav="auto"></div>
+
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="fl">
+    <a href="../index.html">首页</a>
+    <a href="../juan7.html">第七辑导读</a>
+    <a href="../teacher.html">给老师和家长</a>
+    <a href="../about.html">关于本课</a>
+  </div>
+  蓝兔巴迪 · 电脑第一课　|　常州市新北区汤庄桥小学　教师发展处
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>

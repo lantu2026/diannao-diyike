@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>第 6 课 · 桌面、任务栏、窗口 —— 蓝兔巴迪·电脑第一课</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script>(function(){try{var t=localStorage.getItem('dn-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('dn-stage');document.documentElement.setAttribute('data-stage',(s==='high'?'high':'low'));}catch(e){}})();</script>
+</head>
+<body data-root="../" data-page="L06" data-lesson="06" data-stage="low">
+
+<div class="readbar"></div>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <button class="icon-btn menu-btn" data-menu-toggle aria-label="打开目录">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="brand" href="../index.html">
+      <span class="brand-logo">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <ellipse cx="9" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(-14 9 6)"/>
+          <ellipse cx="17" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(14 17 6)"/>
+          <circle cx="13" cy="15.5" r="7.2" fill="#fff"/>
+          <circle cx="10.3" cy="14.4" r="1.15" fill="#1565C0"/>
+          <circle cx="15.7" cy="14.4" r="1.15" fill="#1565C0"/>
+          <path d="M13 17.4c-.9 0-1.6.5-1.6.5s.7.9 1.6.9 1.6-.9 1.6-.9-.7-.5-1.6-.5z" fill="#F0864F"/>
+        </svg>
+      </span>
+      <span class="brand-txt"><strong>蓝兔巴迪 · 电脑第一课</strong><span>COMPUTER FIRST LESSON</span></span>
+    </a>
+    <div class="topbar-spacer"></div>
+    <div class="stage-switch" role="group" aria-label="选择学段">
+      <button data-set-stage="low">🌱 三四年级</button>
+      <button data-set-stage="high">🚀 五六年级</button>
+    </div>
+    <button class="icon-btn" data-theme-toggle aria-label="切换深浅色"></button>
+  </div>
+</header>
+
+<div class="mask"></div>
+
+<div class="shell">
+  <aside class="sidebar" data-render="sidebar"></aside>
+
+  <main class="main">
+
+    <nav class="crumb">
+      <a href="../index.html">首页</a><span class="sep">/</span>
+      <a href="../juan2.html">第二辑</a><span class="sep">/</span>第 6 课
+    </nav>
+
+    <div class="lesson-head">
+      <div class="lesson-no">📦 第二辑 · 第 6 课</div>
+      <h1>桌面、任务栏、窗口</h1>
+      <div class="lesson-meta">
+        <span>🕐 约 6 分钟</span>
+        <span>🎯 信息意识</span>
+        <span>🧰 一台开着机的电脑</span>
+      </div>
+    </div>
+
+    <!-- 🎯 目标 -->
+    <div class="block">
+      <div class="goal">
+        <div class="k">🎯 一句话目标</div>
+        <p data-stage="low">学完这课，你能认出电脑的「书桌」（桌面）、「任务栏」和「窗口」三样东西，会打开窗口、把它缩到最小、再把它关掉。</p>
+        <p data-stage="high">学完这课，你能说清窗口是「程序的外衣」、任务栏是「正在运行的程序名单」，还会同时开两个窗口、把它们并排摆好。</p>
+      </div>
+    </div>
+
+    <!-- 📖 故事 -->
+    <div class="block">
+      <div class="block-h"><span class="em">📖</span>小故事</div>
+      <div class="story">
+        <p class="narr">巴迪按住电源键，电脑「嘀」一声醒了。可屏幕亮起来后，他盯着那片花花绿绿的空地，半天没动。</p>
+        <div class="dialog">
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">这……这一大片空地，是电脑的肚子吗？我该往哪儿下手？</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">不是肚子，是<b>书桌</b>。这叫<b>桌面</b>——你常用的工具摆在上面，随手一点就开。底下那条长长的是<b>任务栏</b>，记着现在正在运行哪些程序。</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">来，你双击这个「此电脑」试试——它会不会「噗」地冒出来一块方方的东西？</div></div>
+          </div>
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">哇！真的冒出来了！一块带蓝条的方方块，上面还有三个小圆点！</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">那块方方块叫<b>窗口</b>，是程序穿的「外衣」。右上角三个点：一条短横是<b>最小化</b>、小方块是<b>最大化</b>、叉叉是<b>关闭</b>。点错别慌，叉叉点一下，它只是躲回任务栏了。</div></div>
+          </div>
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">原来书桌、长条、方方块，各管一摊！那我这就给自己铺张书桌。</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🖼️ 图解 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖼️</span>一张图看懂</div>
+      <figure class="figure">
+        <svg viewBox="0 0 680 420" role="img" aria-label="桌面、任务栏与窗口示意图：桌面上有图标，底部任务栏，中间一个带最小化最大化关闭按钮的窗口">
+          <defs>
+            <style>
+              .cn{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+              .cname{font-size:15px;font-weight:700;fill:var(--ink)}
+              .ctag{font-size:12.5px;font-weight:600}
+              .cst{stroke:var(--g600);stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+              .cf{fill:var(--g100);stroke:var(--g400);stroke-width:2.2;stroke-linejoin:round}
+              .cnum{font-size:13px;font-weight:800;fill:#fff}
+            </style>
+          </defs>
+
+          <!-- 桌面背景 -->
+          <rect x="20" y="20" width="640" height="330" rx="16" style="fill:var(--g50);stroke:var(--g300)" stroke-width="2"/>
+
+          <!-- 1 桌面图标 -->
+          <g>
+            <rect x="56" y="58" width="52" height="48" rx="9" class="cf"/>
+            <rect style="fill:var(--g500)" x="68" y="68" width="28" height="22" rx="3" opacity=".5" stroke="none"/>
+            <circle style="fill:var(--g600)" cx="82" cy="50" r="12"/>
+            <text x="82" y="45" text-anchor="middle" class="cn cnum">1</text>
+            <text x="82" y="122" text-anchor="middle" class="cn cname" style="font-size:11.5px">此电脑</text>
+          </g>
+          <g>
+            <rect x="132" y="58" width="52" height="48" rx="9" class="cf"/>
+            <path d="M150 78 q8 -14 18 0 q8 14 -4 22 q-12 -2 -14 -22z" style="fill:var(--orange)" stroke="none"/>
+            <circle style="fill:var(--g600)" cx="158" cy="50" r="12"/>
+            <text x="158" y="45" text-anchor="middle" class="cn cnum">1</text>
+            <text x="158" y="122" text-anchor="middle" class="cn cname" style="font-size:11.5px">回收站</text>
+          </g>
+          <g>
+            <rect x="208" y="58" width="52" height="48" rx="9" class="cf"/>
+            <path d="M228 70 l12 16 h-24z" style="fill:var(--yellow)" stroke="none"/>
+            <circle style="fill:var(--g600)" cx="234" cy="50" r="12"/>
+            <text x="234" y="45" text-anchor="middle" class="cn cnum">1</text>
+            <text x="234" y="122" text-anchor="middle" class="cn cname" style="font-size:11.5px">文件夹</text>
+          </g>
+
+          <!-- 2 窗口 -->
+          <g>
+            <rect x="300" y="70" width="300" height="190" rx="12" style="fill:var(--card);stroke:var(--g400)" stroke-width="2.4"/>
+            <rect x="300" y="70" width="300" height="34" rx="12" style="fill:var(--g600)" stroke="none"/>
+            <rect x="300" y="92" width="300" height="12" style="fill:var(--g600)" stroke="none"/>
+            <text x="318" y="92" class="cn" style="font-size:13px;font-weight:700;fill:#fff">此电脑</text>
+            <!-- 三个按钮 -->
+            <rect x="500" y="79" width="20" height="16" rx="4" style="fill:#fff" stroke="none"/>
+            <rect x="524" y="79" width="20" height="16" rx="4" style="fill:#fff" stroke="none"/>
+            <rect x="548" y="79" width="20" height="16" rx="4" style="fill:var(--red)" stroke="none"/>
+            <path d="M552 83h12M558 79v12" stroke="#fff" stroke-width="2"/>
+            <line x1="320" y1="130" x2="430" y2="130" class="cst" stroke-width="2" opacity=".5"/>
+            <line x1="320" y1="150" x2="470" y2="150" class="cst" stroke-width="2" opacity=".5"/>
+            <line x1="320" y1="170" x2="400" y2="170" class="cst" stroke-width="2" opacity=".5"/>
+            <line x1="320" y1="190" x2="450" y2="190" class="cst" stroke-width="2" opacity=".5"/>
+            <line x1="320" y1="210" x2="380" y2="210" class="cst" stroke-width="2" opacity=".5"/>
+            <circle style="fill:var(--g600)" cx="560" cy="50" r="12"/>
+            <text x="560" y="45" text-anchor="middle" class="cn cnum">2</text>
+            <text x="450" y="286" text-anchor="middle" class="cn cname">窗口（程序的外衣）</text>
+            <text x="450" y="306" text-anchor="middle" class="cn ctag" style="fill:var(--ink2)">右上角三个键：_ □ ×</text>
+          </g>
+
+          <!-- 3 任务栏 -->
+          <g>
+            <rect x="20" y="356" width="640" height="44" rx="12" style="fill:var(--g700)" stroke="none"/>
+            <circle style="fill:#fff" cx="48" cy="378" r="10" opacity=".9"/>
+            <rect x="74" y="368" width="34" height="22" rx="5" style="fill:#fff" opacity=".85" stroke="none"/>
+            <rect x="116" y="368" width="34" height="22" rx="5" style="fill:var(--g300)" stroke="none"/>
+            <rect x="158" y="368" width="34" height="22" rx="5" style="fill:#fff" opacity=".85" stroke="none"/>
+            <rect x="600" y="370" width="34" height="18" rx="5" style="fill:#fff" opacity=".7" stroke="none"/>
+            <circle style="fill:var(--g600)" cx="78" cy="50" r="12"/>
+            <text x="78" y="45" text-anchor="middle" class="cn cnum">3</text>
+            <text x="340" y="338" text-anchor="middle" class="cn cname">任务栏（正在运行的程序名单）</text>
+          </g>
+        </svg>
+        <figcaption class="figcap">
+          桌面是「书桌」，任务栏是「正在运行的程序名单」，窗口是「程序穿的外衣」。切到「🚀 五六年级」，看看窗口背后站着的是哪个程序。
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- 🖱️ 动手做 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖱️</span>动手做</div>
+      <div class="steps" data-stage="low">
+        <div class="step"><b>看桌面。</b>找到屏幕上那片大背景，上面摆着的小图叫「图标」。数一数，你认出几个？</div>
+        <div class="step"><b>开窗口。</b>双击「此电脑」（或任意一个文件夹），看它是不是「噗」地冒出一个窗口。</div>
+        <div class="step"><b>最小化。</b>点窗口右上角的「_」，窗口不见了？别怕——去<b>任务栏</b>上找它，点一下它就回来了。</div>
+        <div class="step"><b>关窗口。</b>点右上角的「×」，窗口关掉了。注意：关掉的是「外衣」，不是电脑。</div>
+        <div class="step"><b>说一遍。</b>指着屏幕说：「这是桌面，那是任务栏，中间这个方方块是窗口。」三样全说对，过关。</div>
+      </div>
+      <div class="steps" data-stage="high">
+        <div class="step"><b>开两个。</b>同时打开「此电脑」和一个文件夹，让两个窗口都出现在桌面上——你现在是「同时运行两个程序」。</div>
+        <div class="step"><b>并排摆。</b>把其中一个窗口的标题栏拖到屏幕左边，它会自动贴住左半边；另一个拖到右边。两扇「窗」并排，对照着看最方便。</div>
+        <div class="step"><b>认活动窗口。</b>两个窗口叠在一起时，只有最上面那个能打字——它叫「活动窗口」，标题栏颜色更深。点哪个，哪个就醒来。</div>
+        <div class="step"><b>钉一个。</b>在任务栏的程序上点右键，选「固定到任务栏」，下次不用找，直接点任务栏就能开。</div>
+        <div class="step"><b>想一想。</b>关掉窗口和关机，哪个会让没保存的东西丢？（提示：关窗口前没按保存，内容还在程序里吗？）</div>
+      </div>
+    </div>
+
+    <!-- 💡 贴士 -->
+    <div class="block">
+      <div class="block-h"><span class="em">💡</span>素养小贴士</div>
+      <div class="tip">
+        <div class="hd">桌面不是仓库，是书桌</div>
+        <p>真实的书桌如果堆满杂物，你想拿一支笔都要翻半天；电脑桌面塞几十个图标，也是一样——又慢又乱，找东西还费眼。</p>
+        <p>好办法：常用的三五个图标留在桌面，其余统统请进「文件夹」。桌面干净了，电脑也跑得轻快。这跟收拾自己的书桌，道理一模一样。</p>
+      </div>
+    </div>
+
+    <!-- 🏆 闯关 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🏆</span>闯关任务</div>
+      <div class="quest">
+        <div class="hd">关卡：闭眼也能指出来</div>
+        <p data-stage="low">背对屏幕，请同学随便指一个：桌面图标、任务栏、窗口的最小化键或关闭键，你来说出它叫什么、干吗用。五个全答对，闯关成功。</p>
+        <p data-stage="high">给自己的电脑屏幕画一张「地图」：用方框标出桌面、任务栏、当前活动窗口，再在窗口右上角标出 _ □ × 三个键。画完贴桌上，比背十遍都牢。</p>
+      </div>
+    </div>
+
+    <!-- 小测验 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🧩</span>试试看</div>
+      <div class="quiz">
+        <div class="hd">两道小题，选一个你觉得对的</div>
+
+        <div class="q" data-hint="它在屏幕最底下，像一条长长的小巷。">
+          <div class="qt">1. 「任务栏」一般呆在屏幕的哪里？</div>
+          <div class="qopts">
+            <button class="qopt" data-ok="1" data-fb="任务栏通常趴在屏幕最底部，记着现在打开了哪些程序。点它就能切回去。">最底下的一条长条</button>
+            <button class="qopt">窗口的正中间</button>
+            <button class="qopt">电脑的主机里面</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+
+        <div class="q" data-hint="想让窗口「消失但还在」，点哪个？">
+          <div class="qt">2. 只想把窗口收起来、待会再用，应该点哪个？</div>
+          <div class="qopts">
+            <button class="qopt">× 关闭</button>
+            <button class="qopt" data-ok="1" data-fb="点「_」最小化，窗口躲进任务栏，内容还在；想用再点任务栏就回来。× 才是真的关掉。">_ 最小化</button>
+            <button class="qopt">□ 最大化</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ⭐ 自评 -->
+    <div class="block">
+      <div class="block-h"><span class="em">⭐</span>自评卡</div>
+      <div class="selfcheck">
+        <div class="hd">做到了就打勾（打勾会被记住，下次打开还在）</div>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我能认出桌面、任务栏和窗口分别在哪里</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会打开窗口，也会把它最小化、再还原</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我知道 × 是关闭窗口，不是关机</span></label>
+        <label class="check" data-stage="high"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我能同时开两个窗口，并说清哪个是「活动窗口」</span></label>
+      </div>
+    </div>
+
+    <div class="done-wrap">
+      <button class="done-btn" data-done-btn></button>
+    </div>
+
+    <div class="lesson-nav" data-nav="auto"></div>
+
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="fl">
+    <a href="../index.html">首页</a>
+    <a href="../juan2.html">第二辑导读</a>
+    <a href="../teacher.html">给老师和家长</a>
+    <a href="../about.html">关于本课</a>
+  </div>
+  蓝兔巴迪 · 电脑第一课　|　常州市新北区汤庄桥小学　教师发展处
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>

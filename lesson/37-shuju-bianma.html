@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>第 37 课 · 数据与编码 —— 蓝兔巴迪·电脑第一课</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script>(function(){try{var t=localStorage.getItem('dn-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('dn-stage');document.documentElement.setAttribute('data-stage',(s==='high'?'high':'low'));}catch(e){})();</script>
+</head>
+<body data-root="../" data-page="L37" data-lesson="37" data-stage="low">
+
+<div class="readbar"></div>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <button class="icon-btn menu-btn" data-menu-toggle aria-label="打开目录">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="brand" href="../index.html">
+      <span class="brand-logo">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <ellipse cx="9" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(-14 9 6)"/>
+          <ellipse cx="17" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(14 17 6)"/>
+          <circle cx="13" cy="15.5" r="7.2" fill="#fff"/>
+          <circle cx="10.3" cy="14.4" r="1.15" fill="#1565C0"/>
+          <circle cx="15.7" cy="14.4" r="1.15" fill="#1565C0"/>
+          <path d="M13 17.4c-.9 0-1.6.5-1.6.5s.7.9 1.6.9 1.6-.9 1.6-.9-.7-.5-1.6-.5z" fill="#F0864F"/>
+        </svg>
+      </span>
+      <span class="brand-txt"><strong>蓝兔巴迪 · 电脑第一课</strong><span>COMPUTER FIRST LESSON</span></span>
+    </a>
+    <div class="topbar-spacer"></div>
+    <div class="stage-switch" role="group" aria-label="选择学段">
+      <button data-set-stage="low">🌱 三四年级</button>
+      <button data-set-stage="high">🚀 五六年级</button>
+    </div>
+    <button class="icon-btn" data-theme-toggle aria-label="切换深浅色"></button>
+  </div>
+</header>
+
+<div class="mask"></div>
+
+<div class="shell">
+  <aside class="sidebar" data-render="sidebar"></aside>
+
+  <main class="main">
+
+    <nav class="crumb">
+      <a href="../index.html">首页</a><span class="sep">/</span>
+      <a href="../juan8.html">第八辑</a><span class="sep">/</span>第 37 课
+    </nav>
+
+    <div class="lesson-head">
+      <div class="lesson-no">📦 第八辑 · 第 37 课</div>
+      <h1>数据与编码</h1>
+      <div class="lesson-meta">
+        <span>🕐 约 7 分钟</span>
+        <span>🎯 计算思维 · 信息意识</span>
+        <span>🧰 能开机的电脑</span>
+      </div>
+    </div>
+
+    <!-- 🎯 目标 -->
+    <div class="block">
+      <div class="goal">
+        <div class="k">🎯 一句话目标</div>
+        <p data-stage="low">学完这课，你会明白：电脑里所有的图、歌、字，其实都是"0 和 1"组成的；知道"编码"就是把信息变成电脑懂的语言。</p>
+        <p data-stage="high">学完这课，你还能理解二进制怎么数数、ASCII/二维码为什么是一种编码，体会"同一份数据可以有好多表现形式"。</p>
+      </div>
+    </div>
+
+    <!-- 📖 故事 -->
+    <div class="block">
+      <div class="block-h"><span class="em">📖</span>小故事</div>
+      <div class="story">
+        <p class="narr">巴迪给蓝兔发了张自拍，可它想不通：一张彩色的画，怎么能在网线里"跑"过来？</p>
+        <div class="dialog">
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">一张照片那么花，怎么塞进细细的网线传过来？</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">秘密在<b>编码</b>：电脑把照片拆成无数小点，每个点用一串<b>0 和 1</b>表示颜色。网线里跑的，其实是成千上万串 0 和 1。</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">字也是一样：字母 A 在电脑里是「01000001」。这种<b>"把信息变成 0/1 的规则"</b>，就叫编码。就像摩斯密码用「滴答」传信。</div></div>
+          </div>
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">那二维码也是编码吧？扫一下就知道网址。</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">对！<b>同一份信息能编成好多样子</b>：文字、声音、图片、二维码，都是数据的不同"衣服"。懂了这点，你就摸到了数字世界的地基。</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🖼️ 图解 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖼️</span>一张图看懂</div>
+      <figure class="figure">
+        <svg viewBox="0 0 680 300" role="img" aria-label="数据与编码：照片拆成小点，每点用0/1表示颜色；字母A=01000001；二维码是编码；同一信息多种表现形式">
+          <defs>
+            <style>
+              .cn{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+              .cname{font-size:13px;font-weight:700;fill:var(--ink)}
+              .ctag{font-size:11.5px;font-weight:600;fill:var(--ink2)}
+            </style>
+            <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="var(--g600)"/></marker>
+          </defs>
+          <!-- 照片拆点 -->
+          <rect x="20" y="40" width="120" height="100" rx="10" style="fill:var(--g100);stroke:var(--g700)" stroke-width="2"/>
+          <rect x="32" y="52" width="22" height="22" style="fill:var(--orange)"/>
+          <rect x="54" y="52" width="22" height="22" style="fill:var(--g500)"/>
+          <rect x="76" y="52" width="22" height="22" style="fill:var(--yellow)"/>
+          <rect x="98" y="52" width="22" height="22" style="fill:var(--g300)"/>
+          <rect x="32" y="74" width="22" height="22" style="fill:var(--g400)"/>
+          <rect x="54" y="74" width="22" height="22" style="fill:var(--purple)"/>
+          <rect x="76" y="74" width="22" height="22" style="fill:var(--g500)"/>
+          <rect x="98" y="74" width="22" height="22" style="fill:var(--orange)"/>
+          <rect x="32" y="96" width="22" height="22" style="fill:var(--yellow)"/>
+          <rect x="54" y="96" width="22" height="22" style="fill:var(--g300)"/>
+          <rect x="76" y="96" width="22" height="22" style="fill:var(--g400)"/>
+          <rect x="98" y="96" width="22" height="22" style="fill:var(--purple)"/>
+          <text x="80" y="158" text-anchor="middle" class="cn ctag">照片 = 许多小点</text>
+          <!-- 0/1 流 -->
+          <path d="M140 90 H180" stroke="var(--g600)" stroke-width="3" marker-end="url(#ar)"/>
+          <rect x="188" y="50" width="170" height="80" rx="10" style="fill:#fff;stroke:var(--g300)" stroke-width="1.6"/>
+          <text x="273" y="76" text-anchor="middle" class="cn cname">每点 → 一串 0/1</text>
+          <text x="273" y="100" text-anchor="middle" class="cn" style="font-size:13px;fill:var(--g700);font-family:monospace">10101100 01100001</text>
+          <text x="273" y="120" text-anchor="middle" class="cn ctag">颜色被编成数字</text>
+          <!-- 字母编码 -->
+          <rect x="380" y="50" width="150" height="80" rx="10" style="fill:#fff;stroke:var(--g300)" stroke-width="1.6"/>
+          <text x="455" y="76" text-anchor="middle" class="cn cname">字母 A</text>
+          <text x="455" y="100" text-anchor="middle" class="cn" style="font-size:14px;fill:var(--g700);font-family:monospace">= 01000001</text>
+          <text x="455" y="120" text-anchor="middle" class="cn ctag">ASCII 编码</text>
+          <path d="M358 90 H378" stroke="var(--g600)" stroke-width="3" marker-end="url(#ar)"/>
+          <!-- 二维码 -->
+          <rect x="554" y="40" width="106" height="106" rx="8" style="fill:#fff;stroke:var(--g700)" stroke-width="2"/>
+          <rect x="562" y="48" width="14" height="14" style="fill:var(--g700)"/>
+          <rect x="638" y="48" width="14" height="14" style="fill:var(--g700)"/>
+          <rect x="562" y="124" width="14" height="14" style="fill:var(--g700)"/>
+          <rect x="584" y="70" width="14" height="14" style="fill:var(--g700)"/>
+          <rect x="616" y="86" width="14" height="14" style="fill:var(--g700)"/>
+          <rect x="600" y="110" width="14" height="14" style="fill:var(--g700)"/>
+          <rect x="574" y="104" width="14" height="14" style="fill:var(--g700)"/>
+          <text x="607" y="158" text-anchor="middle" class="cn ctag">二维码也是编码</text>
+          <!-- 结论 -->
+          <rect x="20" y="200" width="640" height="64" rx="12" style="fill:var(--g100);stroke:var(--g300)" stroke-width="1.6"/>
+          <text x="340" y="228" text-anchor="middle" class="cn cname">同一份信息，能编成「字 / 声 / 图 / 码」好多件衣服</text>
+          <text x="340" y="250" text-anchor="middle" class="cn ctag">编码 = 把信息翻译成电脑懂的 0/1 规则</text>
+        </svg>
+        <figcaption class="figcaption">
+          图、歌、字、二维码，底层都是 0 和 1；编码就是「信息 ↔ 0/1」的翻译规则。
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- 🖱️ 动手做 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖱️</span>动手做</div>
+      <div class="steps" data-stage="low">
+        <div class="step"><b>玩像素。</b>打开画图把一张图放很大，看它变成一个个小方块（像素）。</div>
+        <div class="step"><b>认 0/1。</b>在纸上把「开灯=1、关灯=0」排一排，当密码传一句话。</div>
+        <div class="step"><b>扫一看。</b>用手机扫一个二维码，猜猜它背后是网址还是文字。</div>
+      </div>
+      <div class="steps" data-stage="high">
+        <div class="step"><b>数二进制。</b>学着用 0/1 数：1、10、11、100……体会「逢二进一」。</div>
+        <div class="step"><b>查 ASCII。</b>找一找字母 A～Z 对应的 0/1 编码，发现规律。</div>
+        <div class="step"><b>做密码。</b>和同学约定「A=01,B=02…」，把一句话编成只有你们懂的码。</div>
+        <div class="step"><b>小挑战。</b>用 4 位 0/1 表示 0～15，给 16 种颜色编号。</div>
+      </div>
+    </div>
+
+    <!-- 💡 贴士 -->
+    <div class="block">
+      <div class="block-h"><span class="em">💡</span>素养小贴士</div>
+      <div class="tip">
+        <div class="hd">数字世界的地基，是"翻译"</div>
+        <p>我们眼睛看到的是画、耳朵听到的是歌，电脑只认 0/1。中间的桥梁就是<b>编码</b>——一套大家都遵守的翻译规则。谁定规则、规则公不公平，其实都是大事（比如汉字编码标准）。</p>
+        <p>懂了编码，你就不再把电脑当"魔法盒子"，而是知道：<b>信息可以被拆解、被表示、被传递</b>。这既是计算机科学的起点，也是你以后学人工智能、学网络的钥匙。</p>
+      </div>
+    </div>
+
+    <!-- 🏆 闯关 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🏆</span>闯关任务</div>
+      <div class="quest">
+        <div class="hd">关卡：解码小侦探</div>
+        <p data-stage="low">能说出"照片、声音、文字底层都是 0/1"，并举出一个编码例子（如二维码）。闯关成功。</p>
+        <p data-stage="high">能用 0/1 数到 15、找出字母编码规律、和朋友互译一段自编密码。闯关成功。</p>
+      </div>
+    </div>
+
+    <!-- 小测验 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🧩</span>试试看</div>
+      <div class="quiz">
+        <div class="hd">两道小题，选一个你觉得对的</div>
+        <div class="q" data-hint="电脑只认得什么？">
+          <div class="qt">1. 电脑最底层只认得哪两个数字？</div>
+          <div class="qopts">
+            <button class="qopt">3 和 8</button>
+            <button class="qopt" data-ok="1" data-fb="电脑用开/关两种状态表示信息，对应 0 和 1（二进制）。">0 和 1</button>
+            <button class="qopt">9 和 6</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+        <div class="q" data-hint="把信息变成 0/1 的规则，叫什么？">
+          <div class="qt">2. 「把照片、文字翻译成 0/1 的规则」，叫？</div>
+          <div class="qopts">
+            <button class="qopt">游戏</button>
+            <button class="qopt" data-ok="1" data-fb="编码就是信息 ↔ 0/1 的翻译规则，如 ASCII、二维码。">编码</button>
+            <button class="qopt">电池</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ⭐ 自评 -->
+    <div class="block">
+      <div class="block-h"><span class="em">⭐</span>自评卡</div>
+      <div class="selfcheck">
+        <div class="hd">做到了就打勾（打勾会被记住，下次打开还在）</div>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我知道电脑底层是 0/1</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我能举出一个编码例子</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我明白同一信息多种样子</span></label>
+        <label class="check" data-stage="high"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会用 0/1 数数、编密码</span></label>
+      </div>
+    </div>
+
+    <div class="done-wrap">
+      <button class="done-btn" data-done-btn></button>
+    </div>
+
+    <div class="lesson-nav" data-nav="auto"></div>
+
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="fl">
+    <a href="../index.html">首页</a>
+    <a href="../juan8.html">第八辑导读</a>
+    <a href="../teacher.html">给老师和家长</a>
+    <a href="../about.html">关于本课</a>
+  </div>
+  蓝兔巴迪 · 电脑第一课　|　常州市新北区汤庄桥小学　教师发展处
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>

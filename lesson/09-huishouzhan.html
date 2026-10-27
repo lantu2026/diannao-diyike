@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>第 9 课 · 删除与回收站 —— 蓝兔巴迪·电脑第一课</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script>(function(){try{var t=localStorage.getItem('dn-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('dn-stage');document.documentElement.setAttribute('data-stage',(s==='high'?'high':'low'));}catch(e){}})();</script>
+</head>
+<body data-root="../" data-page="L09" data-lesson="09" data-stage="low">
+
+<div class="readbar"></div>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <button class="icon-btn menu-btn" data-menu-toggle aria-label="打开目录">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="brand" href="../index.html">
+      <span class="brand-logo">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <ellipse cx="9" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(-14 9 6)"/>
+          <ellipse cx="17" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(14 17 6)"/>
+          <circle cx="13" cy="15.5" r="7.2" fill="#fff"/>
+          <circle cx="10.3" cy="14.4" r="1.15" fill="#1565C0"/>
+          <circle cx="15.7" cy="14.4" r="1.15" fill="#1565C0"/>
+          <path d="M13 17.4c-.9 0-1.6.5-1.6.5s.7.9 1.6.9 1.6-.9 1.6-.9-.7-.5-1.6-.5z" fill="#F0864F"/>
+        </svg>
+      </span>
+      <span class="brand-txt"><strong>蓝兔巴迪 · 电脑第一课</strong><span>COMPUTER FIRST LESSON</span></span>
+    </a>
+    <div class="topbar-spacer"></div>
+    <div class="stage-switch" role="group" aria-label="选择学段">
+      <button data-set-stage="low">🌱 三四年级</button>
+      <button data-set-stage="high">🚀 五六年级</button>
+    </div>
+    <button class="icon-btn" data-theme-toggle aria-label="切换深浅色"></button>
+  </div>
+</header>
+
+<div class="mask"></div>
+
+<div class="shell">
+  <aside class="sidebar" data-render="sidebar"></aside>
+
+  <main class="main">
+
+    <nav class="crumb">
+      <a href="../index.html">首页</a><span class="sep">/</span>
+      <a href="../juan2.html">第二辑</a><span class="sep">/</span>第 9 课
+    </nav>
+
+    <div class="lesson-head">
+      <div class="lesson-no">📦 第二辑 · 第 9 课</div>
+      <h1>删除与回收站</h1>
+      <div class="lesson-meta">
+        <span>🕐 约 6 分钟</span>
+        <span>🎯 信息意识</span>
+        <span>🧰 一个不要的文件练手</span>
+      </div>
+    </div>
+
+    <!-- 🎯 目标 -->
+    <div class="block">
+      <div class="goal">
+        <div class="k">🎯 一句话目标</div>
+        <p data-stage="low">学完这课，你知道删掉的文件先掉进「回收站」这个后悔药里，还能捡回来；也知道「清空回收站」是真没了，动手前要停三秒。</p>
+        <p data-stage="high">学完这课，你能分清普通删除（进回收站）和 Shift+Delete 永久删除，知道回收站有容量上限、满了会怎样，养成「删前先备份」的习惯。</p>
+      </div>
+    </div>
+
+    <!-- 📖 故事 -->
+    <div class="block">
+      <div class="block-h"><span class="em">📖</span>小故事</div>
+      <div class="story">
+        <p class="narr">巴迪手一抖，把写了一晚的数学作业「咣」删了，急得原地转圈。</p>
+        <div class="dialog">
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">完了完了！作业没了！我白写了！蓝兔救我——</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">别慌，先看看桌面上那个<b>垃圾桶</b>。你删的东西，第一站不是「消失」，是掉进<b>回收站</b>——那是电脑给的<b>后悔药</b>。</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">双击打开回收站，找到你的作业，点「还原」——「嗖」，它又回到原来地方了。只要你没清空回收站，它就在。</div></div>
+          </div>
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">呼……捡回来了。那什么时候才真没了？</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">两种时候：一是你右键回收站选「<b>清空</b>」，桶里全倒掉；二是删的时候按住 Shift（Shift+Delete），直接越过回收站。这两种，才叫真没了——所以动它们之前，停三秒。</div></div>
+          </div>
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">记牢了：普通删＝进桶能捡回，清空或 Shift 删＝真没了。下回删前我先深呼吸。</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🖼️ 图解 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖼️</span>一张图看懂</div>
+      <figure class="figure">
+        <svg viewBox="0 0 680 380" role="img" aria-label="文件删除后进回收站可还原，清空回收站则永久消失的对比图">
+          <defs>
+            <style>
+              .cn{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+              .cname{font-size:14px;font-weight:700;fill:var(--ink)}
+              .ctag{font-size:12.5px;font-weight:600}
+              .cst{stroke:var(--g600);stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+              .cf{fill:var(--g100);stroke:var(--g400);stroke-width:2.2;stroke-linejoin:round}
+              .cnum{font-size:13px;font-weight:800;fill:#fff}
+            </style>
+          </defs>
+
+          <!-- 左：能找回 -->
+          <rect x="30" y="34" width="290" height="300" rx="16" style="fill:var(--g100);stroke:var(--g400)" stroke-width="2"/>
+          <text x="50" y="64" class="cn cname" style="fill:var(--g700)">✓ 普通删除：还能捡回</text>
+          <!-- 文件 -->
+          <g>
+            <rect x="60" y="92" width="64" height="52" rx="10" class="cf"/>
+            <path d="M78 106 l9 12 h-18z" style="fill:var(--yellow)" stroke="none"/>
+            <text x="92" y="170" text-anchor="middle" class="cn ctag" style="fill:var(--ink2)">作业.docx</text>
+          </g>
+          <!-- 箭头到回收站 -->
+          <path d="M150 118 q60 30 120 60" class="cst" stroke-width="2.4" marker-end="url(#ar)"/>
+          <text x="210" y="150" text-anchor="middle" class="cn ctag" style="fill:var(--g700)">Delete</text>
+          <!-- 回收站 -->
+          <g transform="translate(250,150)">
+            <path d="M0 14 h66 l-7 78 a8 8 0 0 1 -8 7 h-28 a8 8 0 0 1 -8 -7 z" style="fill:var(--orange);stroke:var(--g600)" stroke-width="2.4"/>
+            <rect x="-4" y="4" width="74" height="12" rx="4" style="fill:var(--g600)" stroke="none"/>
+            <rect x="24" y="-8" width="18" height="8" rx="3" style="fill:var(--g600)" stroke="none"/>
+            <rect x="20" y="40" width="26" height="6" rx="3" style="fill:#fff" opacity=".8" stroke="none"/>
+            <rect x="20" y="54" width="26" height="6" rx="3" style="fill:#fff" opacity=".8" stroke="none"/>
+          </g>
+          <text x="175" y="300" text-anchor="middle" class="cn ctag" style="fill:var(--g700)">右键「还原」→ 回原处</text>
+          <defs>
+            <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" style="fill:var(--g600)"/></marker>
+          </defs>
+
+          <!-- 右：真没了 -->
+          <rect x="360" y="34" width="290" height="300" rx="16" style="fill:var(--red-soft);stroke:var(--red)" stroke-width="2"/>
+          <text x="380" y="64" class="cn cname" style="fill:var(--red)">✗ 清空 / Shift+Delete：真没了</text>
+          <g>
+            <rect x="392" y="92" width="64" height="52" rx="10" class="cf" opacity=".5"/>
+            <path d="M410 106 l9 12 h-18z" style="fill:var(--red)" stroke="none" opacity=".6"/>
+            <line x1="392" y1="92" x2="456" y2="144" stroke="var(--red)" stroke-width="3"/>
+          </g>
+          <text x="424" y="170" text-anchor="middle" class="cn ctag" style="fill:var(--red)">作业.docx</text>
+          <path d="M482 118 q60 30 110 50" stroke="var(--red)" stroke-width="2.4" fill="none" stroke-dasharray="6 5" marker-end="url(#arr)"/>
+          <g transform="translate(572,150)">
+            <path d="M0 14 h66 l-7 78 a8 8 0 0 1 -8 7 h-28 a8 8 0 0 1 -8 -7 z" style="fill:#fff;stroke:var(--red)" stroke-width="2.4" stroke-dasharray="6 5"/>
+          </g>
+          <text x="500" y="300" text-anchor="middle" class="cn ctag" style="fill:var(--red)">越过回收站，救不回</text>
+          <defs>
+            <marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" style="fill:var(--red)"/></marker>
+          </defs>
+        </svg>
+        <figcaption class="figcap">
+          删错别慌，先去回收站捡。但「清空回收站」和「Shift+Delete」是真没了——这两步之前，停三秒。切到「🚀 五六年级」，看看回收站为什么也有容量上限。
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- 🖱️ 动手做 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖱️</span>动手做</div>
+      <div class="steps" data-stage="low">
+        <div class="step"><b>删一个。</b>找一张不要的草稿，按键盘上的 Delete 键（或右键选「删除」），看它是不是掉进回收站。</div>
+        <div class="step"><b>打开桶。</b>双击桌面「回收站」图标，确认你刚删的文件躺在里面。</div>
+        <div class="step"><b>捡回来。</b>在回收站里右键那个文件，选「还原」——它「嗖」地回原处了。</div>
+        <div class="step"><b>记口诀。</b>说一遍：「普通删进桶能捡，清空和 Shift 删才真没。」</div>
+        <div class="step"><b>试还原后的位置。</b>还原后去原文件夹看一眼，文件真的回来了吗？</div>
+      </div>
+      <div class="steps" data-stage="high">
+        <div class="step"><b>认两种删除。</b>普通 Delete 进回收站；选中后按 <b>Shift+Delete</b>，系统会警告「将永久删除」——这就是越过回收站那一步，确认才点。</div>
+        <div class="step"><b>看容量。</b>右键回收站 →「属性」，看看它最多能装多少。桶满了，最早删的会被新来的挤掉——所以重要东西别在桶里长期睡大觉。</div>
+        <div class="step"><b>清空演练（用废纸）。</b>建几个纯练习文件，删进回收站，再右键「清空回收站」练一次，感受「一键全没」。练完你就懂为什么清空前要三思。</div>
+        <div class="step"><b>备份优先。</b>删重要文件前，先 Ctrl+C 存一份到 U 盘或别处。回收站是会满、会清的，U 盘才靠得住。</div>
+        <div class="step"><b>想一想。</b>回收站和「撤销 Ctrl+Z」有什么不同？（提示：撤销管的是「刚才那一步操作」，回收站管的是「已经删掉的文件」，而且能存很久。）</div>
+      </div>
+    </div>
+
+    <!-- 💡 贴士 -->
+    <div class="block">
+      <div class="block-h"><span class="em">💡</span>素养小贴士</div>
+      <div class="tip">
+        <div class="hd">回收站不是保险箱，是缓冲带</div>
+        <p>很多人以为删进回收站就安全了，结果某天手滑「清空」，几年照片全没。记住：回收站是「给你反悔几天的缓冲带」，不是永久仓库。真正重要的东西，要备份到 U 盘、网盘或另一台电脑——那才叫保险箱。</p>
+        <p>还有个小技巧：误删后第一时间按 <b>Ctrl+Z</b>（撤销），往往比去回收站翻更快。两步都试试，手感就来了。</p>
+      </div>
+    </div>
+
+    <!-- 🏆 闯关 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🏆</span>闯关任务</div>
+      <div class="quest">
+        <div class="hd">关卡：删了还能救</div>
+        <p data-stage="low">故意删一个练习文件，再从回收站把它还原回去，证明「你删的东西跑不了」。能完整演示「删→进桶→还原」，闯关成功。</p>
+        <p data-stage="high">用普通删除和 Shift+Delete 两种方式各删一个练习文件，说出它们的去向有何不同；再打开回收站属性，记下它的容量是多少。写成三句话讲给家长听。</p>
+      </div>
+    </div>
+
+    <!-- 小测验 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🧩</span>试试看</div>
+      <div class="quiz">
+        <div class="hd">两道小题，选一个你觉得对的</div>
+
+        <div class="q" data-hint="删错先别慌，有个地方专门收「刚删的」。">
+          <div class="qt">1. 不小心删了文件，第一反应该去哪找？</div>
+          <div class="qopts">
+            <button class="qopt" data-ok="1" data-fb="普通删除先掉进回收站，右键「还原」就回来了。清空回收站或 Shift+Delete 才真没了。">回收站</button>
+            <button class="qopt">桌面</button>
+            <button class="qopt">主机里面</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+
+        <div class="q" data-hint="哪个动作会「越过回收站」？">
+          <div class="qt">2. 下面哪个会让文件「直接消失、救不回」？</div>
+          <div class="qopts">
+            <button class="qopt">普通按 Delete</button>
+            <button class="qopt" data-ok="1" data-fb="Shift+Delete 会跳过回收站直接永久删除，几乎救不回。普通 Delete 还能去回收站捡。">Shift+Delete</button>
+            <button class="qopt">右键「还原」</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ⭐ 自评 -->
+    <div class="block">
+      <div class="block-h"><span class="em">⭐</span>自评卡</div>
+      <div class="selfcheck">
+        <div class="hd">做到了就打勾（打勾会被记住，下次打开还在）</div>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我知道删掉的文件先掉进回收站</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会从回收站把文件还原回来</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我知道「清空回收站」和 Shift+Delete 是真没了</span></label>
+        <label class="check" data-stage="high"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我懂得删重要文件前先备份，回收站不是保险箱</span></label>
+      </div>
+    </div>
+
+    <div class="done-wrap">
+      <button class="done-btn" data-done-btn></button>
+    </div>
+
+    <div class="lesson-nav" data-nav="auto"></div>
+
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="fl">
+    <a href="../index.html">首页</a>
+    <a href="../juan2.html">第二辑导读</a>
+    <a href="../teacher.html">给老师和家长</a>
+    <a href="../about.html">关于本课</a>
+  </div>
+  蓝兔巴迪 · 电脑第一课　|　常州市新北区汤庄桥小学　教师发展处
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>

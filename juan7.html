@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>第七辑 · 图形化编程初体验 —— 蓝兔巴迪·电脑第一课</title>
+<link rel="stylesheet" href="assets/style.css">
+<script>(function(){try{var t=localStorage.getItem('dn-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('dn-stage');document.documentElement.setAttribute('data-stage',(s==='high'?'high':'low'));}catch(e){})();</script>
+</head>
+<body data-root="" data-page="juan7" data-stage="low">
+
+<div class="readbar"></div>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <button class="icon-btn menu-btn" data-menu-toggle aria-label="打开目录">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="brand" href="index.html">
+      <span class="brand-logo">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <ellipse cx="9" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(-14 9 6)"/>
+          <ellipse cx="17" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(14 17 6)"/>
+          <circle cx="13" cy="15.5" r="7.2" fill="#fff"/>
+          <circle cx="10.3" cy="14.4" r="1.15" fill="#1565C0"/>
+          <circle cx="15.7" cy="14.4" r="1.15" fill="#1565C0"/>
+          <path d="M13 17.4c-.9 0-1.6.5-1.6.5s.7.9 1.6.9 1.6-.9 1.6-.9-.7-.5-1.6-.5z" fill="#F0864F"/>
+        </svg>
+      </span>
+      <span class="brand-txt"><strong>蓝兔巴迪 · 电脑第一课</strong><span>COMPUTER FIRST LESSON</span></span>
+    </a>
+    <div class="topbar-spacer"></div>
+    <div class="stage-switch" role="group" aria-label="选择学段">
+      <button data-set-stage="low">🌱 三四年级</button>
+      <button data-set-stage="high">🚀 五六年级</button>
+    </div>
+    <button class="icon-btn" data-theme-toggle aria-label="切换深浅色"></button>
+  </div>
+</header>
+
+<div class="mask"></div>
+
+<div class="shell">
+  <aside class="sidebar" data-render="sidebar"></aside>
+
+  <main class="main">
+
+    <nav class="crumb">
+      <a href="index.html">首页</a><span class="sep">/</span>第七辑 · 图形化编程初体验
+    </nav>
+
+    <div class="lesson-head">
+      <div class="lesson-no">📦 第七辑 · 共 7 课 · 建议 5—6 课时</div>
+      <h1>图形化编程初体验</h1>
+      <div class="lesson-meta">
+        <span>🎯 核心素养：计算思维</span>
+        <span>🕐 每课约 6 分钟</span>
+        <span>🧰 需要：能开机的电脑 + 编程软件</span>
+      </div>
+    </div>
+
+    <!-- 本辑导语 -->
+    <div class="block">
+      <div class="story">
+        <p>巴迪一直觉得"编程"是大人才能干的高深事，直到蓝兔给它打开一块"拼积木"的软件：不用背单词，把彩色的积木拖一拖，小猫就动了起来。</p>
+        <p>「编程不是写天书，是教电脑做事。」蓝兔说，「这一辑咱们从认识舞台和积木开始，学着让角色动、让动作重复、让程序会判断，再认识变量、事件，最后当个调试小医生。」</p>
+        <p>这，就是七个关于"和电脑对话"的故事——也是计算思维的第一块砖。</p>
+      </div>
+    </div>
+
+    <!-- 本辑目标 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🎯</span>学完这一辑，你会做到</div>
+      <div class="card">
+        <ol>
+          <li>打开编程软件，认得出舞台、角色区、积木区和脚本区，拼出第一段让角色动的脚本；</li>
+          <li>用「顺序」和「循环」让动作重复而不啰嗦，画出正方形、让小猫一直走；</li>
+          <li>用「如果…那么 / 否则」做条件判断，让程序会"看情况"；</li>
+          <li>用「变量」装数字和名字、用「事件」让程序听懂你的操作，并会像小医生一样调试找 bug。</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 两学段课表 -->
+    <div class="block">
+      <div class="block-h"><span class="em">📋</span>两个学段，各学什么</div>
+      <p style="color:var(--ink2);font-size:15.5px;margin-bottom:14px">
+        同一课、同一段脚本，说的深浅不一样。右上角随时可以切换，切过去看看差别。
+      </p>
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:56px">课次</th>
+              <th style="width:150px">课题</th>
+              <th>🌱 三、四年级学到</th>
+              <th>🚀 五、六年级学到</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>30</td>
+              <td><a href="lesson/30-biancheng-chujianmian.html">编程软件初见面</a></td>
+              <td>认舞台、角色、积木区，拼出"走一步"</td>
+              <td>理解脚本区逻辑、多角色分工与坐标</td>
+            </tr>
+            <tr>
+              <td>31</td>
+              <td><a href="lesson/31-rang-juese-dong.html">让角色动起来</a></td>
+              <td>绿旗触发、移动、面向，小猫走起来</td>
+              <td>用方向角度、滑行、造型切换做流畅动画</td>
+            </tr>
+            <tr>
+              <td>32</td>
+              <td><a href="lesson/32-xunhuan-chongfu.html">循环与重复</a></td>
+              <td>重复执行、重复 N 次，画正方形</td>
+              <td>循环套循环画花朵，理解嵌套</td>
+            </tr>
+            <tr>
+              <td>33</td>
+              <td><a href="lesson/33-tiaojian-panduan.html">条件判断</a></td>
+              <td>如果…那么，碰边就反弹</td>
+              <td>否则分支、与/或连条件、碰颜色避障</td>
+            </tr>
+            <tr>
+              <td>34</td>
+              <td><a href="lesson/34-bianliang-jishuqi.html">变量与计数器</a></td>
+              <td>建"得分"盒子，接到就 +1</td>
+              <td>用变量计数、装文字，做过关条件</td>
+            </tr>
+            <tr>
+              <td>35</td>
+              <td><a href="lesson/35-shijian-jiaohu.html">事件与交互</a></td>
+              <td>按键、点角色触发动作</td>
+              <td>广播消息、碰撞触发、双人互动</td>
+            </tr>
+            <tr>
+              <td>36</td>
+              <td><a href="lesson/36-tiaoshi-xiaoyisheng.html">调试小医生</a></td>
+              <td>单步看、看变量找毛病</td>
+              <td>读报错、拆循环定位隐藏 bug</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 7 课卡片 -->
+    <div class="block">
+      <div class="block-h"><span class="em">📚</span>本辑七课</div>
+      <div class="juan-grid" data-render="course-cards" data-scope="juan7"></div>
+    </div>
+
+    <!-- 素养落点 -->
+    <div class="block">
+      <div class="block-h"><span class="em">💡</span>这一辑藏在背后的道理</div>
+      <div class="tip">
+        <div class="hd">编程，练的是"想清楚再动手"</div>
+        <p>图形化编程把"写代码"变成"拼积木"，门槛降下来，但脑子里的功夫没降：<b>顺序、循环、判断、变量</b>这四样，正是人类解决问题的基本套路。孩子练的，是把一件复杂的事拆成一步一步、再让电脑照做。</p>
+        <p>而"调试"那课最珍贵——它告诉孩子：<b>出错不可怕，会找原因才厉害</b>。这种心态，比任何一行程序都受用一生。</p>
+      </div>
+    </div>
+
+    <!-- 老师提示 -->
+    <div class="block">
+      <div class="notice">
+        <b>给老师：</b>本辑对应《信息科技》"算法与程序设计"启蒙内容（参考 Scratch 类图形化环境）。建议以"小猫闯关"为线索，第 36 课做"互埋 bug 互修"活动，作为计算思维过程性评价。
+        <a href="teacher.html">详细课时安排与评价量表 →</a>
+      </div>
+    </div>
+
+    <div class="lesson-nav">
+      <a href="index.html"><div class="d">← 返回</div><div class="t">全站首页</div></a>
+      <a class="next" href="lesson/30-biancheng-chujianmian.html"><div class="d">下一课 →</div><div class="t">第 30 课 · 编程软件初见面</div></a>
+    </div>
+
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="fl">
+    <a href="index.html">首页</a>
+    <a href="juan1.html">第一辑导读</a>
+    <a href="juan2.html">第二辑导读</a>
+    <a href="juan3.html">第三辑导读</a>
+    <a href="juan4.html">第四辑导读</a>
+    <a href="juan5.html">第五辑导读</a>
+    <a href="juan6.html">第六辑导读</a>
+    <a href="juan7.html">第七辑导读</a>
+    <a href="teacher.html">给老师和家长</a>
+    <a href="about.html">关于本课</a>
+  </div>
+  蓝兔巴迪 · 电脑第一课　|　常州市新北区汤庄桥小学　教师发展处
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

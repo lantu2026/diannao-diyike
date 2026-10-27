@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>第 7 课 · 文件与文件夹 —— 蓝兔巴迪·电脑第一课</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script>(function(){try{var t=localStorage.getItem('dn-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('dn-stage');document.documentElement.setAttribute('data-stage',(s==='high'?'high':'low'));}catch(e){}})();</script>
+</head>
+<body data-root="../" data-page="L07" data-lesson="07" data-stage="low">
+
+<div class="readbar"></div>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <button class="icon-btn menu-btn" data-menu-toggle aria-label="打开目录">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="brand" href="../index.html">
+      <span class="brand-logo">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <ellipse cx="9" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(-14 9 6)"/>
+          <ellipse cx="17" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(14 17 6)"/>
+          <circle cx="13" cy="15.5" r="7.2" fill="#fff"/>
+          <circle cx="10.3" cy="14.4" r="1.15" fill="#1565C0"/>
+          <circle cx="15.7" cy="14.4" r="1.15" fill="#1565C0"/>
+          <path d="M13 17.4c-.9 0-1.6.5-1.6.5s.7.9 1.6.9 1.6-.9 1.6-.9-.7-.5-1.6-.5z" fill="#F0864F"/>
+        </svg>
+      </span>
+      <span class="brand-txt"><strong>蓝兔巴迪 · 电脑第一课</strong><span>COMPUTER FIRST LESSON</span></span>
+    </a>
+    <div class="topbar-spacer"></div>
+    <div class="stage-switch" role="group" aria-label="选择学段">
+      <button data-set-stage="low">🌱 三四年级</button>
+      <button data-set-stage="high">🚀 五六年级</button>
+    </div>
+    <button class="icon-btn" data-theme-toggle aria-label="切换深浅色"></button>
+  </div>
+</header>
+
+<div class="mask"></div>
+
+<div class="shell">
+  <aside class="sidebar" data-render="sidebar"></aside>
+
+  <main class="main">
+
+    <nav class="crumb">
+      <a href="../index.html">首页</a><span class="sep">/</span>
+      <a href="../juan2.html">第二辑</a><span class="sep">/</span>第 7 课
+    </nav>
+
+    <div class="lesson-head">
+      <div class="lesson-no">📦 第二辑 · 第 7 课</div>
+      <h1>文件与文件夹</h1>
+      <div class="lesson-meta">
+        <span>🕐 约 6 分钟</span>
+        <span>🎯 计算思维</span>
+        <span>🧰 能新建文件夹</span>
+      </div>
+    </div>
+
+    <!-- 🎯 目标 -->
+    <div class="block">
+      <div class="goal">
+        <div class="k">🎯 一句话目标</div>
+        <p data-stage="low">学完这课，你知道「文件」是电脑里一段信息、「文件夹」是装文件的柜子，还能给文件和文件夹起一个你自己看得懂的名字。</p>
+        <p data-stage="high">学完这课，你掌握「日期_内容_作者」的命名规则，会建两级文件夹把东西分门别类，明白同名文件会互相覆盖的道理。</p>
+      </div>
+    </div>
+
+    <!-- 📖 故事 -->
+    <div class="block">
+      <div class="block-h"><span class="em">📖</span>小故事</div>
+      <div class="story">
+        <p class="narr">一周后，巴迪又来找蓝兔，耷拉着耳朵。</p>
+        <div class="dialog">
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">蓝兔，我那张画存哪儿了？桌面上全是「新建文档 1、2、3、4」……我分不清哪个是我画的了。</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">哈哈，这就像把作业都写进「没名字的纸」，当然找不着。电脑里的每段信息叫<b>文件</b>，装文件的盒子叫<b>文件夹</b>，而名字——就是它们的身份证。</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">来，把这张画改名成「2026春游_巴迪的画」。前面写日期，中间写内容，最后写是谁的——你一个月后再看，也一眼认得。</div></div>
+          </div>
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">哦！那「新建文档」就像没写名字的信，摞在一起当然乱。那文件夹是啥？</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">文件夹就是<b>抽屉</b>。画放「我的画」抽屉，作业放「作业」抽屉，抽屉里还能套小抽屉。东西各回各家，电脑才清爽。</div></div>
+          </div>
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">懂了！文件名写清楚，再装进对的抽屉——这就是电脑的「收拾房间」。</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🖼️ 图解 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖼️</span>一张图看懂</div>
+      <figure class="figure">
+        <svg viewBox="0 0 680 400" role="img" aria-label="坏名字与好名字对比，以及文件夹套文件夹的层级">
+          <defs>
+            <style>
+              .cn{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+              .cname{font-size:14px;font-weight:700;fill:var(--ink)}
+              .ctag{font-size:12.5px;font-weight:600}
+              .cst{stroke:var(--g600);stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+              .cf{fill:var(--g100);stroke:var(--g400);stroke-width:2.2;stroke-linejoin:round}
+              .cnum{font-size:13px;font-weight:800;fill:#fff}
+            </style>
+          </defs>
+
+          <!-- 左：坏名字 -->
+          <rect x="24" y="36" width="300" height="150" rx="14" style="fill:var(--red-soft);stroke:var(--red)" stroke-width="2"/>
+          <text x="44" y="64" class="cn cname" style="fill:var(--red)">✗ 这样起名，一周后就傻眼</text>
+          <g style="fill:var(--ink2)" font-family="-apple-system,'Microsoft YaHei',sans-serif" font-size="13.5">
+            <text x="44" y="96">新建文档1</text>
+            <text x="44" y="120">新建文档2</text>
+            <text x="44" y="144">a</text>
+            <text x="44" y="168">最终版(真的)</text>
+          </g>
+
+          <!-- 右：好名字 -->
+          <rect x="356" y="36" width="300" height="150" rx="14" style="fill:var(--g100);stroke:var(--g400)" stroke-width="2"/>
+          <text x="376" y="64" class="cn cname" style="fill:var(--g700)">✓ 好名字：日期_内容_作者</text>
+          <g style="fill:var(--ink)" font-family="-apple-system,'Microsoft YaHei',sans-serif" font-size="13.5" font-weight="600">
+            <text x="376" y="96" style="fill:var(--g700)">2026春游_巴迪的画.jpg</text>
+            <text x="376" y="120" style="fill:var(--g700)">数学作业_第三单元.docx</text>
+            <text x="376" y="144" style="fill:var(--g700)">读书笔记_四月_小汤.pdf</text>
+            <text x="376" y="168" style="fill:var(--g700)">班级合照_六一.jpg</text>
+          </g>
+
+          <!-- 下：文件夹套文件夹 -->
+          <g transform="translate(150,236)">
+            <rect x="0" y="0" width="380" height="150" rx="16" style="fill:var(--g50);stroke:var(--g300)" stroke-width="2"/>
+            <text x="16" y="26" class="cn cname">我的电脑</text>
+            <path d="M40 44 h70 a8 8 0 0 1 8 8 v14 h-78 a8 8 0 0 0 -8 8 v64 h120 v-94 a8 8 0 0 0 -8 -8 h-30 l-10 -10 h-52 a8 8 0 0 0 -8 8 z" style="fill:var(--yellow);stroke:var(--g600)" stroke-width="2"/>
+            <text x="62" y="112" class="cn ctag" style="fill:var(--g700)">我的画</text>
+            <path d="M210 60 h70 a8 8 0 0 1 8 8 v14 h-78 a8 8 0 0 0 -8 8 v60 h120 v-90 a8 8 0 0 0 -8 -8 h-30 l-10 -10 h-52 a8 8 0 0 0 -8 8 z" style="fill:var(--orange);stroke:var(--g600)" stroke-width="2"/>
+            <text x="232" y="118" class="cn ctag" style="fill:#fff">作业</text>
+          </g>
+          <text x="340" y="408" text-anchor="middle" class="cn ctag" style="fill:var(--ink2)">文件夹里能套文件夹 —— 抽屉里还能有抽屉</text>
+        </svg>
+        <figcaption class="figcap">
+          左边那堆「新建文档」就像没写名字的信；右边用「日期_内容_作者」一命名，一年后都认得。切到「🚀 五六年级」，看文件夹是怎么一层套一层的。
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- 🖱️ 动手做 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖱️</span>动手做</div>
+      <div class="steps" data-stage="low">
+        <div class="step"><b>建抽屉。</b>在桌面空白处点右键 →「新建」→「文件夹」，它会冒出一个写着「新建文件夹」的盒子。</div>
+        <div class="step"><b>起名字。</b>趁它还亮着，直接打字改成「我的画」，按回车。名字起好啦！</div>
+        <div class="step"><b>改一个文件。</b>找一个文件，慢慢点它两下名字（不是两下图标！），名字变蓝就能改，改成你看得懂的。</div>
+        <div class="step"><b>装进去。</b>把一张图片拖进「我的画」文件夹。打开文件夹，确认它真的进去了。</div>
+        <div class="step"><b>说规律。</b>告诉身边人：文件是「一段信息」，文件夹是「装文件的抽屉」。</div>
+      </div>
+      <div class="steps" data-stage="high">
+        <div class="step"><b>用规则命名。</b>把三份作业分别改名：<b>数学作业_第三单元_巴迪.docx</b>、<b>语文作业_古诗_巴迪.docx</b>、<b>手抄报_春天_巴迪.docx</b>。对比一下，是不是一眼就分清？</div>
+        <div class="step"><b>两级归类。</b>建「我的画」「作业」「音乐」三个文件夹，再把「作业」里按学科再套小文件夹。一套「抽屉里的抽屉」，找东西飞快。</div>
+        <div class="step"><b>试一次覆盖。</b>故意建两个同名文件放同一处，电脑会问「替换还是保留」——这就是「同名会打架」。以后见到这提示，先想清楚再点。</div>
+        <div class="step"><b>看类型。</b>文件名最后的「.jpg / .docx / .mp3」叫扩展名，告诉你它是什么类型。把鼠标停在文件上，看看类型栏写了啥。</div>
+        <div class="step"><b>想一想。</b>如果文件没有名字，电脑靠什么找它？（提示：其实它有编号，但那串数字你记不住——所以名字是给人看的身份证。）</div>
+      </div>
+    </div>
+
+    <!-- 💡 贴士 -->
+    <div class="block">
+      <div class="block-h"><span class="em">💡</span>素养小贴士</div>
+      <div class="tip">
+        <div class="hd">好名字三件套：看得懂、不重复、带日期</div>
+        <p>「最终版」「最终版2」「真的最终版」——这种名字是给自己挖坑，过三天连你都分不清哪个最新。宁可啰嗦一点，写清「哪天_关于什么_谁的」。</p>
+        <p>还有，文件名里尽量别用 <code>/ \ : * ? " &lt; &gt; |</code> 这些符号，电脑会认生、不让你存。空格和中文都 OK。</p>
+      </div>
+    </div>
+
+    <!-- 🏆 闯关 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🏆</span>闯关任务</div>
+      <div class="quest">
+        <div class="hd">关卡：整理我的桌面</div>
+        <p data-stage="low">把桌面上散着的文件，装进至少两个文件夹（比如「我的画」「作业」），每个文件夹名字都要看得懂。整理完截图给老师看，闯关成功。</p>
+        <p data-stage="high">用「日期_内容_作者」规则，给桌面上五个以上文件重新命名，再建两级文件夹归类。命名前后对比一下，说说你省了多少「找东西的时间」。</p>
+      </div>
+    </div>
+
+    <!-- 小测验 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🧩</span>试试看</div>
+      <div class="quiz">
+        <div class="hd">两道小题，选一个你觉得对的</div>
+
+        <div class="q" data-hint="它像抽屉，是装东西的盒子。">
+          <div class="qt">1. 电脑里「文件夹」最像生活中的什么？</div>
+          <div class="qopts">
+            <button class="qopt" data-ok="1" data-fb="文件夹就是抽屉/柜子，专门把文件分门别类装好。文件才是真正那段信息本身。">装东西的抽屉</button>
+            <button class="qopt">一段音乐</button>
+            <button class="qopt">电脑的电源</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+
+        <div class="q" data-hint="哪种名字，一个月后你还认得？">
+          <div class="qt">2. 下面哪个文件名最「懂事」？</div>
+          <div class="qopts">
+            <button class="qopt">新建文档3</button>
+            <button class="qopt">a</button>
+            <button class="qopt" data-ok="1" data-fb="「2026春游_巴迪的画.jpg」写了日期、内容、作者，一年后也一眼认得。前两个名等于没写。">2026春游_巴迪的画.jpg</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ⭐ 自评 -->
+    <div class="block">
+      <div class="block-h"><span class="em">⭐</span>自评卡</div>
+      <div class="selfcheck">
+        <div class="hd">做到了就打勾（打勾会被记住，下次打开还在）</div>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我知道文件和文件夹分别是什么</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会在桌面新建文件夹，并给它改名</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我给文件起了看得懂的名字，没再用「新建文档」</span></label>
+        <label class="check" data-stage="high"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我用了「日期_内容_作者」规则，并建了两级文件夹</span></label>
+      </div>
+    </div>
+
+    <div class="done-wrap">
+      <button class="done-btn" data-done-btn></button>
+    </div>
+
+    <div class="lesson-nav" data-nav="auto"></div>
+
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="fl">
+    <a href="../index.html">首页</a>
+    <a href="../juan2.html">第二辑导读</a>
+    <a href="../teacher.html">给老师和家长</a>
+    <a href="../about.html">关于本课</a>
+  </div>
+  蓝兔巴迪 · 电脑第一课　|　常州市新北区汤庄桥小学　教师发展处
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>

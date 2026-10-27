@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>第 36 课 · 调试小医生 —— 蓝兔巴迪·电脑第一课</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script>(function(){try{var t=localStorage.getItem('dn-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('dn-stage');document.documentElement.setAttribute('data-stage',(s==='high'?'high':'low'));}catch(e){})();</script>
+</head>
+<body data-root="../" data-page="L36" data-lesson="36" data-stage="low">
+
+<div class="readbar"></div>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <button class="icon-btn menu-btn" data-menu-toggle aria-label="打开目录">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="brand" href="../index.html">
+      <span class="brand-logo">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <ellipse cx="9" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(-14 9 6)"/>
+          <ellipse cx="17" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(14 17 6)"/>
+          <circle cx="13" cy="15.5" r="7.2" fill="#fff"/>
+          <circle cx="10.3" cy="14.4" r="1.15" fill="#1565C0"/>
+          <circle cx="15.7" cy="14.4" r="1.15" fill="#1565C0"/>
+          <path d="M13 17.4c-.9 0-1.6.5-1.6.5s.7.9 1.6.9 1.6-.9 1.6-.9-.7-.5-1.6-.5z" fill="#F0864F"/>
+        </svg>
+      </span>
+      <span class="brand-txt"><strong>蓝兔巴迪 · 电脑第一课</strong><span>COMPUTER FIRST LESSON</span></span>
+    </a>
+    <div class="topbar-spacer"></div>
+    <div class="stage-switch" role="group" aria-label="选择学段">
+      <button data-set-stage="low">🌱 三四年级</button>
+      <button data-set-stage="high">🚀 五六年级</button>
+    </div>
+    <button class="icon-btn" data-theme-toggle aria-label="切换深浅色"></button>
+  </div>
+</header>
+
+<div class="mask"></div>
+
+<div class="shell">
+  <aside class="sidebar" data-render="sidebar"></aside>
+
+  <main class="main">
+
+    <nav class="crumb">
+      <a href="../index.html">首页</a><span class="sep">/</span>
+      <a href="../juan7.html">第七辑</a><span class="sep">/</span>第 36 课
+    </nav>
+
+    <div class="lesson-head">
+      <div class="lesson-no">📦 第七辑 · 第 36 课</div>
+      <h1>调试小医生</h1>
+      <div class="lesson-meta">
+        <span>🕐 约 6 分钟</span>
+        <span>🎯 计算思维 · 问题求解</span>
+        <span>🧰 能开机的电脑 + 编程软件</span>
+      </div>
+    </div>
+
+    <!-- 🎯 目标 -->
+    <div class="block">
+      <div class="goal">
+        <div class="k">🎯 一句话目标</div>
+        <p data-stage="low">学完这课，你能像小医生一样给程序"看病"：它不动、乱动或报错时，会用「单步看」「看变量」「拆开试」三招找出毛病，再修好。</p>
+        <p data-stage="high">学完这课，你还能用「断点」「监视列表」定位藏在循环里的小错，把"找 bug"当成一种好玩的侦探游戏。</p>
+      </div>
+    </div>
+
+    <!-- 📖 故事 -->
+    <div class="block">
+      <div class="block-h"><span class="em">📖</span>小故事</div>
+      <div class="story">
+        <p class="narr">巴迪的小猫本该绕圈走，结果它直直冲出舞台、再也不回来。巴迪急得想关电脑。</p>
+        <div class="dialog">
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">小猫冲出舞台不回来了，程序"病"了，我只会重做！</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">别急着重做。<b>调试</b>就是给程序看病：先别改，先看它到底怎么"病"的。第一步——<b>单步看</b>：一次只走一块积木，看清卡在哪。</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">第二步<b>看变量</b>：把「得分」显示出来，发现它一直没加，就找到病根了。第三步<b>拆开试</b>：把循环拿掉，先让一步能动，再慢慢拼回去。</div></div>
+          </div>
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">原来小猫冲出去，是因为我忘放「碰边反弹」了！</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">对！<b>报错不是丢脸，是程序在告诉你"这里不对"</b>。会调试的人，比一次写对的人更厉害——因为谁都会写错，关键是能找到并修好。</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🖼️ 图解 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖼️</span>一张图看懂</div>
+      <figure class="figure">
+        <svg viewBox="0 0 680 300" role="img" aria-label="调试三招：单步看卡在哪、看变量找病根、拆开试再拼回；报错是程序在提示">
+          <defs>
+            <style>
+              .cn{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+              .cname{font-size:13px;font-weight:700;fill:var(--ink)}
+              .ctag{font-size:11.5px;font-weight:600;fill:var(--ink2)}
+            </style>
+            <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="var(--g600)"/></marker>
+          </defs>
+          <!-- 三招卡片 -->
+          <rect x="20" y="36" width="190" height="78" rx="12" style="fill:#fff;stroke:var(--g500)" stroke-width="2"/>
+          <text x="115" y="64" text-anchor="middle" class="cn cname" style="fill:var(--g600)">① 单步看</text>
+          <text x="115" y="88" text-anchor="middle" class="cn ctag">一块块走，看卡哪</text>
+          <text x="115" y="105" text-anchor="middle" class="cn ctag">"症状"先看清</text>
+          <rect x="245" y="36" width="190" height="78" rx="12" style="fill:#fff;stroke:var(--orange)" stroke-width="2"/>
+          <text x="340" y="64" text-anchor="middle" class="cn cname" style="fill:var(--orange)">② 看变量</text>
+          <text x="340" y="88" text-anchor="middle" class="cn ctag">显示数值，找病根</text>
+          <text x="340" y="105" text-anchor="middle" class="cn ctag">"病因"现形了</text>
+          <rect x="470" y="36" width="190" height="78" rx="12" style="fill:#fff;stroke:var(--purple)" stroke-width="2"/>
+          <text x="565" y="64" text-anchor="middle" class="cn cname" style="fill:var(--purple)">③ 拆开试</text>
+          <text x="565" y="88" text-anchor="middle" class="cn ctag">先让一步动</text>
+          <text x="565" y="105" text-anchor="middle" class="cn ctag">再慢慢拼回</text>
+          <!-- 箭头流程 -->
+          <path d="M210 75 H243" stroke="var(--g600)" stroke-width="3" marker-end="url(#ar)"/>
+          <path d="M435 75 H468" stroke="var(--g600)" stroke-width="3" marker-end="url(#ar)"/>
+          <!-- 报错提示 -->
+          <rect x="20" y="140" width="640" height="64" rx="12" style="fill:var(--g100);stroke:var(--g300)" stroke-width="1.6"/>
+          <text x="340" y="170" text-anchor="middle" class="cn cname">💬 报错不是丢脸，是程序在说"这里不对"</text>
+          <text x="340" y="192" text-anchor="middle" class="cn ctag">把红色提示读一遍，它往往直接告诉你第几块、什么错</text>
+          <!-- 修复闭环 -->
+          <rect x="20" y="220" width="640" height="56" rx="12" style="fill:#fff;stroke:var(--g700)" stroke-width="1.6"/>
+          <text x="340" y="248" text-anchor="middle" class="cn cname">🔁 发现错 → 想原因 → 改一处 → 再运行 → 还错就再来一遍</text>
+          <text x="340" y="268" text-anchor="middle" class="cn ctag">调试 = 耐心的小侦探，不是一次写对的天才</text>
+        </svg>
+        <figcaption class="figcaption">
+          调试三招：单步看症状、看变量找病根、拆开试再拼回；报错是线索不是失败。
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- 🖱️ 动手做 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖱️</span>动手做</div>
+      <div class="steps" data-stage="low">
+        <div class="step"><b>先别改。</b>程序一乱，先停下来看它"怎么乱"。</div>
+        <div class="step"><b>单步看。</b>右键脚本「单步执行」，一块块走，找出卡住的那块。</div>
+        <div class="step"><b>补一块。</b>像巴迪忘放"碰边反弹"，找到就补上，再运行。</div>
+      </div>
+      <div class="steps" data-stage="high">
+        <div class="step"><b>看变量。</b>把关键变量显示出来，对比"该是多少 / 实际多少"。</div>
+        <div class="step"><b>拆循环。</b>循环里出错，先去掉循环让核心动起来，再逐步加回。</div>
+        <div class="step"><b>读报错。</b>红字提示直接读，定位第几块、什么类型错。</div>
+        <div class="step"><b>小挑战。</b>故意埋 3 个 bug（漏反弹、变量没归零、拼错条件），互相当医生修好。</div>
+      </div>
+    </div>
+
+    <!-- 💡 贴士 -->
+    <div class="block">
+      <div class="block-h"><span class="em">💡</span>素养小贴士</div>
+      <div class="tip">
+        <div class="hd">会改错，比一次写对更厉害</div>
+        <p>初学者最怕"红了""乱了"，巴不得马上删掉重来。可真正的能力，是<b>面对出错不慌</b>：先观察、再假设、改一处试一处。这套「调试思维」不只编程用，写作文改病句、做实验找失败原因，全是同一个套路。</p>
+        <p>所以——<b>把 bug 当线索，把报错当提示</b>。程序比你诚实，它从不撒谎，只是说得直白了点。</p>
+      </div>
+    </div>
+
+    <!-- 🏆 闯关 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🏆</span>闯关任务</div>
+      <div class="quest">
+        <div class="hd">关卡：我是小医生</div>
+        <p data-stage="low">用「单步看 + 看变量 + 拆开试」修好一个"小猫冲出舞台"的 bug。闯关成功。</p>
+        <p data-stage="high">修好藏在循环/条件里的多个 bug，并说出每个 bug 的"病因"。闯关成功。</p>
+      </div>
+    </div>
+
+    <!-- 小测验 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🧩</span>试试看</div>
+      <div class="quiz">
+        <div class="hd">两道小题，选一个你觉得对的</div>
+        <div class="q" data-hint="程序出错时，第一步该怎么做？">
+          <div class="qt">1. 程序乱套了，第一件事该？</div>
+          <div class="qopts">
+            <button class="qopt">立刻删掉重做</button>
+            <button class="qopt" data-ok="1" data-fb="先观察「怎么乱」，再定位原因——调试是看病不是推倒重来。">先看清它怎么乱</button>
+            <button class="qopt">关电脑休息</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+        <div class="q" data-hint="想找出「哪块积木卡住」，用什么方法？">
+          <div class="qt">2. 想知道卡在哪块积木，最好用？</div>
+          <div class="qopts">
+            <button class="qopt">单步执行</button>
+            <button class="qopt" data-ok="1" data-fb="单步执行一块块走，能看清程序在哪一步出问题。">单步执行</button>
+            <button class="qopt">大声念咒语</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ⭐ 自评 -->
+    <div class="block">
+      <div class="block-h"><span class="em">⭐</span>自评卡</div>
+      <div class="selfcheck">
+        <div class="hd">做到了就打勾（打勾会被记住，下次打开还在）</div>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>出错时我先观察再改</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会单步看卡在哪</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我把报错当线索</span></label>
+        <label class="check" data-stage="high"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会看变量、拆循环找 bug</span></label>
+      </div>
+    </div>
+
+    <div class="done-wrap">
+      <button class="done-btn" data-done-btn></button>
+    </div>
+
+    <div class="lesson-nav" data-nav="auto"></div>
+
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="fl">
+    <a href="../index.html">首页</a>
+    <a href="../juan7.html">第七辑导读</a>
+    <a href="../teacher.html">给老师和家长</a>
+    <a href="../about.html">关于本课</a>
+  </div>
+  蓝兔巴迪 · 电脑第一课　|　常州市新北区汤庄桥小学　教师发展处
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>

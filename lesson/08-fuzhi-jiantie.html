@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>第 8 课 · 复制、剪切、粘贴、重命名 —— 蓝兔巴迪·电脑第一课</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script>(function(){try{var t=localStorage.getItem('dn-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('dn-stage');document.documentElement.setAttribute('data-stage',(s==='high'?'high':'low'));}catch(e){}})();</script>
+</head>
+<body data-root="../" data-page="L08" data-lesson="08" data-stage="low">
+
+<div class="readbar"></div>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <button class="icon-btn menu-btn" data-menu-toggle aria-label="打开目录">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="brand" href="../index.html">
+      <span class="brand-logo">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <ellipse cx="9" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(-14 9 6)"/>
+          <ellipse cx="17" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(14 17 6)"/>
+          <circle cx="13" cy="15.5" r="7.2" fill="#fff"/>
+          <circle cx="10.3" cy="14.4" r="1.15" fill="#1565C0"/>
+          <circle cx="15.7" cy="14.4" r="1.15" fill="#1565C0"/>
+          <path d="M13 17.4c-.9 0-1.6.5-1.6.5s.7.9 1.6.9 1.6-.9 1.6-.9-.7-.5-1.6-.5z" fill="#F0864F"/>
+        </svg>
+      </span>
+      <span class="brand-txt"><strong>蓝兔巴迪 · 电脑第一课</strong><span>COMPUTER FIRST LESSON</span></span>
+    </a>
+    <div class="topbar-spacer"></div>
+    <div class="stage-switch" role="group" aria-label="选择学段">
+      <button data-set-stage="low">🌱 三四年级</button>
+      <button data-set-stage="high">🚀 五六年级</button>
+    </div>
+    <button class="icon-btn" data-theme-toggle aria-label="切换深浅色"></button>
+  </div>
+</header>
+
+<div class="mask"></div>
+
+<div class="shell">
+  <aside class="sidebar" data-render="sidebar"></aside>
+
+  <main class="main">
+
+    <nav class="crumb">
+      <a href="../index.html">首页</a><span class="sep">/</span>
+      <a href="../juan2.html">第二辑</a><span class="sep">/</span>第 8 课
+    </nav>
+
+    <div class="lesson-head">
+      <div class="lesson-no">📦 第二辑 · 第 8 课</div>
+      <h1>复制、剪切、粘贴、重命名</h1>
+      <div class="lesson-meta">
+        <span>🕐 约 7 分钟</span>
+        <span>🎯 计算思维</span>
+        <span>🧰 几个待整理的文件</span>
+      </div>
+    </div>
+
+    <!-- 🎯 目标 -->
+    <div class="block">
+      <div class="goal">
+        <div class="k">🎯 一句话目标</div>
+        <p data-stage="low">学完这课，你用 Ctrl+C 复制、Ctrl+V 粘贴做出文件的「副本」，用 F2 给文件改名——整理文件不用一个个手动画。</p>
+        <p data-stage="high">学完这课，你能分清<b>复制</b>（留原件、多一份）和<b>剪切</b>（搬走原件）的差异，会批量选中、整套搬家，懂得「先选中，再操作」这个铁律。</p>
+      </div>
+    </div>
+
+    <!-- 📖 故事 -->
+    <div class="block">
+      <div class="block-h"><span class="em">📖</span>小故事</div>
+      <div class="story">
+        <p class="narr">巴迪要把桌上的作业搬进「作业」文件夹，可他笨办法是一个一个点开、另存为……十分钟才弄了两个。</p>
+        <div class="dialog">
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">蓝兔，搬个文件怎么比搬家还累？我手都点酸了。</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">因为你用了「笨办法」。记住三兄弟：<b>复制 Ctrl+C</b>、<b>剪切 Ctrl+X</b>、<b>粘贴 Ctrl+V</b>。先选中文件，按一下，它就记在电脑的「剪贴板」里了。</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">然后去目标文件夹，按 <b>Ctrl+V</b>——「噗」，一份一模一样的就出现了。这叫<b>复制</b>，原件还在原地。</div></div>
+          </div>
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">那复制和剪切，不都是「搬」吗？</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">差远了。<b>复制</b>是「生个双胞胎」，原件留着；<b>剪切</b>是「真搬家」，原件跟你走、原地没了。想备份用复制，想挪窝用剪切。</div></div>
+          </div>
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">懂了！改名还有个快捷键 F2，按一下就能改，不用慢慢点两下名字。</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🖼️ 图解 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖼️</span>一张图看懂</div>
+      <figure class="figure">
+        <svg viewBox="0 0 680 380" role="img" aria-label="复制粘贴流程：选中文件，Ctrl+C 进剪贴板，Ctrl+V 出副本；剪切 Ctrl+X 移走原件">
+          <defs>
+            <style>
+              .cn{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+              .cname{font-size:14px;font-weight:700;fill:var(--ink)}
+              .ctag{font-size:12.5px;font-weight:600}
+              .cst{stroke:var(--g600);stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+              .cf{fill:var(--g100);stroke:var(--g400);stroke-width:2.2;stroke-linejoin:round}
+              .cnum{font-size:13px;font-weight:800;fill:#fff}
+            </style>
+          </defs>
+
+          <!-- 源文件 -->
+          <g>
+            <rect x="40" y="150" width="86" height="70" rx="12" class="cf"/>
+            <path d="M62 166 l10 14 h-20z" style="fill:var(--yellow)" stroke="none"/>
+            <text x="83" y="246" text-anchor="middle" class="cn cname">作业.docx</text>
+            <circle style="fill:var(--g600)" cx="48" cy="138" r="12"/>
+            <text x="48" y="133" text-anchor="middle" class="cn cnum">1</text>
+          </g>
+
+          <!-- Ctrl+C 箭头 -->
+          <path d="M150 185 h60" class="cst" stroke-width="2.6" marker-end="url(#ar)"/>
+          <text x="178" y="172" text-anchor="middle" class="cn ctag" style="fill:var(--g700)">Ctrl+C</text>
+
+          <!-- 剪贴板 -->
+          <g>
+            <rect x="228" y="120" width="92" height="120" rx="12" style="fill:var(--card);stroke:var(--g500)" stroke-width="2.6"/>
+            <rect x="252" y="108" width="44" height="20" rx="6" style="fill:var(--g500)" stroke="none"/>
+            <line x1="248" y1="156" x2="300" y2="156" class="cst" stroke-width="2" opacity=".5"/>
+            <line x1="248" y1="178" x2="300" y2="178" class="cst" stroke-width="2" opacity=".5"/>
+            <line x1="248" y1="200" x2="284" y2="200" class="cst" stroke-width="2" opacity=".5"/>
+            <text x="274" y="262" text-anchor="middle" class="cn cname">剪贴板</text>
+            <circle style="fill:var(--g600)" cx="228" cy="108" r="12"/>
+            <text x="228" y="103" text-anchor="middle" class="cn cnum">2</text>
+          </g>
+
+          <!-- Ctrl+V 箭头 -->
+          <path d="M336 185 h58" class="cst" stroke-width="2.6" marker-end="url(#ar)"/>
+          <text x="364" y="172" text-anchor="middle" class="cn ctag" style="fill:var(--g700)">Ctrl+V</text>
+
+          <!-- 副本 -->
+          <g>
+            <rect x="412" y="150" width="86" height="70" rx="12" class="cf"/>
+            <path d="M434 166 l10 14 h-20z" style="fill:var(--yellow)" stroke="none"/>
+            <text x="455" y="246" text-anchor="middle" class="cn cname">作业-副本.docx</text>
+            <circle style="fill:var(--g600)" cx="420" cy="138" r="12"/>
+            <text x="420" y="133" text-anchor="middle" class="cn cnum">3</text>
+          </g>
+
+          <!-- 箭头 marker -->
+          <defs>
+            <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+              <path d="M0 0 L9 4.5 L0 9 z" style="fill:var(--g600)"/>
+            </marker>
+          </defs>
+
+          <!-- 重命名铅笔 -->
+          <g transform="translate(548,150)">
+            <rect x="0" y="40" width="86" height="70" rx="12" class="cf"/>
+            <path d="M22 56 l10 14 h-20z" style="fill:var(--yellow)" stroke="none"/>
+            <rect x="20" y="-6" width="46" height="14" rx="4" style="fill:var(--orange)" stroke="none" transform="rotate(-38 43 1)"/>
+            <text x="43" y="140" text-anchor="middle" class="cn cname">F2 改名</text>
+          </g>
+
+          <text x="340" y="328" text-anchor="middle" class="cn ctag" style="fill:var(--ink2)">复制＝生副本（原件留着）　　剪切 Ctrl+X＝真搬家（原件走）</text>
+        </svg>
+        <figcaption class="figcap">
+          先「选中」再「操作」——这是文件世界的铁律。复制留原件、剪切搬原件，粘贴都靠 Ctrl+V。切到「🚀 五六年级」，看剪贴板到底记了什么。
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- 🖱️ 动手做 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖱️</span>动手做</div>
+      <div class="steps" data-stage="low">
+        <div class="step"><b>选中。</b>单击一个文件，它变蓝，就「被你拿在手里」了。没选中，后面的操作都没目标。</div>
+        <div class="step"><b>复制。</b>按住 Ctrl 再按 C（Ctrl+C），文件被「记下来」了。</div>
+        <div class="step"><b>粘贴。</b>打开「作业」文件夹，按 Ctrl+V——「噗」，一模一样的副本来了。</div>
+        <div class="step"><b>改名。</b>慢慢点文件名两下（不是图标），变蓝就打字改；或者选中后按 <b>F2</b> 直接改。</div>
+        <div class="step"><b>核对。</b>确认原件还在桌面、副本在文件夹里。两个都在，说明你做的是复制。</div>
+      </div>
+      <div class="steps" data-stage="high">
+        <div class="step"><b>对比复制与剪切。</b>同一个文件，先 Ctrl+C 再 Ctrl+V（桌面多一份）；再选中按 Ctrl+X 再 Ctrl+V 到别处（原件消失，只在新地方有）。体会「留」与「走」。</div>
+        <div class="step"><b>批量选。</b>按住鼠标左键拖一个大框，框住一片文件；或按住 Ctrl 一个个点加选；或 Ctrl+A 全选。一批文件一次搬完。</div>
+        <div class="step"><b>整套搬家。</b>把一个文件夹整体选中，Ctrl+X 到新位置 Ctrl+V——连里面的小文件一起走，不用拆开搬。</div>
+        <div class="step"><b>备份意识。</b>删重要东西前，先 Ctrl+C 存一份到 U 盘或别处。复制就是最便宜的「后悔药」。</div>
+        <div class="step"><b>想一想。</b>剪贴板一次能记几个东西？（提示：绝大多数系统只记「最近一次」复制/剪切的内容——所以连复制两次，第一次就被冲掉了。）</div>
+      </div>
+    </div>
+
+    <!-- 💡 贴士 -->
+    <div class="block">
+      <div class="block-h"><span class="em">💡</span>素养小贴士</div>
+      <div class="tip">
+        <div class="hd">先选中，再操作——少一步都错</div>
+        <p>电脑最讲秩序：它只对手里「当前选中」的东西干活。你没选中就按 Ctrl+C，它一脸懵——复制了个空气。所以动手前，先看一眼：要操作的那一个/那一批，变蓝了吗？</p>
+        <p>还有个顺口溜：<b>C 是 copy（复制留着），X 是 cut（剪切搬走），V 是 view/paste（粘贴贴上）</b>。三个键左手一握就够，比菜单点来点去快十倍。</p>
+      </div>
+    </div>
+
+    <!-- 🏆 闯关 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🏆</span>闯关任务</div>
+      <div class="quest">
+        <div class="hd">关卡：三分钟整理大作战</div>
+        <p data-stage="low">桌面上散着五个文件，用 Ctrl+C / Ctrl+V 把它们各做一份副本、塞进「作业」文件夹，再用 F2 把副本改名为看得懂的名字。原件都还在，闯关成功。</p>
+        <p data-stage="high">把桌面上十个以上文件，按类型用 Ctrl+X / Ctrl+V 分进「我的画」「作业」「音乐」三个文件夹（原件要从桌面消失，才算真正归位）。再用 Ctrl+A 验证每个文件夹数量对得上。</p>
+      </div>
+    </div>
+
+    <!-- 小测验 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🧩</span>试试看</div>
+      <div class="quiz">
+        <div class="hd">两道小题，选一个你觉得对的</div>
+
+        <div class="q" data-hint="想「贴一份一样的出来」，按哪个？">
+          <div class="qt">1. 复制之后，要「贴出副本」该按什么？</div>
+          <div class="qopts">
+            <button class="qopt">Ctrl+X</button>
+            <button class="qopt" data-ok="1" data-fb="Ctrl+V 是粘贴（paste），把剪贴板里的内容「贴」一份出来。Ctrl+X 是剪切，Ctrl+C 才是复制。">Ctrl+V</button>
+            <button class="qopt">Ctrl+Z</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+
+        <div class="q" data-hint="哪个会让「原件原地消失」？">
+          <div class="qt">2. 下面哪个是「真搬家」，原件会不在原地了？</div>
+          <div class="qopts">
+            <button class="qopt" data-ok="1" data-fb="Ctrl+X 是剪切（cut），原件被搬走、原地没了；Ctrl+C 复制才会留着原件。">Ctrl+X 剪切</button>
+            <button class="qopt">Ctrl+C 复制</button>
+            <button class="qopt">F2 改名</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ⭐ 自评 -->
+    <div class="block">
+      <div class="block-h"><span class="em">⭐</span>自评卡</div>
+      <div class="selfcheck">
+        <div class="hd">做到了就打勾（打勾会被记住，下次打开还在）</div>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我知道「先选中，再操作」这个顺序</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会用 Ctrl+C / Ctrl+V 做出文件副本</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会用 F2 给文件改名</span></label>
+        <label class="check" data-stage="high"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我能分清复制（留原件）与剪切（搬走）的差异</span></label>
+      </div>
+    </div>
+
+    <div class="done-wrap">
+      <button class="done-btn" data-done-btn></button>
+    </div>
+
+    <div class="lesson-nav" data-nav="auto"></div>
+
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="fl">
+    <a href="../index.html">首页</a>
+    <a href="../juan2.html">第二辑导读</a>
+    <a href="../teacher.html">给老师和家长</a>
+    <a href="../about.html">关于本课</a>
+  </div>
+  蓝兔巴迪 · 电脑第一课　|　常州市新北区汤庄桥小学　教师发展处
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>

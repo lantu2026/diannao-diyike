@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>第 20 课 · 浏览器与网址 —— 蓝兔巴迪·电脑第一课</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script>(function(){try{var t=localStorage.getItem('dn-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('dn-stage');document.documentElement.setAttribute('data-stage',(s==='high'?'high':'low'));}catch(e){}})();</script>
+</head>
+<body data-root="../" data-page="L20" data-lesson="20" data-stage="low">
+
+<div class="readbar"></div>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <button class="icon-btn menu-btn" data-menu-toggle aria-label="打开目录">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="brand" href="../index.html">
+      <span class="brand-logo">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <ellipse cx="9" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(-14 9 6)"/>
+          <ellipse cx="17" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(14 17 6)"/>
+          <circle cx="13" cy="15.5" r="7.2" fill="#fff"/>
+          <circle cx="10.3" cy="14.4" r="1.15" fill="#1565C0"/>
+          <circle cx="15.7" cy="14.4" r="1.15" fill="#1565C0"/>
+          <path d="M13 17.4c-.9 0-1.6.5-1.6.5s.7.9 1.6.9 1.6-.9 1.6-.9-.7-.5-1.6-.5z" fill="#F0864F"/>
+        </svg>
+      </span>
+      <span class="brand-txt"><strong>蓝兔巴迪 · 电脑第一课</strong><span>COMPUTER FIRST LESSON</span></span>
+    </a>
+    <div class="topbar-spacer"></div>
+    <div class="stage-switch" role="group" aria-label="选择学段">
+      <button data-set-stage="low">🌱 三四年级</button>
+      <button data-set-stage="high">🚀 五六年级</button>
+    </div>
+    <button class="icon-btn" data-theme-toggle aria-label="切换深浅色"></button>
+  </div>
+</header>
+
+<div class="mask"></div>
+
+<div class="shell">
+  <aside class="sidebar" data-render="sidebar"></aside>
+
+  <main class="main">
+
+    <nav class="crumb">
+      <a href="../index.html">首页</a><span class="sep">/</span>
+      <a href="../juan5.html">第五辑</a><span class="sep">/</span>第 20 课
+    </nav>
+
+    <div class="lesson-head">
+      <div class="lesson-no">📦 第五辑 · 第 20 课</div>
+      <h1>浏览器与网址</h1>
+      <div class="lesson-meta">
+        <span>🕐 约 6 分钟</span>
+        <span>🎯 信息意识 · 数字化学习</span>
+        <span>🧰 一台能上网的电脑</span>
+      </div>
+    </div>
+
+    <!-- 🎯 目标 -->
+    <div class="block">
+      <div class="goal">
+        <div class="k">🎯 一句话目标</div>
+        <p data-stage="low">学完这课，你能打开「浏览器」、在地址栏输入一个网址回车打开网页，并大致看懂网址里「www」和「域名」是啥。</p>
+        <p data-stage="high">学完这课，你还能认出网址开头的 <b>https</b>（带小锁、更安全）、用「标签页」同时开好几个网页、把常去的网站收进书签，上网更顺手。</p>
+      </div>
+    </div>
+
+    <!-- 📖 故事 -->
+    <div class="block">
+      <div class="block-h"><span class="em">📖</span>小故事</div>
+      <div class="story">
+        <p class="narr">科学课要查「为什么天是蓝的」，巴迪第一次坐到能上网的电脑前，却不知从哪点。</p>
+        <div class="dialog">
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">蓝兔，我想查资料，可屏幕上花花绿绿，哪个能带我「上网」？</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">用<b>浏览器</b>——就是那个地球仪或小船图标。它像一辆出租车，把你送到想去的网页。打开它，上面那条长条叫<b>地址栏</b>。</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">在地址栏输入<b>网址</b>再回车，就像告诉出租车门牌号。网址一般是 <b>https://www.名字.后缀</b>，比如学校的网站。www 是「万维网」，后面那段是这家网站的「门牌」。</div></div>
+          </div>
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">那网址前面有时是 http 有时是 https，差个 s 有关系吗？</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">有！<b>https 多一把小锁</b>，表示你和网站之间的路被加密了，别人偷看不着。见到带锁的 https，填账号密码才放心。</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🖼️ 图解 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖼️</span>一张图看懂</div>
+      <figure class="figure">
+        <svg viewBox="0 0 680 320" role="img" aria-label="浏览器窗口：地址栏里一个网址 https://www.xuexiao.cn，标注 https小锁、www、域名三部分">
+          <defs>
+            <style>
+              .cn{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+              .cname{font-size:14px;font-weight:700;fill:var(--ink)}
+              .ctag{font-size:12px;font-weight:600;fill:var(--ink2)}
+            </style>
+          </defs>
+          <rect x="20" y="20" width="640" height="280" rx="16" style="fill:var(--g50);stroke:var(--g300)" stroke-width="2"/>
+          <!-- 标签栏 -->
+          <rect x="36" y="40" width="608" height="34" rx="8" style="fill:var(--card);stroke:var(--g400)" stroke-width="1.6"/>
+          <rect x="48" y="50" width="120" height="14" rx="7" style="fill:var(--g100)"/>
+          <text x="108" y="61" text-anchor="middle" class="cn" style="font-size:11px;fill:var(--ink2)">新标签页 +</text>
+          <!-- 地址栏 -->
+          <rect x="36" y="86" width="608" height="40" rx="20" style="fill:var(--card);stroke:var(--g400)" stroke-width="2"/>
+          <circle cx="64" cy="106" r="9" style="fill:var(--g600)"/>
+          <path d="M58 106 a6 6 0 1 1 12 0" fill="none" stroke="#fff" stroke-width="2.4"/>
+          <text x="84" y="111" class="cn" style="font-size:14px;fill:var(--ink)">https://www.xuexiao.cn</text>
+          <!-- 锁 -->
+          <rect x="600" y="98" width="20" height="16" rx="3" style="fill:var(--g700)"/>
+          <path d="M604 98 v-4 a6 6 0 0 1 12 0 v4" fill="none" stroke="var(--g700)" stroke-width="2.4"/>
+          <!-- 标注 -->
+          <g>
+            <line x1="150" y1="86" x2="150" y2="60" stroke="var(--g600)" stroke-width="2" marker-end="url(#ar)"/>
+            <text x="150" y="52" text-anchor="middle" class="cn ctag" style="fill:var(--g700)">🔒 https＝加密安全</text>
+            <line x1="250" y1="126" x2="250" y2="156" stroke="var(--orange)" stroke-width="2" marker-end="url(#ar2)"/>
+            <text x="250" y="176" text-anchor="middle" class="cn ctag" style="fill:var(--orange)">www＝万维网</text>
+            <line x1="420" y1="126" x2="420" y2="156" stroke="var(--purple)" stroke-width="2" marker-end="url(#ar3)"/>
+            <text x="420" y="176" text-anchor="middle" class="cn ctag" style="fill:var(--purple)">xuexiao.cn＝网站门牌(域名)</text>
+          </g>
+          <rect x="36" y="200" width="608" height="86" rx="10" style="fill:#fff;stroke:var(--g300)" stroke-width="1.6"/>
+          <text x="60" y="232" class="cn cname">（网页内容出现在这里）</text>
+          <text x="60" y="262" class="cn ctag">天为什么是蓝的？因为阳光里蓝光最容易被空气散射……</text>
+          <defs>
+            <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="var(--g600)"/></marker>
+            <marker id="ar2" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="var(--orange)"/></marker>
+            <marker id="ar3" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="var(--purple)"/></marker>
+          </defs>
+        </svg>
+        <figcaption class="figcap">
+          浏览器 = 上网的出租车；网址 = 门牌号。认准 https 小锁再填账号密码。切到「🚀 五六年级」看标签页和书签怎么用。
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- 🖱️ 动手做 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖱️</span>动手做</div>
+      <div class="steps" data-stage="low">
+        <div class="step"><b>打开浏览器。</b>双击那个地球仪/小船图标，窗口出来。</div>
+        <div class="step"><b>输网址。</b>点地址栏，输入一个你熟悉的网址（如学校网站），按回车。</div>
+        <div class="step"><b>看网页。</b>页面出来后，用鼠标滚轮往下看内容。</div>
+      </div>
+      <div class="steps" data-stage="high">
+        <div class="step"><b>认小锁。</b>看地址栏开头是不是 https 带锁；填账号密码前先确认它在。</div>
+        <div class="step"><b>开多标签。</b>点「+」开新标签页，一个标签查资料、一个标签看视频，互不打架。</div>
+        <div class="step"><b>加书签。</b>把常去的网站点「☆」收进书签栏，下次一点就到，不用再背网址。</div>
+        <div class="step"><b>小挑战。</b>开两个标签页分别打开两个网站，再把其中一个加书签。</div>
+      </div>
+    </div>
+
+    <!-- 💡 贴士 -->
+    <div class="block">
+      <div class="block-h"><span class="em">💡</span>素养小贴士</div>
+      <div class="tip">
+        <div class="hd">网址不是乱敲的，认门牌更要认锁</div>
+        <p>网址输错一个字母，可能就跑到另一个网站（甚至假网站）。所以尽量用书签或搜索点进去，少手敲长网址。更要紧的是：<b>凡是让填账号、密码、手机号的地方，先盯一眼是不是 https 带锁</b>——没有锁，信息就像明信片被人看光。</p>
+      </div>
+    </div>
+
+    <!-- 🏆 闯关 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🏆</span>闯关任务</div>
+      <div class="quest">
+        <div class="hd">关卡：坐上上网出租车</div>
+        <p data-stage="low">打开浏览器，输入一个正确网址回车打开网页，能指出来网址里的 www 和域名分别在哪。闯关成功。</p>
+        <p data-stage="high">打开两个标签页、把常去网站加书签，并讲清 http 和 https 差在哪、为什么 https 更安全。闯关成功。</p>
+      </div>
+    </div>
+
+    <!-- 小测验 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🧩</span>试试看</div>
+      <div class="quiz">
+        <div class="hd">两道小题，选一个你觉得对的</div>
+        <div class="q" data-hint="想上网看网页，靠哪个软件当出租车？">
+          <div class="qt">1. 要打开一个网页，我们主要靠下面哪个？</div>
+          <div class="qopts">
+            <button class="qopt">画图软件</button>
+            <button class="qopt" data-ok="1" data-fb="浏览器（地球仪/小船图标）负责打开网页，是上网的「出租车」。">浏览器</button>
+            <button class="qopt">记事本</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+        <div class="q" data-hint="网址开头多一个 s、带小锁，意味路被加密了。">
+          <div class="qt">2. 网址开头是 https（带小锁）比 http 好，是因为？</div>
+          <div class="qopts">
+            <button class="qopt">页面更好看</button>
+            <button class="qopt" data-ok="1" data-fb="https 表示连接被加密，你填的信息不容易被偷看，所以更安全。">连接被加密、更安全</button>
+            <button class="qopt">网速更快</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ⭐ 自评 -->
+    <div class="block">
+      <div class="block-h"><span class="em">⭐</span>自评卡</div>
+      <div class="selfcheck">
+        <div class="hd">做到了就打勾（打勾会被记住，下次打开还在）</div>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会打开浏览器、输入网址打开网页</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我看得懂网址里的 www 和域名</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我知道 https 带锁更安全</span></label>
+        <label class="check" data-stage="high"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会用标签页和书签，让上网更顺</span></label>
+      </div>
+    </div>
+
+    <div class="done-wrap">
+      <button class="done-btn" data-done-btn></button>
+    </div>
+
+    <div class="lesson-nav" data-nav="auto"></div>
+
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="fl">
+    <a href="../index.html">首页</a>
+    <a href="../juan5.html">第五辑导读</a>
+    <a href="../teacher.html">给老师和家长</a>
+    <a href="../about.html">关于本课</a>
+  </div>
+  蓝兔巴迪 · 电脑第一课　|　常州市新北区汤庄桥小学　教师发展处
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>

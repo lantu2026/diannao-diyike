@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>编程软件初见面 · 蓝兔巴迪·电脑第一课（讲义版）</title>
+<meta name="description" content="编程软件初见面——蓝兔巴迪·电脑第一课讲义版，可投屏、可打印、可单课下发。">
+<style>
+/* ============================================================
+   《蓝兔巴迪·电脑第一课》站点样式
+   设计语言：沿用教师工作台的绿色系与卡片质感，调亮、调圆、调大
+   ============================================================ */
+
+/* ---------- 1. 设计变量 ---------- */
+:root{
+  /* 讲义版配色：蓝 + 青 + 琥珀（承接样板课基线） */
+  --g900:#0D3B66; --g800:#0F4C81; --g700:#1565C0; --g600:#1976D2;
+  --g500:#1E88E5; --g400:#42A5F5; --g300:#90CAF9; --g200:#BBDEFB;
+  --g100:#E3F2FD; --g50:#F1F8FE;
+
+  --orange:#00897B; --orange-soft:#E3F5F2;
+  --blue:#1565C0;   --blue-soft:#E8F1FB;
+  --yellow:#F9A825; --yellow-soft:#FFF6E0;
+  --purple:#7B1FA2; --purple-soft:#F3E5F5;
+  --red:#C62828;    --red-soft:#FDECEC;
+
+  --bg:#F6F8FC;
+  --card:#FFFFFF;
+  --ink:#1F2A37;
+  --ink2:#4B5563;
+  --ink3:#8A94A6;
+  --line:#E3E8EF;
+  --line2:#EEF2F7;
+
+  --r:16px; --r-sm:12px; --r-lg:22px;
+  --sh:0 3px 14px rgba(21,101,192,.07);
+  --sh2:0 10px 30px rgba(21,101,192,.12);
+  --sh3:0 18px 50px rgba(13,59,102,.18);
+
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --mono:"Cascadia Code",Consolas,"Courier New",monospace;
+}
+
+/* 深色模式 */
+html[data-theme="dark"]{
+  --bg:#101A24;
+  --card:#182432;
+  --ink:#E6F0FA;
+  --ink2:#A9BED4;
+  --ink3:#7490AD;
+  --line:#27384A;
+  --line2:#1F2E3C;
+  --g50:#16222F; --g100:#1C2E40; --g200:#24415A; --g300:#2E557A;
+  --g400:#3B6EA5; --g500:#4F8FD6; --g600:#5B9CE0; --g700:#82B4E8;
+  --g800:#A9CCF1; --g900:#CFE6FA;
+  --orange-soft:#13343A; --blue-soft:#14304E; --yellow-soft:#3A3015;
+  --purple-soft:#282444; --red-soft:#3A2422;
+  --sh:0 2px 10px rgba(0,0,0,.3);
+  --sh2:0 10px 30px rgba(0,0,0,.4);
+  --sh3:0 18px 50px rgba(0,0,0,.5);
+}
+
+/* ---------- 2. 基础重置 ---------- */
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{
+  font-family:var(--font);
+  font-size:17px;line-height:1.85;
+  color:var(--ink);background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  transition:background .25s ease,color .25s ease;
+}
+img,svg{max-width:100%;display:block}
+a{color:var(--g600);text-decoration:none}
+a:hover{color:var(--g500);text-decoration:underline}
+button{font-family:inherit;font-size:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul,ol{padding-left:1.4em}
+li{margin:.3em 0}
+:focus-visible{outline:3px solid var(--g400);outline-offset:2px;border-radius:6px}
+
+/* ---------- 3. 阅读进度条 ---------- */
+.readbar{
+  position:fixed;top:0;left:0;height:4px;width:0;z-index:200;
+  background:linear-gradient(90deg,var(--g500),var(--orange));
+  transition:width .1s linear;
+}
+
+/* ---------- 4. 顶栏 ---------- */
+.topbar{
+  position:sticky;top:0;z-index:150;
+  background:var(--card);
+  background:color-mix(in srgb,var(--card) 88%,transparent);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-in{
+  max-width:1240px;margin:0 auto;padding:10px 20px;
+  display:flex;align-items:center;gap:14px;
+}
+.brand{display:flex;align-items:center;gap:11px;flex-shrink:0}
+.brand-logo{
+  width:42px;height:42px;border-radius:13px;flex-shrink:0;
+  background:linear-gradient(135deg,var(--g600),var(--g400));
+  display:grid;place-items:center;box-shadow:0 3px 10px rgba(58,133,96,.3);
+}
+.brand-txt strong{display:block;font-size:16.5px;font-weight:700;letter-spacing:.2px;line-height:1.2}
+.brand-txt span{display:block;font-size:11.5px;color:var(--ink3);letter-spacing:.6px}
+.topbar-spacer{flex:1}
+
+/* 学段切换 */
+.stage-switch{
+  display:flex;gap:3px;padding:3px;border-radius:999px;
+  background:var(--g100);border:1px solid var(--line);flex-shrink:0;
+}
+.stage-switch button{
+  padding:6px 14px;border-radius:999px;font-size:14px;font-weight:600;
+  color:var(--ink2);transition:.2s;white-space:nowrap;
+}
+.stage-switch button.on{
+  background:var(--card);color:var(--g700);box-shadow:0 2px 6px rgba(21,101,192,.14);
+}
+
+/* 图标按钮 */
+.icon-btn{
+  width:40px;height:40px;border-radius:12px;display:grid;place-items:center;
+  color:var(--ink2);border:1px solid var(--line);background:var(--card);
+  transition:.2s;flex-shrink:0;
+}
+.icon-btn:hover{background:var(--g50);color:var(--g700);border-color:var(--g200)}
+.menu-btn{display:none}
+
+/* ---------- 5. 布局 ---------- */
+.shell{max-width:1240px;margin:0 auto;padding:0 20px;display:flex;gap:32px;align-items:flex-start}
+.sidebar{
+  width:246px;flex-shrink:0;position:sticky;top:84px;
+  max-height:calc(100vh - 108px);overflow-y:auto;
+  padding:18px 0 40px;
+}
+.sidebar::-webkit-scrollbar{width:6px}
+.sidebar::-webkit-scrollbar-thumb{background:var(--g200);border-radius:3px}
+.side-title{
+  font-size:12px;font-weight:700;letter-spacing:1.2px;color:var(--ink3);
+  padding:14px 12px 7px;text-transform:uppercase;
+}
+.side-link{
+  display:flex;align-items:center;gap:9px;padding:9px 12px;border-radius:11px;
+  font-size:14.5px;color:var(--ink2);transition:.16s;line-height:1.45;
+}
+.side-link:hover{background:var(--g50);color:var(--g700);text-decoration:none}
+.side-link.on{background:var(--g100);color:var(--g700);font-weight:600}
+.side-link .n{
+  width:22px;height:22px;border-radius:7px;flex-shrink:0;display:grid;place-items:center;
+  font-size:11.5px;font-weight:700;background:var(--g100);color:var(--g600);
+  font-variant-numeric:tabular-nums;
+}
+.side-link.on .n{background:var(--g500);color:#fff}
+.side-link .n.done{background:var(--g500);color:#fff}
+.side-link.soon{opacity:.5;cursor:not-allowed}
+.side-link.soon:hover{background:none;color:var(--ink2)}
+
+.main{flex:1;min-width:0;padding-bottom:80px}
+
+/* ---------- 6. 面包屑 ---------- */
+.crumb{font-size:13.5px;color:var(--ink3);padding:26px 0 4px}
+.crumb a{color:var(--ink3)}
+.crumb a:hover{color:var(--g600)}
+.crumb .sep{margin:0 7px;opacity:.6}
+
+/* ---------- 7. 课页头部 ---------- */
+.lesson-head{padding:8px 0 26px;border-bottom:1px dashed var(--line);margin-bottom:30px}
+.lesson-no{
+  display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;
+  color:var(--g600);background:var(--g100);padding:5px 13px;border-radius:999px;
+  letter-spacing:.4px;margin-bottom:14px;
+}
+.lesson-head h1{
+  font-size:clamp(25px,3.6vw,36px);line-height:1.32;font-weight:800;
+  letter-spacing:-.4px;margin-bottom:12px;
+}
+.lesson-meta{display:flex;flex-wrap:wrap;gap:16px;font-size:13.5px;color:var(--ink3)}
+.lesson-meta span{display:flex;align-items:center;gap:5px}
+
+/* ---------- 8. 卡片与七件套 ---------- */
+.block{margin:0 0 28px}
+.block-h{
+  display:flex;align-items:center;gap:9px;font-size:18px;font-weight:700;
+  margin-bottom:13px;letter-spacing:-.1px;
+}
+.block-h .em{font-size:21px;line-height:1}
+
+/* 通用卡片 */
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  padding:22px 24px;box-shadow:var(--sh);
+}
+
+/* 🎯 目标卡 */
+.goal{
+  background:linear-gradient(135deg,var(--g700),var(--g500));
+  color:#fff;border-radius:var(--r);padding:24px 26px;box-shadow:var(--sh2);
+  position:relative;overflow:hidden;
+}
+.goal::after{
+  content:"";position:absolute;right:-30px;top:-30px;width:150px;height:150px;
+  border-radius:50%;background:rgba(255,255,255,.09);
+}
+.goal .k{font-size:12.5px;letter-spacing:2px;opacity:.8;font-weight:700;margin-bottom:7px}
+.goal p{font-size:18px;line-height:1.7;font-weight:600;position:relative;z-index:1}
+
+/* 📖 故事卡 */
+.story{
+  background:var(--yellow-soft);border-radius:var(--r);padding:22px 24px;
+  border-left:5px solid var(--yellow);
+}
+.story>p{margin:.55em 0}
+
+/* 对话气泡（巴迪 🤖 / 蓝兔 🐰） */
+.dialog{display:flex;flex-direction:column;gap:13px}
+.bubble{display:flex;gap:11px;align-items:flex-start}
+.bubble .avatar{
+  flex:0 0 42px;width:42px;height:42px;border-radius:50%;
+  display:grid;place-items:center;font-size:20px;line-height:1;
+  background:var(--g100);border:1px solid var(--g200);
+}
+.bubble.me .avatar{background:var(--orange-soft);border-color:var(--line)}
+.bubble .bd{flex:1;min-width:0}
+.bubble .name{font-size:12.5px;font-weight:700;color:var(--ink3);margin-bottom:4px}
+.bubble .say{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:14px;border-top-left-radius:5px;padding:11px 15px;
+  font-size:15.5px;line-height:1.78;color:var(--ink);
+}
+.bubble.me .say{background:var(--orange-soft)}
+.bubble .say b{color:var(--g700)}
+html[data-theme="dark"] .bubble .say b{color:var(--g300)}
+.story .narr{font-size:14px;color:var(--ink3);line-height:1.7;margin:0 0 3px;padding-left:53px}
+.story .screen{
+  font-family:var(--mono);background:var(--card);border:1px solid var(--line);
+  border-radius:10px;padding:10px 14px;margin:4px 0;font-size:14.5px;
+  color:var(--ink2);letter-spacing:.5px;
+}
+@media (max-width:520px){
+  .bubble{gap:8px}
+  .bubble .avatar{flex-basis:36px;width:36px;height:36px;font-size:17px}
+  .bubble .say{font-size:15px;padding:10px 13px}
+}
+
+/* 🖼️ 图解 */
+.figure{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  padding:22px;box-shadow:var(--sh);overflow-x:auto;
+}
+.figure svg{margin:0 auto;min-width:0}
+.figcap{
+  text-align:center;font-size:14px;color:var(--ink3);margin-top:14px;
+  padding-top:12px;border-top:1px dashed var(--line);
+}
+
+/* 🖱️ 动手做 */
+.steps{counter-reset:step;display:flex;flex-direction:column;gap:12px}
+.step{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  padding:17px 20px 17px 62px;position:relative;box-shadow:var(--sh);
+  transition:.2s;
+}
+.step:hover{border-color:var(--g300);transform:translateX(3px)}
+.step::before{
+  counter-increment:step;content:counter(step);
+  position:absolute;left:18px;top:16px;
+  width:30px;height:30px;border-radius:10px;
+  background:linear-gradient(135deg,var(--g600),var(--g500));color:#fff;
+  display:grid;place-items:center;font-size:15px;font-weight:800;
+  font-variant-numeric:tabular-nums;
+}
+.step b{color:var(--g700);font-weight:700}
+html[data-theme="dark"] .step b{color:var(--g300)}
+.step .kbd{
+  display:inline-block;padding:1px 8px;margin:0 2px;border-radius:6px;
+  background:var(--g50);border:1px solid var(--g200);border-bottom-width:2px;
+  font-family:var(--mono);font-size:14px;font-weight:600;color:var(--g700);
+  line-height:1.6;
+}
+
+/* 💡 贴士 */
+.tip{
+  background:var(--blue-soft);border-radius:var(--r);padding:22px 24px;
+  border-left:5px solid var(--blue);
+}
+.tip .hd{font-weight:700;color:var(--blue);margin-bottom:6px;font-size:15px}
+.tip p{margin:.4em 0}
+
+/* 🏆 闯关 */
+.quest{
+  background:var(--orange-soft);border-radius:var(--r);padding:22px 24px;
+  border-left:5px solid var(--orange);
+}
+.quest .hd{font-weight:700;color:var(--orange);margin-bottom:6px;font-size:15px}
+
+/* ⭐ 自评卡 */
+.selfcheck{
+  background:var(--card);border:1.5px dashed var(--g300);border-radius:var(--r);
+  padding:22px 24px;
+}
+.selfcheck .hd{font-weight:700;margin-bottom:12px;font-size:16px;color:var(--g700)}
+html[data-theme="dark"] .selfcheck .hd{color:var(--g300)}
+.check{
+  display:flex;align-items:flex-start;gap:11px;padding:9px 0;cursor:pointer;
+  user-select:none;border-bottom:1px solid var(--line2);
+}
+.check:last-child{border-bottom:none}
+.check input{display:none}
+.check .box{
+  width:23px;height:23px;border-radius:8px;border:2px solid var(--g300);flex-shrink:0;
+  margin-top:2px;display:grid;place-items:center;transition:.18s;background:var(--card);
+}
+.check .box svg{opacity:0;transform:scale(.5);transition:.18s}
+.check input:checked+.box{background:var(--g500);border-color:var(--g500)}
+.check input:checked+.box svg{opacity:1;transform:scale(1)}
+.check input:checked~span{color:var(--ink3);text-decoration:line-through}
+.check span{font-size:16.5px;transition:.18s}
+
+/* 小测验 */
+.quiz{background:var(--purple-soft);border-radius:var(--r);padding:22px 24px;border-left:5px solid var(--purple)}
+.quiz .hd{font-weight:700;color:var(--purple);margin-bottom:14px;font-size:15px}
+.q{margin-bottom:18px}
+.q:last-child{margin-bottom:0}
+.q .qt{font-weight:600;margin-bottom:10px;font-size:16.5px}
+.qopts{display:flex;flex-wrap:wrap;gap:9px}
+.qopt{
+  padding:9px 17px;border-radius:11px;border:1.5px solid var(--line);
+  background:var(--card);font-size:15px;transition:.18s;font-weight:500;
+}
+.qopt:hover{border-color:var(--purple);transform:translateY(-1px)}
+.qopt.ok{background:var(--g500);border-color:var(--g500);color:#fff}
+.qopt.no{background:var(--red);border-color:var(--red);color:#fff}
+.qfb{margin-top:9px;font-size:14.5px;color:var(--ink2);display:none;padding-left:3px}
+.qfb.show{display:block}
+
+/* ---------- 9. 课末导航 ---------- */
+.lesson-nav{display:flex;gap:14px;margin-top:44px;flex-wrap:wrap}
+.lesson-nav a{
+  flex:1;min-width:210px;padding:17px 20px;border-radius:var(--r);
+  background:var(--card);border:1px solid var(--line);box-shadow:var(--sh);
+  transition:.2s;text-decoration:none;
+}
+.lesson-nav a:hover{border-color:var(--g300);box-shadow:var(--sh2);transform:translateY(-2px);text-decoration:none}
+.lesson-nav .d{font-size:12.5px;color:var(--ink3);margin-bottom:4px;font-weight:600;letter-spacing:.5px}
+.lesson-nav .t{font-size:16px;font-weight:700;color:var(--ink)}
+.lesson-nav a.next{text-align:right}
+.lesson-nav a.dis{opacity:.45;pointer-events:none}
+
+/* 完成按钮 */
+.done-wrap{display:flex;justify-content:center;margin:36px 0 0}
+.done-btn{
+  padding:13px 30px;border-radius:999px;font-size:16px;font-weight:700;
+  background:var(--card);border:2px solid var(--g300);color:var(--g700);
+  transition:.2s;display:inline-flex;align-items:center;gap:9px;
+}
+.done-btn:hover{border-color:var(--g500);background:var(--g50)}
+.done-btn.on{background:var(--g500);border-color:var(--g500);color:#fff}
+
+/* ---------- 10. 首页 ---------- */
+.hero{
+  padding:52px 0 42px;text-align:center;position:relative;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;
+  color:var(--g600);background:var(--g100);padding:7px 16px;border-radius:999px;
+  margin-bottom:20px;letter-spacing:.4px;
+}
+.hero h1{
+  font-size:clamp(32px,5.5vw,54px);line-height:1.18;font-weight:800;
+  letter-spacing:-1.2px;margin-bottom:16px;
+}
+.hero h1 .hl{
+  background:linear-gradient(180deg,transparent 62%,var(--g200) 62%);
+  padding:0 4px;
+}
+.hero .lede{
+  font-size:17.5px;color:var(--ink2);max-width:620px;margin:0 auto 30px;line-height:1.85;
+}
+.hero-acts{display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;padding:13px 27px;border-radius:13px;
+  font-size:16px;font-weight:700;transition:.2s;text-decoration:none;
+}
+.btn-primary{background:linear-gradient(135deg,var(--g700),var(--g500));color:#fff;box-shadow:0 6px 20px rgba(21,101,192,.3)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(21,101,192,.38);color:#fff;text-decoration:none}
+.btn-ghost{background:var(--card);color:var(--ink);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--g300);color:var(--g700);text-decoration:none}
+
+/* 数字条 */
+.stats{
+  display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin:40px 0 8px;
+}
+.stat{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r-sm);
+  padding:15px 24px;box-shadow:var(--sh);min-width:118px;
+}
+.stat .v{font-size:26px;font-weight:800;color:var(--g600);line-height:1.2;font-variant-numeric:tabular-nums}
+.stat .l{font-size:12.5px;color:var(--ink3);margin-top:2px}
+
+/* 学段选择卡 */
+.stage-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px;margin:18px 0 8px}
+.stage-card{
+  background:var(--card);border:1.5px solid var(--line);border-radius:var(--r);
+  padding:26px;box-shadow:var(--sh);transition:.22s;cursor:pointer;position:relative;overflow:hidden;
+}
+.stage-card:hover{border-color:var(--g400);box-shadow:var(--sh2);transform:translateY(-3px)}
+.stage-card.on{border-color:var(--g500);background:var(--g50)}
+.stage-card .ico{font-size:32px;margin-bottom:12px}
+.stage-card h3{font-size:20px;margin-bottom:7px;font-weight:800}
+.stage-card p{font-size:14.5px;color:var(--ink2);line-height:1.7}
+.stage-card .tag{
+  position:absolute;top:18px;right:20px;font-size:12px;font-weight:700;
+  padding:4px 11px;border-radius:999px;background:var(--g100);color:var(--g600);
+}
+
+/* 辑目录 */
+.juan-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(275px,1fr));gap:16px}
+.cards-sub{grid-column:1 / -1;display:flex;align-items:center;gap:7px;font-weight:700;font-size:15.5px;color:var(--g700);margin:.2em 0 .1em}
+.cards-sub .em{font-size:18px}
+.juan-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  padding:20px 22px;box-shadow:var(--sh);transition:.2s;text-decoration:none;display:block;
+  position:relative;
+}
+.juan-card:hover{border-color:var(--g300);box-shadow:var(--sh2);transform:translateY(-3px);text-decoration:none}
+.juan-card.live{border-left:5px solid var(--g500)}
+.juan-card.soon{opacity:.62}
+.juan-card .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px}
+.juan-card .no{font-size:12px;font-weight:700;color:var(--g600);letter-spacing:1px}
+.juan-card .cnt{font-size:12px;color:var(--ink3);background:var(--g50);padding:2px 9px;border-radius:999px}
+.juan-card h3{font-size:17.5px;margin-bottom:7px;font-weight:700;color:var(--ink)}
+.juan-card p{font-size:13.5px;color:var(--ink2);line-height:1.65}
+.juan-card .badge{
+  display:inline-block;margin-top:11px;font-size:12px;font-weight:700;
+  padding:3px 10px;border-radius:999px;
+}
+.badge-live{background:var(--g100);color:var(--g600)}
+.badge-soon{background:var(--line2);color:var(--ink3)}
+
+/* 区块标题 */
+.sec-h{text-align:center;margin:56px 0 26px}
+.sec-h h2{font-size:26px;font-weight:800;letter-spacing:-.5px;margin-bottom:8px}
+.sec-h p{font-size:15px;color:var(--ink2)}
+
+/* 说明条 */
+.notice{
+  background:var(--blue-soft);border-radius:var(--r);padding:18px 22px;
+  font-size:15px;color:var(--ink2);border-left:5px solid var(--blue);line-height:1.75;
+}
+.notice b{color:var(--blue)}
+
+/* 进度概览 */
+.progress-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  padding:24px;box-shadow:var(--sh);
+}
+.pbar{height:11px;border-radius:999px;background:var(--g100);overflow:hidden;margin:14px 0 10px}
+.pbar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--g500),var(--g400));transition:width .5s ease}
+
+/* ---------- 11. 表格 ---------- */
+.tbl-wrap{overflow-x:auto;border-radius:var(--r);border:1px solid var(--line);box-shadow:var(--sh)}
+table{width:100%;border-collapse:collapse;font-size:15px;background:var(--card)}
+th,td{padding:12px 15px;text-align:left;border-bottom:1px solid var(--line2)}
+th{background:var(--g50);font-weight:700;color:var(--g700);font-size:14px;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+tbody tr:hover{background:var(--g50)}
+
+/* ---------- 12. 页脚 ---------- */
+.foot{
+  border-top:1px solid var(--line);margin-top:60px;padding:32px 20px 44px;
+  text-align:center;font-size:13.5px;color:var(--ink3);line-height:1.9;
+}
+.foot a{color:var(--ink3)}
+.foot .fl{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}
+
+/* ---------- 13. 学段显隐 ---------- */
+/* html 与 body 上都会写 data-stage，保证首屏渲染前就生效、不闪烁 */
+[data-stage="low"] [data-stage="high"],
+[data-stage="high"] [data-stage="low"]{display:none!important}
+.stage-flag{
+  display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;
+  padding:3px 11px;border-radius:999px;margin-bottom:11px;
+}
+.flag-low{background:var(--g100);color:var(--g600)}
+.flag-high{background:var(--orange-soft);color:var(--orange)}
+
+/* ---------- 14. 遮罩（移动端目录） ---------- */
+.mask{
+  position:fixed;inset:0;background:rgba(20,40,32,.4);z-index:160;
+  opacity:0;visibility:hidden;transition:.22s;backdrop-filter:blur(2px);
+}
+.mask.on{opacity:1;visibility:visible}
+
+/* ---------- 15. 动效 ---------- */
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.float{animation:float 4s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ---------- 16. 响应式 ---------- */
+@media(max-width:1080px){
+  .menu-btn{display:grid}
+  .sidebar{
+    position:fixed;top:0;left:0;bottom:0;width:282px;z-index:170;
+    background:var(--card);padding:74px 10px 30px;max-height:none;
+    transform:translateX(-100%);transition:transform .26s ease;
+    box-shadow:var(--sh3);overflow-y:auto;
+  }
+  .sidebar.on{transform:translateX(0)}
+  .shell{gap:0}
+}
+@media(max-width:720px){
+  body{font-size:16px;line-height:1.8}
+  .shell{padding:0 16px}
+  .topbar-in{padding:9px 16px;gap:10px}
+  .brand-txt span{display:none}
+  .brand-logo{width:38px;height:38px}
+  .stage-switch button{padding:6px 11px;font-size:13px}
+  .card,.goal,.story,.figure,.tip,.quest,.selfcheck,.quiz{padding:19px 18px}
+  .step{padding:16px 16px 16px 54px}
+  .step::before{left:14px;width:27px;height:27px;font-size:14px}
+  .hero{padding:34px 0 26px}
+  .stats{gap:10px}
+  .stat{padding:12px 17px;min-width:100px}
+  .stat .v{font-size:22px}
+  .lesson-nav a{min-width:100%}
+  .lesson-nav a.next{text-align:left}
+}
+@media(max-width:420px){
+  .brand-txt strong{font-size:14.5px}
+  .stage-switch button{padding:5px 9px;font-size:12.5px}
+}
+
+/* ---------- 17. 打印（为出 Word/PDF 预留） ---------- */
+@media print{
+  .topbar,.sidebar,.mask,.readbar,.lesson-nav,.done-wrap,.stage-switch,.icon-btn{display:none!important}
+  body{background:#fff;font-size:12pt}
+  .main{width:100%;max-width:100%}
+  .shell{padding:0;display:block}
+  .card,.step,.figure{box-shadow:none;border:1px solid #ddd;break-inside:avoid}
+  .goal{background:#eee!important;color:#000!important}
+  .block{break-inside:avoid}
+}
+
+
+/* ===================== 讲义版外壳 ===================== */
+body{background:var(--bg)}
+.jy-wrap{max-width:860px;margin:0 auto;padding:26px 20px 72px}
+.jy-crumb{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px;font-size:13px;color:var(--ink3)}
+.jy-chip{background:var(--g100);color:var(--g700);border-radius:999px;padding:3px 12px;font-weight:700}
+.jy-chip.t{background:var(--orange-soft);color:var(--orange)}
+.jy-chip.a{background:var(--yellow-soft);color:#9A6B00}
+.jy-chip.n{background:var(--line2);color:var(--ink2)}
+.jy-hero{background:linear-gradient(135deg,#1565C0,#1E88E5 58%,#26A69A);color:#fff;
+  border-radius:22px;padding:30px 30px 26px;box-shadow:var(--sh2)}
+.jy-hero .tag{font-size:13px;font-weight:700;letter-spacing:1px;opacity:.92;margin-bottom:8px}
+.jy-hero h1{font-size:31px;line-height:1.32;letter-spacing:.5px;color:#fff}
+.jy-hero p{margin-top:10px;font-size:16px;opacity:.95;line-height:1.7}
+.jy-hero .kvs{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.jy-hero .kvs span{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);
+  border-radius:999px;padding:4px 12px;font-size:13px;font-weight:600}
+.jy-stage{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin:18px 0 4px;
+  padding:12px 16px;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--sh)}
+.jy-stage .lb{font-size:13.5px;color:var(--ink2);font-weight:700}
+.jy-sbtn{border:1.5px solid var(--line);background:var(--card);color:var(--ink2);border-radius:999px;
+  padding:6px 15px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;transition:.16s}
+.jy-sbtn:hover{border-color:var(--g400)}
+.jy-sbtn.on{background:var(--g600);border-color:var(--g600);color:#fff}
+.jy-stage .hint{font-size:12.5px;color:var(--ink3);margin-left:auto}
+.jy-body{margin-top:24px}
+/* 动手步骤可打勾 */
+.steps .step{cursor:pointer}
+.steps .step.done{background:var(--orange-soft);border-color:var(--orange)}
+.steps .step.done::before{content:"✓";background:var(--orange)}
+.jy-nav{display:flex;gap:14px;margin-top:46px;flex-wrap:wrap}
+.jy-nav a{flex:1;min-width:180px;text-decoration:none;background:var(--card);border:1px solid var(--line);
+  border-radius:16px;padding:16px 18px;box-shadow:var(--sh);transition:.18s}
+.jy-nav a:hover{transform:translateY(-2px);box-shadow:var(--sh2);border-color:var(--g300)}
+.jy-nav a.next{text-align:right}
+.jy-nav a.dis{opacity:.42;pointer-events:none}
+.jy-nav .d{font-size:12.5px;color:var(--ink3);font-weight:700;margin-bottom:4px;letter-spacing:.5px}
+.jy-nav .t{font-size:16px;font-weight:700;color:var(--ink)}
+.jy-foot{margin-top:26px;padding-top:16px;border-top:1px dashed var(--line);text-align:center;
+  font-size:12.5px;color:var(--ink3);line-height:1.9}
+.jy-back{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:13.5px;
+  color:var(--g700);font-weight:700;text-decoration:none}
+.jy-back:hover{text-decoration:underline}
+@media (max-width:560px){
+  .jy-wrap{padding:18px 13px 56px}
+  .jy-hero{padding:24px 20px 22px}
+  .jy-hero h1{font-size:24px}
+  .jy-stage .hint{margin-left:0;flex-basis:100%}
+}
+/* ===================== 打印 ===================== */
+@media print{
+  @page{margin:14mm 12mm}
+  body{background:#fff!important;font-size:12pt;padding:0}
+  .jy-wrap{max-width:none;padding:0}
+  .jy-stage,.jy-nav,.jy-back,.jy-crumb,.readbar{display:none!important}
+  .jy-hero{background:#1565C0!important;color:#fff!important;border-radius:12px;padding:16px 20px;
+    box-shadow:none;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .jy-hero h1{font-size:21pt;color:#fff!important}
+  .jy-hero .kvs span{border-color:rgba(255,255,255,.6)}
+  .jy-body{margin-top:12pt}
+  .block{margin-bottom:15pt;break-inside:avoid}
+  .goal,.story,.tip,.quest,.quiz,.selfcheck,.figure,.steps,.step{break-inside:avoid;box-shadow:none}
+  .figure{overflow:visible}
+  .qopt{pointer-events:none}
+  .qfb{display:none!important}
+  .check input:checked~span{text-decoration:none;color:var(--ink)}
+  .jy-foot{margin-top:14pt}
+  a{color:inherit;text-decoration:none}
+}
+
+</style>
+</head>
+<body data-page="30">
+<div class="jy-wrap">
+
+  <div class="jy-crumb">
+    <span class="jy-chip">蓝兔巴迪 · 电脑第一课</span>
+    <span class="jy-chip t">讲义版</span>
+    <span class="jy-chip n">第七辑 · 图形化编程初体验</span>
+    <span class="jy-chip a">第 1 课 / 共 7 课</span>
+  </div>
+
+  <header class="jy-hero">
+    <div class="tag">📦 第七辑 · 第 30 课</div>
+    <h1>编程软件初见面</h1>
+    <p>舞台、角色、积木区，认识编程界面</p>
+    <div class="kvs"><span>🕐 约 6 分钟</span> <span>🎯 计算思维 · 算法意识</span> <span>🧰 能开机的电脑 + 编程软件</span></div>
+  </header>
+
+  <div class="jy-stage">
+    <span class="lb">按学段看：</span>
+    <button class="jy-sbtn" data-set-stage="low">🌱 三四年级</button>
+    <button class="jy-sbtn" data-set-stage="high">🚀 五六年级</button>
+    <span class="hint">投屏或打印前先选好学段，本页会自动只留该学段的内容。</span>
+  </div>
+
+  <div class="jy-body">
+<!-- 🎯 目标 -->
+    <div class="block">
+      <div class="goal">
+        <div class="k">🎯 一句话目标</div>
+        <p data-stage="low">学完这课，你能打开图形化编程软件，认出「舞台、角色、积木区、脚本区」四块地方，知道程序是用彩色积木拼出来的。</p>
+        <p data-stage="high">学完这课，你还能理解「坐标」就是角色在舞台上的位置、知道一个角色可以有多个「造型」和「声音」，并找到「扩展」里更多的本领。</p>
+      </div>
+    </div>
+
+    <!-- 📖 故事 -->
+    <div class="block">
+      <div class="block-h"><span class="em">📖</span>小故事</div>
+      <div class="story">
+        <p class="narr">巴迪羡慕别人做的动画：小猫会跳舞、苹果会掉、飞船会飞。它也想自己做，可一打开编程软件，满屏方块，懵了。</p>
+        <div class="dialog">
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">这些花花绿绿的方块是啥？我连从哪下手都不知道。</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">这叫<b>图形化编程</b>——不用打字写代码，把<b>积木</b>拖来拼好，就是程序。先认四块：右边大白框是<b>舞台</b>（角色表演的地方）；左下是<b>角色列表</b>；中间一列彩色方块是<b>积木区</b>；右边空白是<b>脚本区</b>（你拼积木的地方）。</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">角色在舞台上的位置叫<b>坐标</b>（横 x、竖 y）。高年级还能给小猫换「造型」、加「声音」，甚至点「扩展」让它能画图、算数。</div></div>
+          </div>
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">所以……写程序就是「玩积木」？</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">对，但积木要<b>拼对顺序</b>才灵。下一课就让小猫走起来。先和这四块地方交个朋友。</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🖼️ 图解 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖼️</span>一张图看懂</div>
+      <figure class="figure">
+        <svg viewBox="0 0 680 320" role="img" aria-label="编程软件界面四区：舞台(右)、角色列表(左下)、积木区(中彩色方块)、脚本区(右空白拼积木)">
+          <defs>
+            <style>
+              .cn{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+              .cname{font-size:13px;font-weight:700;fill:var(--ink)}
+              .ctag{font-size:11.5px;font-weight:600;fill:var(--ink2)}
+            </style>
+          </defs>
+          <rect x="20" y="20" width="640" height="280" rx="16" style="fill:var(--g50);stroke:var(--g300)" stroke-width="2"/>
+          <!-- 积木区 -->
+          <rect x="36" y="40" width="150" height="240" rx="10" style="fill:var(--card);stroke:var(--g400)" stroke-width="1.6"/>
+          <rect x="50" y="56" width="122" height="20" rx="5" style="fill:var(--orange)"/>
+          <rect x="50" y="86" width="122" height="20" rx="5" style="fill:var(--g500)"/>
+          <rect x="50" y="116" width="122" height="20" rx="5" style="fill:var(--yellow)"/>
+          <rect x="50" y="146" width="122" height="20" rx="5" style="fill:var(--purple)"/>
+          <text x="111" y="270" text-anchor="middle" class="cn cname" style="fill:var(--g600)">② 积木区</text>
+          <!-- 角色列表 -->
+          <rect x="200" y="220" width="120" height="60" rx="8" style="fill:var(--card);stroke:var(--g300)" stroke-width="1.6"/>
+          <circle cx="230" cy="250" r="16" style="fill:var(--yellow)"/>
+          <text x="280" y="254" text-anchor="middle" class="cn ctag">小猫</text>
+          <text x="260" y="206" text-anchor="middle" class="cn cname" style="fill:var(--g600)">③ 角色列表</text>
+          <!-- 脚本区 -->
+          <rect x="200" y="40" width="200" height="170" rx="10" style="fill:#fff;stroke:var(--g300)" stroke-width="1.6"/>
+          <rect x="214" y="56" width="172" height="20" rx="5" style="fill:var(--orange)"/>
+          <rect x="214" y="84" width="172" height="20" rx="5" style="fill:var(--g500)"/>
+          <text x="300" y="200" text-anchor="middle" class="cn cname" style="fill:var(--g600)">④ 脚本区（拼积木）</text>
+          <!-- 舞台 -->
+          <rect x="420" y="40" width="220" height="240" rx="10" style="fill:#fff;stroke:var(--g700)" stroke-width="2"/>
+          <text x="530" y="64" text-anchor="middle" class="cn cname" style="fill:var(--g700)">① 舞台</text>
+          <line x1="530" y1="80" x2="530" y2="260" stroke="var(--g200)" stroke-width="1.4"/>
+          <line x1="430" y1="170" x2="630" y2="170" stroke="var(--g200)" stroke-width="1.4"/>
+          <circle cx="530" cy="170" r="18" style="fill:var(--yellow)"/>
+          <text x="530" y="296" text-anchor="middle" class="cn ctag">角色在这表演，坐标(x,y)定位置</text>
+          <text x="340" y="312" text-anchor="middle" class="cn ctag">程序＝积木拼对顺序；四块地方先认全。</text>
+        </svg>
+        <figcaption class="figcap">
+          四块：①舞台（表演区）②积木区（彩色方块）③角色列表（谁出场）④脚本区（拼积木）。坐标 x/y 决定角色站哪。
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- 🖱️ 动手做 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖱️</span>动手做</div>
+      <div class="steps" data-stage="low">
+        <div class="step"><b>打开软件。</b>进图形化编程网站/软件，看到四块界面。</div>
+        <div class="step"><b>认四块。</b>指给旁边人：舞台、角色列表、积木区、脚本区分别在哪。</div>
+        <div class="step"><b>看积木。</b>点左边不同颜色分类，看看运动、外观、声音各有啥积木。</div>
+      </div>
+      <div class="steps" data-stage="high">
+        <div class="step"><b>看坐标。</b>点舞台上的小猫，看右边 x、y 数字怎么变。</div>
+        <div class="step"><b>换造型。</b>给小猫加第二个「造型」，知道它能变样子。</div>
+        <div class="step"><b>找扩展。</b>点「扩展」，看看画笔、音乐等更多本领。</div>
+        <div class="step"><b>小挑战。</b>说出四块地方各自干嘛，并调一下小猫的坐标看看它怎么动。</div>
+      </div>
+    </div>
+
+    <!-- 💡 贴士 -->
+    <div class="block">
+      <div class="block-h"><span class="em">💡</span>素养小贴士</div>
+      <div class="tip">
+        <div class="hd">编程不是背代码，是学「怎么让机器听话」</div>
+        <p>很多人以为编程是记一堆英文命令。图形化编程把命令变成积木，<b>拼顺序</b>就行——这训练的是「把大事拆成小步骤、排好先后」的脑子，叫<b>计算思维</b>。以后学任何语言都用得上。</p>
+        <p>所以别怕「满屏方块」。先认地方、再拼一块试试，错了拖回来重拼，电脑不会嫌你。</p>
+      </div>
+    </div>
+
+    <!-- 🏆 闯关 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🏆</span>闯关任务</div>
+      <div class="quest">
+        <div class="hd">关卡：和编程软件握手</div>
+        <p data-stage="low">打开编程软件，认出舞台、角色、积木区、脚本区四块，能说出每块干嘛。闯关成功。</p>
+        <p data-stage="high">调小猫坐标看它移动、给它加一个造型，讲清「坐标」和「计算思维」是啥。闯关成功。</p>
+      </div>
+    </div>
+
+    <!-- 小测验 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🧩</span>试试看</div>
+      <div class="quiz">
+        <div class="hd">两道小题，选一个你觉得对的</div>
+        <div class="q" data-hint="图形化编程，程序是用什么「拼」出来的？">
+          <div class="qt">1. 在图形化编程里，程序是用什么拼出来的？</div>
+          <div class="qopts">
+            <button class="qopt">打字写英文</button>
+            <button class="qopt" data-ok="1" data-fb="图形化编程把命令做成彩色「积木」，拖来拼好就是程序，不用打字写代码。">彩色积木</button>
+            <button class="qopt">画图画</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+        <div class="q" data-hint="角色在舞台上的位置，靠什么决定？">
+          <div class="qt">2. 小猫在舞台「站在哪」，由什么决定？</div>
+          <div class="qopts">
+            <button class="qopt">它的名字</button>
+            <button class="qopt" data-ok="1" data-fb="坐标(x,y)是角色在舞台上的位置；调 x/y 它就移动。">坐标 (x, y)</button>
+            <button class="qopt">积木的颜色</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ⭐ 自评 -->
+    <div class="block">
+      <div class="block-h"><span class="em">⭐</span>自评卡</div>
+      <div class="selfcheck">
+        <div class="hd">做到了就打勾（打勾会被记住，下次打开还在）</div>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会打开编程软件</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我认得出四块界面</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我知道程序是积木拼出来的</span></label>
+        <label class="check" data-stage="high"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我懂坐标、造型和扩展</span></label>
+      </div>
+    </div>
+  </div>
+
+  <nav class="jy-nav">
+<a href="29-fangying-jiangshu.html"><div class="d">← 上一课</div><div class="t">放映与讲述</div></a>
+    <a class="next" href="31-rang-juese-dong.html"><div class="d">下一课 →</div><div class="t">让角色动起来</div></a>
+  </nav>
+
+  <div class="jy-foot">
+    蓝兔巴迪 · 电脑第一课（讲义版）　|　常州市新北区汤庄桥小学 · 教师发展处 × 巴迪<br>
+    校本原创教学资源，案例人物均为虚构，不含任何真实学生信息。
+    <br><a class="jy-back" href="../lesson/30-biancheng-chujianmian.html">← 在网站上打开这一课（可做小测验、记学习进度）</a>
+  </div>
+</div>
+<script>
+(function(){
+  var LS={get:function(k,d){try{var v=localStorage.getItem(k);return v===null?d:v}catch(e){return d}},
+          set:function(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+  function applyStage(st){
+    if(st!=='low'&&st!=='high')st='low';
+    document.body.setAttribute('data-stage',st);
+    document.documentElement.setAttribute('data-stage',st);
+    LS.set('dn-stage',st);
+    document.querySelectorAll('[data-set-stage]').forEach(function(b){
+      b.classList.toggle('on',b.getAttribute('data-set-stage')===st);});
+  }
+  applyStage(LS.get('dn-stage','low'));
+  document.querySelectorAll('[data-set-stage]').forEach(function(b){
+    b.addEventListener('click',function(){applyStage(b.getAttribute('data-set-stage'));});});
+  // 动手步骤打勾
+  document.querySelectorAll('.steps .step').forEach(function(s){
+    s.addEventListener('click',function(){s.classList.toggle('done');});});
+  // 自评卡
+  var pid=document.body.getAttribute('data-page')||'jy';
+  var boxes=document.querySelectorAll('.selfcheck .check input');
+  if(boxes.length){
+    var saved={};try{saved=JSON.parse(localStorage.getItem('jy-ck-'+pid)||'{}');}catch(e){}
+    boxes.forEach(function(inp,i){
+      inp.checked=!!saved[i];
+      inp.addEventListener('change',function(){
+        var s={};try{s=JSON.parse(localStorage.getItem('jy-ck-'+pid)||'{}');}catch(e){}
+        s[i]=inp.checked;try{localStorage.setItem('jy-ck-'+pid,JSON.stringify(s));}catch(e){}
+      });
+    });
+  }
+  // 小测验
+  document.querySelectorAll('.q').forEach(function(q){
+    var opts=q.querySelectorAll('.qopt'),fb=q.querySelector('.qfb'),solved=false;
+    opts.forEach(function(o){o.addEventListener('click',function(){
+      if(solved)return;
+      if(o.getAttribute('data-ok')==='1'){
+        o.classList.add('ok');solved=true;
+        opts.forEach(function(x){if(x!==o)x.style.opacity='.45';});
+        if(fb){fb.innerHTML='<b style="color:var(--g600)">\u2714 \u7b54\u5bf9\u5566\uff01</b> '+(o.getAttribute('data-fb')||'');fb.classList.add('show');}
+      }else{
+        o.classList.add('no');o.style.pointerEvents='none';
+        if(fb){fb.innerHTML='<b style="color:var(--red)">\u518d\u60f3\u60f3\uff5e</b> '+(q.getAttribute('data-hint')||'\u6362\u4e2a\u7b54\u6848\u8bd5\u8bd5\u3002');fb.classList.add('show');}
+      }
+    });});
+  });
+})();
+</script>
+</body>
+</html>

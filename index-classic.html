@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>蓝兔巴迪·电脑第一课（经典版首页）</title>
+<meta name="description" content="一套面向小学三至六年级、从零起步的免费电脑启蒙教程。">
+<meta name="author" content="蓝兔 & 巴迪 · 常州市新北区汤庄桥小学">
+<link rel="stylesheet" href="assets/style.css">
+<script>
+/* 首屏防闪烁：在样式前应用已保存的学段与主题 */
+(function(){try{
+  var t=localStorage.getItem('dn-theme'); if(t==='dark') document.documentElement.setAttribute('data-theme','dark');
+}catch(e){}})();
+</script>
+</head>
+<body data-root="" data-page="home" data-stage="low">
+
+<div class="readbar"></div>
+
+<!-- ============ 顶栏 ============ -->
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html">
+      <span class="brand-logo">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <ellipse cx="9" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(-14 9 6)"/>
+          <ellipse cx="17" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(14 17 6)"/>
+          <circle cx="13" cy="15.5" r="7.2" fill="#fff"/>
+          <circle cx="10.3" cy="14.4" r="1.15" fill="#1565C0"/>
+          <circle cx="15.7" cy="14.4" r="1.15" fill="#1565C0"/>
+          <path d="M13 17.4c-.9 0-1.6.5-1.6.5s.7.9 1.6.9 1.6-.9 1.6-.9-.7-.5-1.6-.5z" fill="#F0864F"/>
+        </svg>
+      </span>
+      <span class="brand-txt">
+        <strong>蓝兔巴迪 · 电脑第一课</strong>
+        <span>COMPUTER FIRST LESSON</span>
+      </span>
+    </a>
+    <div class="topbar-spacer"></div>
+    <div class="stage-switch" role="group" aria-label="选择学段">
+      <button data-set-stage="low">🌱 三四年级</button>
+      <button data-set-stage="high">🚀 五六年级</button>
+    </div>
+    <button class="icon-btn" data-theme-toggle aria-label="切换深浅色"></button>
+  </div>
+</header>
+
+<main class="shell" style="display:block;max-width:1120px">
+
+  <!-- ============ 封面（单列居中） ============ -->
+  <section class="hero">
+    <div class="hero-badge">🐰 蓝兔 &amp; 巴迪 一起写 · 免费 · 不用登录 · 断网也能用</div>
+    <h1>从<span class="hl">怎么用</span>到<span class="hl">怎么想</span></h1>
+    <p class="lede">
+      教材讲「为什么」，这门课补「怎么做」——鼠标怎么点、键盘怎么按、文件怎么存、第一行字怎么打。把被跳过的基本功，一课一课补回来。
+    </p>
+    <div class="hero-acts">
+      <a class="btn btn-primary" href="lesson/01-diannao-jiazu.html">
+        开始第一课
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn-ghost" href="juan1.html">看第一辑导读</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="v">8 辑</div><div class="l">完整规划</div></div>
+      <div class="stat"><div class="v">39 课</div><div class="l">八辑全上线</div></div>
+      <div class="stat"><div class="v">￥0</div><div class="l">永久免费</div></div>
+    </div>
+  </section>
+
+  <!-- ============ 选学段 ============ -->
+  <section>
+    <div class="sec-h">
+      <h2>先选一个学段</h2>
+      <p>同一课，两种深度。随时可以换，右上角也能切。</p>
+    </div>
+    <div class="stage-cards">
+      <div class="stage-card" data-stage-card="low" data-set-stage="low">
+        <div class="ico">🌱</div>
+        <h3>三、四年级</h3>
+        <p>句子里没有难词，每一步都写清楚「手该放在哪里、点哪个键」。重点是<b>会用</b>：能自己开机、能用鼠标点开想看的东西、能打出自己的名字。</p>
+        <span class="tag">看得懂 · 做得到</span>
+      </div>
+      <div class="stage-card" data-stage-card="high" data-set-stage="high">
+        <div class="ico">🚀</div>
+        <h3>五、六年级</h3>
+        <p>同样的操作，多问一层「为什么」。会讲输入输出、文件路径、快捷键原理，也要求你做一份能给别人看的小作品。<b>不光会用，还要会讲</b>。</p>
+        <span class="tag">多一层道理</span>
+      </div>
+    </div>
+    <div class="notice" style="margin-top:12px">
+      <b>小提示：</b>选好之后，整站的文字会跟着变——同一幅图解、同一个动作，两个学段说的深浅不一样，但知识都对得上。
+    </div>
+  </section>
+
+  <!-- ============ 课程地图（按学段过滤） ============ -->
+  <section id="map">
+    <div class="sec-h">
+      <h2>🗺️ 我的课程地图</h2>
+      <p>跟着学段走，一次只看四辑：三四年级看前四辑，五六年级看后四辑。想翻全站点右边「显示全部」。</p>
+    </div>
+    <div class="map-bar">
+      <div class="mb-l">
+        <span class="mb-ico" data-map-ico>🌱</span>
+        <div class="mb-t">
+          <b data-map-title>三四年级 · 前四辑</b>
+          <span data-map-sub>第 1—4 辑共 19 课，认电脑、管文件、画图、写文章</span>
+        </div>
+      </div>
+      <div class="map-switch">
+        <button data-map-all="0" class="on">按学段看</button>
+        <button data-map-all="1">显示全部 39 课</button>
+      </div>
+    </div>
+    <div class="map-list" data-render="home-map"></div>
+  </section>
+
+  <!-- ============ 进度 ============ -->
+  <section style="margin-top:20px">
+    <div class="progress-card" data-progress-box></div>
+  </section>
+
+  <!-- ============ 这门课怎么用 ============ -->
+  <section>
+    <div class="sec-h">
+      <h2>这门课怎么用</h2>
+    </div>
+    <div class="juan-grid" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr))">
+      <div class="card">
+        <div style="font-size:26px;margin-bottom:9px">🖱️</div>
+        <h3 style="font-size:17px;margin-bottom:6px">双击就能打开</h3>
+        <p style="font-size:14.5px;color:var(--ink2);line-height:1.7">整个文件夹拷到电脑上，双击 <b>index.html</b> 就开始。不用注册、不用联网、不装任何东西。</p>
+      </div>
+      <div class="card">
+        <div style="font-size:26px;margin-bottom:9px">⏱️</div>
+        <h3 style="font-size:17px;margin-bottom:6px">一课五分钟</h3>
+        <p style="font-size:14.5px;color:var(--ink2);line-height:1.7">先读故事，再看图，然后<b>一定要动手</b>。光看不练，等于没学——电脑是练会的。</p>
+      </div>
+      <div class="card">
+        <div style="font-size:26px;margin-bottom:9px">⭐</div>
+        <h3 style="font-size:17px;margin-bottom:6px">自己给自己打分</h3>
+        <p style="font-size:14.5px;color:var(--ink2);line-height:1.7">每课最后有一张自评卡和一道闯关题。做到了就打勾，做不到就再来一遍，没人会笑你。</p>
+      </div>
+      <div class="card">
+        <div style="font-size:26px;margin-bottom:9px">👩‍🏫</div>
+        <h3 style="font-size:17px;margin-bottom:6px">老师可以直接拿去用</h3>
+        <p style="font-size:14.5px;color:var(--ink2);line-height:1.7">信息科技课当补充练习、创客社团当入门教材、课后服务当课程包，都可以。<a href="teacher.html">看老师的用法 →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 两种版本 ============ -->
+  <section>
+    <div class="sec-h">
+      <h2>两种版本，随你挑</h2>
+      <p>同一套内容，做成两种用法：在线自学，或投屏打印。</p>
+    </div>
+    <div class="juan-grid" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr))">
+      <div class="card">
+        <div style="font-size:26px;margin-bottom:9px">🌐</div>
+        <h3 style="font-size:17px;margin-bottom:6px">在线版（你现在看的）</h3>
+        <p style="font-size:14.5px;color:var(--ink2);line-height:1.7">图文、图解、小测验、自评卡一应俱全，学习进度会自动记住。适合学生在电脑上自学、在家复习。</p>
+      </div>
+      <div class="card">
+        <div style="font-size:26px;margin-bottom:9px">🖨️</div>
+        <h3 style="font-size:17px;margin-bottom:6px">讲义版（投屏 / 打印）</h3>
+        <p style="font-size:14.5px;color:var(--ink2);line-height:1.7">一课一页、蓝白清爽版式，能投屏、能按 Ctrl+P 打印、还能单独发给学生。<a href="jianyi/index.html">打开讲义版目录 →</a></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ 页脚 ============ -->
+<footer class="foot">
+  <div class="fl">
+    <a href="index.html">首页</a>
+    <a href="juan1.html">第一辑导读</a>
+    <a href="juan2.html">第二辑导读</a>
+    <a href="juan3.html">第三辑导读</a>
+    <a href="juan4.html">第四辑导读</a>
+    <a href="juan5.html">第五辑导读</a>
+    <a href="juan6.html">第六辑导读</a>
+    <a href="juan7.html">第七辑导读</a>
+    <a href="juan8.html">第八辑导读</a>
+    <a href="teacher.html">给老师和家长</a>
+    <a href="about.html">关于本课</a>
+    <a href="index-classic.html"><b>↔ 经典版首页</b></a>
+  </div>
+  蓝兔巴迪 · 电脑第一课　|　常州市新北区汤庄桥小学　教师发展处<br>
+  本站为校本原创教学资源，所有案例人物均为虚构，不含任何真实学生信息。
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>第 30 课 · 编程软件初见面 —— 蓝兔巴迪·电脑第一课</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script>(function(){try{var t=localStorage.getItem('dn-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('dn-stage');document.documentElement.setAttribute('data-stage',(s==='high'?'high':'low'));}catch(e){})();</script>
+</head>
+<body data-root="../" data-page="L30" data-lesson="30" data-stage="low">
+
+<div class="readbar"></div>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <button class="icon-btn menu-btn" data-menu-toggle aria-label="打开目录">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="brand" href="../index.html">
+      <span class="brand-logo">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <ellipse cx="9" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(-14 9 6)"/>
+          <ellipse cx="17" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(14 17 6)"/>
+          <circle cx="13" cy="15.5" r="7.2" fill="#fff"/>
+          <circle cx="10.3" cy="14.4" r="1.15" fill="#1565C0"/>
+          <circle cx="15.7" cy="14.4" r="1.15" fill="#1565C0"/>
+          <path d="M13 17.4c-.9 0-1.6.5-1.6.5s.7.9 1.6.9 1.6-.9 1.6-.9-.7-.5-1.6-.5z" fill="#F0864F"/>
+        </svg>
+      </span>
+      <span class="brand-txt"><strong>蓝兔巴迪 · 电脑第一课</strong><span>COMPUTER FIRST LESSON</span></span>
+    </a>
+    <div class="topbar-spacer"></div>
+    <div class="stage-switch" role="group" aria-label="选择学段">
+      <button data-set-stage="low">🌱 三四年级</button>
+      <button data-set-stage="high">🚀 五六年级</button>
+    </div>
+    <button class="icon-btn" data-theme-toggle aria-label="切换深浅色"></button>
+  </div>
+</header>
+
+<div class="mask"></div>
+
+<div class="shell">
+  <aside class="sidebar" data-render="sidebar"></aside>
+
+  <main class="main">
+
+    <nav class="crumb">
+      <a href="../index.html">首页</a><span class="sep">/</span>
+      <a href="../juan7.html">第七辑</a><span class="sep">/</span>第 30 课
+    </nav>
+
+    <div class="lesson-head">
+      <div class="lesson-no">📦 第七辑 · 第 30 课</div>
+      <h1>编程软件初见面</h1>
+      <div class="lesson-meta">
+        <span>🕐 约 6 分钟</span>
+        <span>🎯 计算思维 · 算法意识</span>
+        <span>🧰 能开机的电脑 + 编程软件</span>
+      </div>
+    </div>
+
+    <!-- 🎯 目标 -->
+    <div class="block">
+      <div class="goal">
+        <div class="k">🎯 一句话目标</div>
+        <p data-stage="low">学完这课，你能打开图形化编程软件，认出「舞台、角色、积木区、脚本区」四块地方，知道程序是用彩色积木拼出来的。</p>
+        <p data-stage="high">学完这课，你还能理解「坐标」就是角色在舞台上的位置、知道一个角色可以有多个「造型」和「声音」，并找到「扩展」里更多的本领。</p>
+      </div>
+    </div>
+
+    <!-- 📖 故事 -->
+    <div class="block">
+      <div class="block-h"><span class="em">📖</span>小故事</div>
+      <div class="story">
+        <p class="narr">巴迪羡慕别人做的动画：小猫会跳舞、苹果会掉、飞船会飞。它也想自己做，可一打开编程软件，满屏方块，懵了。</p>
+        <div class="dialog">
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">这些花花绿绿的方块是啥？我连从哪下手都不知道。</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">这叫<b>图形化编程</b>——不用打字写代码，把<b>积木</b>拖来拼好，就是程序。先认四块：右边大白框是<b>舞台</b>（角色表演的地方）；左下是<b>角色列表</b>；中间一列彩色方块是<b>积木区</b>；右边空白是<b>脚本区</b>（你拼积木的地方）。</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">角色在舞台上的位置叫<b>坐标</b>（横 x、竖 y）。高年级还能给小猫换「造型」、加「声音」，甚至点「扩展」让它能画图、算数。</div></div>
+          </div>
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">所以……写程序就是「玩积木」？</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">对，但积木要<b>拼对顺序</b>才灵。下一课就让小猫走起来。先和这四块地方交个朋友。</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🖼️ 图解 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖼️</span>一张图看懂</div>
+      <figure class="figure">
+        <svg viewBox="0 0 680 320" role="img" aria-label="编程软件界面四区：舞台(右)、角色列表(左下)、积木区(中彩色方块)、脚本区(右空白拼积木)">
+          <defs>
+            <style>
+              .cn{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+              .cname{font-size:13px;font-weight:700;fill:var(--ink)}
+              .ctag{font-size:11.5px;font-weight:600;fill:var(--ink2)}
+            </style>
+          </defs>
+          <rect x="20" y="20" width="640" height="280" rx="16" style="fill:var(--g50);stroke:var(--g300)" stroke-width="2"/>
+          <!-- 积木区 -->
+          <rect x="36" y="40" width="150" height="240" rx="10" style="fill:var(--card);stroke:var(--g400)" stroke-width="1.6"/>
+          <rect x="50" y="56" width="122" height="20" rx="5" style="fill:var(--orange)"/>
+          <rect x="50" y="86" width="122" height="20" rx="5" style="fill:var(--g500)"/>
+          <rect x="50" y="116" width="122" height="20" rx="5" style="fill:var(--yellow)"/>
+          <rect x="50" y="146" width="122" height="20" rx="5" style="fill:var(--purple)"/>
+          <text x="111" y="270" text-anchor="middle" class="cn cname" style="fill:var(--g600)">② 积木区</text>
+          <!-- 角色列表 -->
+          <rect x="200" y="220" width="120" height="60" rx="8" style="fill:var(--card);stroke:var(--g300)" stroke-width="1.6"/>
+          <circle cx="230" cy="250" r="16" style="fill:var(--yellow)"/>
+          <text x="280" y="254" text-anchor="middle" class="cn ctag">小猫</text>
+          <text x="260" y="206" text-anchor="middle" class="cn cname" style="fill:var(--g600)">③ 角色列表</text>
+          <!-- 脚本区 -->
+          <rect x="200" y="40" width="200" height="170" rx="10" style="fill:#fff;stroke:var(--g300)" stroke-width="1.6"/>
+          <rect x="214" y="56" width="172" height="20" rx="5" style="fill:var(--orange)"/>
+          <rect x="214" y="84" width="172" height="20" rx="5" style="fill:var(--g500)"/>
+          <text x="300" y="200" text-anchor="middle" class="cn cname" style="fill:var(--g600)">④ 脚本区（拼积木）</text>
+          <!-- 舞台 -->
+          <rect x="420" y="40" width="220" height="240" rx="10" style="fill:#fff;stroke:var(--g700)" stroke-width="2"/>
+          <text x="530" y="64" text-anchor="middle" class="cn cname" style="fill:var(--g700)">① 舞台</text>
+          <line x1="530" y1="80" x2="530" y2="260" stroke="var(--g200)" stroke-width="1.4"/>
+          <line x1="430" y1="170" x2="630" y2="170" stroke="var(--g200)" stroke-width="1.4"/>
+          <circle cx="530" cy="170" r="18" style="fill:var(--yellow)"/>
+          <text x="530" y="296" text-anchor="middle" class="cn ctag">角色在这表演，坐标(x,y)定位置</text>
+          <text x="340" y="312" text-anchor="middle" class="cn ctag">程序＝积木拼对顺序；四块地方先认全。</text>
+        </svg>
+        <figcaption class="figcap">
+          四块：①舞台（表演区）②积木区（彩色方块）③角色列表（谁出场）④脚本区（拼积木）。坐标 x/y 决定角色站哪。
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- 🖱️ 动手做 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖱️</span>动手做</div>
+      <div class="steps" data-stage="low">
+        <div class="step"><b>打开软件。</b>进图形化编程网站/软件，看到四块界面。</div>
+        <div class="step"><b>认四块。</b>指给旁边人：舞台、角色列表、积木区、脚本区分别在哪。</div>
+        <div class="step"><b>看积木。</b>点左边不同颜色分类，看看运动、外观、声音各有啥积木。</div>
+      </div>
+      <div class="steps" data-stage="high">
+        <div class="step"><b>看坐标。</b>点舞台上的小猫，看右边 x、y 数字怎么变。</div>
+        <div class="step"><b>换造型。</b>给小猫加第二个「造型」，知道它能变样子。</div>
+        <div class="step"><b>找扩展。</b>点「扩展」，看看画笔、音乐等更多本领。</div>
+        <div class="step"><b>小挑战。</b>说出四块地方各自干嘛，并调一下小猫的坐标看看它怎么动。</div>
+      </div>
+    </div>
+
+    <!-- 💡 贴士 -->
+    <div class="block">
+      <div class="block-h"><span class="em">💡</span>素养小贴士</div>
+      <div class="tip">
+        <div class="hd">编程不是背代码，是学「怎么让机器听话」</div>
+        <p>很多人以为编程是记一堆英文命令。图形化编程把命令变成积木，<b>拼顺序</b>就行——这训练的是「把大事拆成小步骤、排好先后」的脑子，叫<b>计算思维</b>。以后学任何语言都用得上。</p>
+        <p>所以别怕「满屏方块」。先认地方、再拼一块试试，错了拖回来重拼，电脑不会嫌你。</p>
+      </div>
+    </div>
+
+    <!-- 🏆 闯关 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🏆</span>闯关任务</div>
+      <div class="quest">
+        <div class="hd">关卡：和编程软件握手</div>
+        <p data-stage="low">打开编程软件，认出舞台、角色、积木区、脚本区四块，能说出每块干嘛。闯关成功。</p>
+        <p data-stage="high">调小猫坐标看它移动、给它加一个造型，讲清「坐标」和「计算思维」是啥。闯关成功。</p>
+      </div>
+    </div>
+
+    <!-- 小测验 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🧩</span>试试看</div>
+      <div class="quiz">
+        <div class="hd">两道小题，选一个你觉得对的</div>
+        <div class="q" data-hint="图形化编程，程序是用什么「拼」出来的？">
+          <div class="qt">1. 在图形化编程里，程序是用什么拼出来的？</div>
+          <div class="qopts">
+            <button class="qopt">打字写英文</button>
+            <button class="qopt" data-ok="1" data-fb="图形化编程把命令做成彩色「积木」，拖来拼好就是程序，不用打字写代码。">彩色积木</button>
+            <button class="qopt">画图画</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+        <div class="q" data-hint="角色在舞台上的位置，靠什么决定？">
+          <div class="qt">2. 小猫在舞台「站在哪」，由什么决定？</div>
+          <div class="qopts">
+            <button class="qopt">它的名字</button>
+            <button class="qopt" data-ok="1" data-fb="坐标(x,y)是角色在舞台上的位置；调 x/y 它就移动。">坐标 (x, y)</button>
+            <button class="qopt">积木的颜色</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ⭐ 自评 -->
+    <div class="block">
+      <div class="block-h"><span class="em">⭐</span>自评卡</div>
+      <div class="selfcheck">
+        <div class="hd">做到了就打勾（打勾会被记住，下次打开还在）</div>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会打开编程软件</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我认得出四块界面</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我知道程序是积木拼出来的</span></label>
+        <label class="check" data-stage="high"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我懂坐标、造型和扩展</span></label>
+      </div>
+    </div>
+
+    <div class="done-wrap">
+      <button class="done-btn" data-done-btn></button>
+    </div>
+
+    <div class="lesson-nav" data-nav="auto"></div>
+
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="fl">
+    <a href="../index.html">首页</a>
+    <a href="../juan7.html">第七辑导读</a>
+    <a href="../teacher.html">给老师和家长</a>
+    <a href="../about.html">关于本课</a>
+  </div>
+  蓝兔巴迪 · 电脑第一课　|　常州市新北区汤庄桥小学　教师发展处
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>

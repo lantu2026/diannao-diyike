@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>第 13 课 · 橡皮、撤销与配色 —— 蓝兔巴迪·电脑第一课</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script>(function(){try{var t=localStorage.getItem('dn-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('dn-stage');document.documentElement.setAttribute('data-stage',(s==='high'?'high':'low'));}catch(e){}})();</script>
+</head>
+<body data-root="../" data-page="L13" data-lesson="13" data-stage="low">
+
+<div class="readbar"></div>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <button class="icon-btn menu-btn" data-menu-toggle aria-label="打开目录">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="brand" href="../index.html">
+      <span class="brand-logo">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <ellipse cx="9" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(-14 9 6)"/>
+          <ellipse cx="17" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(14 17 6)"/>
+          <circle cx="13" cy="15.5" r="7.2" fill="#fff"/>
+          <circle cx="10.3" cy="14.4" r="1.15" fill="#1565C0"/>
+          <circle cx="15.7" cy="14.4" r="1.15" fill="#1565C0"/>
+          <path d="M13 17.4c-.9 0-1.6.5-1.6.5s.7.9 1.6.9 1.6-.9 1.6-.9-.7-.5-1.6-.5z" fill="#F0864F"/>
+        </svg>
+      </span>
+      <span class="brand-txt"><strong>蓝兔巴迪 · 电脑第一课</strong><span>COMPUTER FIRST LESSON</span></span>
+    </a>
+    <div class="topbar-spacer"></div>
+    <div class="stage-switch" role="group" aria-label="选择学段">
+      <button data-set-stage="low">🌱 三四年级</button>
+      <button data-set-stage="high">🚀 五六年级</button>
+    </div>
+    <button class="icon-btn" data-theme-toggle aria-label="切换深浅色"></button>
+  </div>
+</header>
+
+<div class="mask"></div>
+
+<div class="shell">
+  <aside class="sidebar" data-render="sidebar"></aside>
+
+  <main class="main">
+
+    <nav class="crumb">
+      <a href="../index.html">首页</a><span class="sep">/</span>
+      <a href="../juan3.html">第三辑</a><span class="sep">/</span>第 13 课
+    </nav>
+
+    <div class="lesson-head">
+      <div class="lesson-no">📦 第三辑 · 第 13 课</div>
+      <h1>橡皮、撤销与配色</h1>
+      <div class="lesson-meta">
+        <span>🕐 约 6 分钟</span>
+        <span>🎯 计算思维 · 数字化创作</span>
+        <span>🧰 上完第 12 课</span>
+      </div>
+    </div>
+
+    <!-- 🎯 目标 -->
+    <div class="block">
+      <div class="goal">
+        <div class="k">🎯 一句话目标</div>
+        <p data-stage="low">学完这课，你会用橡皮擦掉画错的地方，还会按 <b>Ctrl+Z</b> 让画「退回一步」——画错不用怕，一步就能翻回去。</p>
+        <p data-stage="high">学完这课，你还会用「取色器」复制画面里已有的颜色、用「放大镜」看清楚细节，并懂得撤销能连退好几步、按 Ctrl+Y 还能「重做」回来。</p>
+      </div>
+    </div>
+
+    <!-- 📖 故事 -->
+    <div class="block">
+      <div class="block-h"><span class="em">📖</span>小故事</div>
+      <div class="story">
+        <p class="narr">巴迪给太阳填色时手一抖，黄色「哗」地漏出了圈，把整片天空染成了黄油色。它抓起橡皮狂擦，结果把房子也蹭花了。</p>
+        <div class="dialog">
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">完了完了，我是不是得重画一整幅？</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">别急。橡皮是「擦一块」，可你刚才那一下是「整步」画错了——用<b>撤销</b>更干净：按 <b>Ctrl+Z</b>，时间就像倒流，回到填色之前。</div></div>
+          </div>
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">哇，真的退回去了！那我再按几下，是不是能回到刚铺好白纸的时候？</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">对，撤销能连退好多步，像爬楼梯一层层下。还有个<b>取色器</b>像吸管，吸一下画面上的黄，笔就变成那个黄——不用再去颜色盒里找一模一样的。</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">记住：橡皮改小毛刺，Ctrl+Z 改大错。高手都随手按撤销，不丢人。</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🖼️ 图解 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖼️</span>一张图看懂</div>
+      <figure class="figure">
+        <svg viewBox="0 0 680 440" role="img" aria-label="三个修改法宝：橡皮擦除、撤销Ctrl+Z时间倒流、取色器吸管吸色；并画出一步步撤销退回干净画布的阶梯">
+          <defs>
+            <style>
+              .cn{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+              .cname{font-size:15px;font-weight:700;fill:var(--ink)}
+              .ctag{font-size:12.5px;font-weight:600}
+            </style>
+          </defs>
+
+          <!-- 1 橡皮 -->
+          <g>
+            <rect x="30" y="40" width="180" height="120" rx="12" style="fill:var(--card);stroke:var(--g400)" stroke-width="2"/>
+            <rect x="62" y="70" width="40" height="30" rx="5" style="fill:var(--orange)" stroke="none"/>
+            <text x="120" y="62" text-anchor="middle" class="cn cname" style="font-size:13px">① 橡皮</text>
+            <text x="120" y="138" text-anchor="middle" class="cn ctag" style="fill:var(--ink2)">蹭掉一小块画错的地方</text>
+          </g>
+
+          <!-- 2 撤销阶梯 -->
+          <g>
+            <rect x="250" y="40" width="190" height="120" rx="12" style="fill:var(--card);stroke:var(--g400)" stroke-width="2"/>
+            <text x="345" y="62" text-anchor="middle" class="cn cname" style="font-size:13px">② 撤销 Ctrl+Z</text>
+            <path d="M268 120 L300 120 L300 100 L332 100 L332 80 L364 80 L364 60 L396 60" fill="none" stroke="var(--g600)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M396 60 l-10 -2 l4 10" fill="none" stroke="var(--g600)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="345" y="138" text-anchor="middle" class="cn ctag" style="fill:var(--ink2)">像下楼梯，一步退回上一步</text>
+          </g>
+
+          <!-- 3 取色器 -->
+          <g>
+            <rect x="470" y="40" width="180" height="120" rx="12" style="fill:var(--card);stroke:var(--g400)" stroke-width="2"/>
+            <circle cx="510" cy="92" r="18" style="fill:var(--yellow)" stroke="none"/>
+            <path d="M524 106 l34 34" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"/>
+            <text x="560" y="62" text-anchor="middle" class="cn cname" style="font-size:13px">③ 取色器</text>
+            <text x="560" y="138" text-anchor="middle" class="cn ctag" style="fill:var(--ink2)">吸一下，笔就变成那个颜色</text>
+          </g>
+
+          <!-- 底部：干净画布 + 放大镜 -->
+          <rect x="220" y="200" width="240" height="150" rx="12" style="fill:#fff;stroke:var(--g300)" stroke-width="1.6"/>
+          <text x="340" y="288" text-anchor="middle" class="cn ctag" style="fill:var(--ink2)">撤销退到底 = 干净的画布</text>
+          <g>
+            <circle cx="540" cy="280" r="42" style="fill:none;stroke:var(--g600)" stroke-width="6"/>
+            <circle cx="540" cy="280" r="30" style="fill:var(--g50)" stroke="none"/>
+            <line x1="540" y1="238" x2="540" y2="322" stroke="var(--g300)" stroke-width="1.2"/>
+            <line x1="498" y1="280" x2="582" y2="280" stroke="var(--g300)" stroke-width="1.2"/>
+            <text x="540" y="378" text-anchor="middle" class="cn cname" style="font-size:12px">放大镜：看清单根线条</text>
+          </g>
+          <text x="20" y="420" class="cn ctag" style="fill:var(--orange)">口诀：小毛刺用橡皮，大错按 Ctrl+Z；退多了按 Ctrl+Y 重做回来</text>
+        </svg>
+        <figcaption class="figcap">
+          橡皮、撤销、取色器，是画画的三件「后悔法宝」。切到「🚀 五六年级」，看看 Ctrl+Y 怎么把撤销的步骤要回来。
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- 🖱️ 动手做 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖱️</span>动手做</div>
+      <div class="steps" data-stage="low">
+        <div class="step"><b>画错一处。</b>随便画一条线，故意画歪，当作「画错了」。</div>
+        <div class="step"><b>用橡皮。</b>点「橡皮」，去蹭掉那处歪线——适合只改一小块。</div>
+        <div class="step"><b>撤销一步。</b>按 <b>Ctrl+Z</b>，看刚才那步是不是整步消失。</div>
+        <div class="step"><b>连退几步。</b>多按几次 Ctrl+Z，一直退到画布干干净净，体会「时间倒流」。</div>
+        <div class="step"><b>说口诀。</b>对着同学说：小错用橡皮，大错按 Ctrl+Z。</div>
+      </div>
+      <div class="steps" data-stage="high">
+        <div class="step"><b>取色。</b>画里有一块红色，点「取色器」吸一下它，再去画别处——新画的笔触自动是那个红，不用去颜色盒找。</div>
+        <div class="step"><b>放大镜。</b>点「放大镜」（或按住 Ctrl+滚轮），凑近看线条边缘有没有毛刺，再细细修。</div>
+        <div class="step"><b>重做。</b>撤销退多了？按 <b>Ctrl+Y</b> 把刚退掉的步「重做」回来，像把楼梯再爬上去。</div>
+        <div class="step"><b>对比。</b>同一处错误，分别用「橡皮」和「撤销」修一遍，说说哪个更干净、更适合大范围改。</div>
+        <div class="step"><b>小挑战。</b>故意画错三处，再用三种不同办法（橡皮 / 撤销 / 取色覆盖）各修好一处。</div>
+      </div>
+    </div>
+
+    <!-- 💡 贴士 -->
+    <div class="block">
+      <div class="block-h"><span class="em">💡</span>素养小贴士</div>
+      <div class="tip">
+        <div class="hd">「撤销」不是丢脸，是高手的习惯</div>
+        <p>很多人觉得画错很糗，其实在计算机里，「能退回」是设计者送你的保险。真正厉害的人不是不犯错，而是随手 Ctrl+Z，把错悄悄改掉，继续往前画。</p>
+        <p>这个习惯不只画画有用——写作文、做表格、写代码，处处都有「撤销」。越早把它变成肌肉记忆，以后越省心。</p>
+      </div>
+    </div>
+
+    <!-- 🏆 闯关 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🏆</span>闯关任务</div>
+      <div class="quest">
+        <div class="hd">关卡：三件法宝大比拼</div>
+        <p data-stage="low">故意画错一处，分别用「橡皮」和「Ctrl+Z」各修一次，能说出哪个改小毛刺、哪个改整步错，闯关成功。</p>
+        <p data-stage="high">故意制造三处错误，用三种不同法宝（橡皮 / 撤销 / 取色器覆盖）各修好一处；再演示一次「撤销退多步 → Ctrl+Y 重做回来」。三件法宝都用上，闯关成功。</p>
+      </div>
+    </div>
+
+    <!-- 小测验 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🧩</span>试试看</div>
+      <div class="quiz">
+        <div class="hd">两道小题，选一个你觉得对的</div>
+
+        <div class="q" data-hint="想让整一步「像没发生过」，按哪个键？">
+          <div class="qt">1. 一整步都画错了，想干净地退回这一步，最好用？</div>
+          <div class="qopts">
+            <button class="qopt">橡皮一点点蹭</button>
+            <button class="qopt" data-ok="1" data-fb="按 Ctrl+Z「撤销」，整步消失、干干净净；橡皮适合只改一小块，大错还是撤销最利落。">按 Ctrl+Z 撤销</button>
+            <button class="qopt">关掉重画</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+
+        <div class="q" data-hint="吸管一样的工具，是干啥的？">
+          <div class="qt">2. 「取色器」像一根吸管，它的作用是？</div>
+          <div class="qopts">
+            <button class="qopt" data-ok="1" data-fb="取色器「吸」一下画面上的颜色，你的笔就变成那个颜色，省得去颜色盒里找一模一样的。">复制画面里已有的颜色给画笔</button>
+            <button class="qopt">把画放大看清楚</button>
+            <button class="qopt">把颜色擦掉</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ⭐ 自评 -->
+    <div class="block">
+      <div class="block-h"><span class="em">⭐</span>自评卡</div>
+      <div class="selfcheck">
+        <div class="hd">做到了就打勾（打勾会被记住，下次打开还在）</div>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会用橡皮擦掉画错的小块</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会按 Ctrl+Z 撤销，连退好几步</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我知道「小错用橡皮、大错用撤销」</span></label>
+        <label class="check" data-stage="high"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会用取色器和放大镜，并按 Ctrl+Y 重做</span></label>
+      </div>
+    </div>
+
+    <div class="done-wrap">
+      <button class="done-btn" data-done-btn></button>
+    </div>
+
+    <div class="lesson-nav" data-nav="auto"></div>
+
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="fl">
+    <a href="../index.html">首页</a>
+    <a href="../juan3.html">第三辑导读</a>
+    <a href="../teacher.html">给老师和家长</a>
+    <a href="../about.html">关于本课</a>
+  </div>
+  蓝兔巴迪 · 电脑第一课　|　常州市新北区汤庄桥小学　教师发展处
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>

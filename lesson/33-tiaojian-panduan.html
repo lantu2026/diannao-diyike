@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>第 33 课 · 条件判断 —— 蓝兔巴迪·电脑第一课</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script>(function(){try{var t=localStorage.getItem('dn-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('dn-stage');document.documentElement.setAttribute('data-stage',(s==='high'?'high':'low'));}catch(e){})();</script>
+</head>
+<body data-root="../" data-page="L33" data-lesson="33" data-stage="low">
+
+<div class="readbar"></div>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <button class="icon-btn menu-btn" data-menu-toggle aria-label="打开目录">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="brand" href="../index.html">
+      <span class="brand-logo">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <ellipse cx="9" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(-14 9 6)"/>
+          <ellipse cx="17" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(14 17 6)"/>
+          <circle cx="13" cy="15.5" r="7.2" fill="#fff"/>
+          <circle cx="10.3" cy="14.4" r="1.15" fill="#1565C0"/>
+          <circle cx="15.7" cy="14.4" r="1.15" fill="#1565C0"/>
+          <path d="M13 17.4c-.9 0-1.6.5-1.6.5s.7.9 1.6.9 1.6-.9 1.6-.9-.7-.5-1.6-.5z" fill="#F0864F"/>
+        </svg>
+      </span>
+      <span class="brand-txt"><strong>蓝兔巴迪 · 电脑第一课</strong><span>COMPUTER FIRST LESSON</span></span>
+    </a>
+    <div class="topbar-spacer"></div>
+    <div class="stage-switch" role="group" aria-label="选择学段">
+      <button data-set-stage="low">🌱 三四年级</button>
+      <button data-set-stage="high">🚀 五六年级</button>
+    </div>
+    <button class="icon-btn" data-theme-toggle aria-label="切换深浅色"></button>
+  </div>
+</header>
+
+<div class="mask"></div>
+
+<div class="shell">
+  <aside class="sidebar" data-render="sidebar"></aside>
+
+  <main class="main">
+
+    <nav class="crumb">
+      <a href="../index.html">首页</a><span class="sep">/</span>
+      <a href="../juan7.html">第七辑</a><span class="sep">/</span>第 33 课
+    </nav>
+
+    <div class="lesson-head">
+      <div class="lesson-no">📦 第七辑 · 第 33 课</div>
+      <h1>条件判断</h1>
+      <div class="lesson-meta">
+        <span>🕐 约 6 分钟</span>
+        <span>🎯 计算思维 · 逻辑判断</span>
+        <span>🧰 能开机的电脑 + 编程软件</span>
+      </div>
+    </div>
+
+    <!-- 🎯 目标 -->
+    <div class="block">
+      <div class="goal">
+        <div class="k">🎯 一句话目标</div>
+        <p data-stage="low">学完这课，你能用「如果…那么」积木，让小猫「碰到边缘就反弹、碰到颜色就停」，程序会看情况做不同的事。</p>
+        <p data-stage="high">学完这课，你还能用「否则」处理另一种情况、用「与 / 或」把多个条件连起来，理解程序里的「如果—就—不然—就」逻辑。</p>
+      </div>
+    </div>
+
+    <!-- 📖 故事 -->
+    <div class="block">
+      <div class="block-h"><span class="em">📖</span>小故事</div>
+      <div class="story">
+        <p class="narr">巴迪让小猫一直走，结果它一头撞墙、卡在边上不动了。巴迪想要它「碰到边就回头」。</p>
+        <div class="dialog">
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">小猫一直走撞墙了，能不能让它「碰到边就回头」？</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">用<b>「如果…那么」</b>积木：里面写条件「碰到边缘？」，下面写动作「反弹」。程序每跑一步都先问这句——<b>成立了才做</b>，不成立就跳过。</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">这叫<b>条件判断</b>，是程序会「看情况」的关键。比如「如果碰到红色，就停；否则继续走」。</div></div>
+          </div>
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">「否则」是啥？是不是「如果不成立就干别的」？</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">对！<b>「否则」</b>管「不成立时怎么办」。高年级还能把条件连起来：「如果碰到边缘<b>并且</b>速度很快，就减速」——用「与 / 或」拼多个条件。</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🖼️ 图解 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖼️</span>一张图看懂</div>
+      <figure class="figure">
+        <svg viewBox="0 0 680 300" role="img" aria-label="条件判断：菱形「如果碰到边缘？」成立→反弹，不成立→继续走；标注如果那么否则逻辑">
+          <defs>
+            <style>
+              .cn{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+              .cname{font-size:13px;font-weight:700;fill:var(--ink)}
+              .ctag{font-size:11.5px;font-weight:600;fill:var(--ink2)}
+            </style>
+            <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="var(--g600)"/></marker>
+          </defs>
+          <!-- 菱形判断 -->
+          <path d="M210 70 l70 46 l-70 46 l-70 -46 z" style="fill:var(--yellow-soft);stroke:var(--yellow)" stroke-width="2"/>
+          <text x="140" y="118" text-anchor="middle" class="cn cname" style="fill:#9A6B00;font-size:12px">如果 碰到边缘？</text>
+          <!-- 成立 -->
+          <path d="M280 116 H330" stroke="var(--g600)" stroke-width="3" marker-end="url(#ar)"/>
+          <rect x="338" y="100" width="150" height="34" rx="8" style="fill:var(--g500)"/>
+          <text x="413" y="122" text-anchor="middle" class="cn" style="font-size:12px;fill:#fff">那么 反弹</text>
+          <text x="413" y="154" text-anchor="middle" class="cn ctag" style="fill:var(--g600)">成立→做</text>
+          <!-- 不成立 -->
+          <path d="M210 162 V200 H330" stroke="var(--orange)" stroke-width="3" fill="none" marker-end="url(#ar2)"/>
+          <rect x="338" y="186" width="150" height="34" rx="8" style="fill:var(--orange)"/>
+          <text x="413" y="208" text-anchor="middle" class="cn" style="font-size:12px;fill:#fff">否则 继续走</text>
+          <text x="413" y="240" text-anchor="middle" class="cn ctag" style="fill:var(--orange)">不成立→做别的</text>
+          <defs><marker id="ar2" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="var(--orange)"/></marker></defs>
+          <!-- 舞台示意 -->
+          <rect x="510" y="60" width="150" height="170" rx="12" style="fill:#fff;stroke:var(--g700)" stroke-width="2"/>
+          <text x="585" y="82" text-anchor="middle" class="cn cname" style="fill:var(--g700)">舞台</text>
+          <circle cx="585" cy="180" r="15" style="fill:var(--yellow)"/>
+          <path d="M600 180 a14 14 0 0 1 -2 8" fill="none" stroke="var(--g600)" stroke-width="2.4" marker-end="url(#ar)"/>
+          <text x="585" y="224" text-anchor="middle" class="cn ctag">碰边→回头</text>
+          <text x="340" y="284" text-anchor="middle" class="cn ctag">「如果—就—不然—就」＝程序会看情况做选择。</text>
+        </svg>
+        <figcaption class="figcaption">
+          用「如果…那么」判断条件；成立做「那么」、不成立做「否则」。高年级用「与/或」连多个条件。
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- 🖱️ 动手做 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖱️</span>动手做</div>
+      <div class="steps" data-stage="low">
+        <div class="step"><b>放判断。</b>拖「如果…那么」积木，里面条件选「碰到边缘？」。</div>
+        <div class="step"><b>填动作。</b>在「那么」里放「反弹」，让小猫撞边回头。</div>
+        <div class="step"><b>套循环。</b>把判断放进「重复执行」，小猫就一直在舞台里弹。</div>
+      </div>
+      <div class="steps" data-stage="high">
+        <div class="step"><b>加否则。</b>在判断里加「否则」，不成立时做另一件事（如继续走）。</div>
+        <div class="step"><b>多个条件。</b>用「与 / 或」把「碰到边缘＋速度快」连起来。</div>
+        <div class="step"><b>碰颜色。</b>用「碰到颜色」让小猫遇到红线停，做简易避障。</div>
+        <div class="step"><b>小挑战。</b>让小猫在舞台里反弹巡游，遇到红色区就停。</div>
+      </div>
+    </div>
+
+    <!-- 💡 贴士 -->
+    <div class="block">
+      <div class="block-h"><span class="em">💡</span>素养小贴士</div>
+      <div class="tip">
+        <div class="hd">会判断，机器才像有了脑子</div>
+        <p>没有判断的程序，只会「一根筋」照做。加了「如果…那么」，程序才会<b>看情况</b>——这正是电脑显得「聪明」的地方。我们做人也一样：做事前先判断「这样行不行、安不安全」，而不是闷头冲。</p>
+        <p>「如果—就—不然—就」这套逻辑，数学、语文、生活决策都在用。编程不过是把你本来就有的判断力，清楚地告诉机器。</p>
+      </div>
+    </div>
+
+    <!-- 🏆 闯关 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🏆</span>闯关任务</div>
+      <div class="quest">
+        <div class="hd">关卡：会看情况的程序</div>
+        <p data-stage="low">用「如果碰到边缘就反弹」让小猫在舞台里弹，能说出「条件成立才做」。闯关成功。</p>
+        <p data-stage="high">加「否则」分支、用「与/或」连条件，做出「碰边且快就减速」之类逻辑。闯关成功。</p>
+      </div>
+    </div>
+
+    <!-- 小测验 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🧩</span>试试看</div>
+      <div class="quiz">
+        <div class="hd">两道小题，选一个你觉得对的</div>
+        <div class="q" data-hint="想让程序「看情况做不同事」，用哪类积木？">
+          <div class="qt">1. 让小猫「碰到边缘就反弹」，该用哪块？</div>
+          <div class="qopts">
+            <button class="qopt">重复执行</button>
+            <button class="qopt" data-ok="1" data-fb="「如果…那么」做条件判断：条件成立才执行里面的动作。">如果…那么</button>
+            <button class="qopt">移动 10 步</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+        <div class="q" data-hint="条件「不成立」时，想做另一件事，用哪块？">
+          <div class="qt">2. 条件不成立时想做别的事，该加哪块？</div>
+          <div class="qopts">
+            <button class="qopt">否则</button>
+            <button class="qopt" data-ok="1" data-fb="「否则」处理条件不成立的情况，和「那么」成对出现。">否则</button>
+            <button class="qopt">重复 4 次</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ⭐ 自评 -->
+    <div class="block">
+      <div class="block-h"><span class="em">⭐</span>自评卡</div>
+      <div class="selfcheck">
+        <div class="hd">做到了就打勾（打勾会被记住，下次打开还在）</div>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会用「如果…那么」</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会让角色碰边反弹</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我知道条件成立才执行</span></label>
+        <label class="check" data-stage="high"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会用否则、与或连条件</span></label>
+      </div>
+    </div>
+
+    <div class="done-wrap">
+      <button class="done-btn" data-done-btn></button>
+    </div>
+
+    <div class="lesson-nav" data-nav="auto"></div>
+
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="fl">
+    <a href="../index.html">首页</a>
+    <a href="../juan7.html">第七辑导读</a>
+    <a href="../teacher.html">给老师和家长</a>
+    <a href="../about.html">关于本课</a>
+  </div>
+  蓝兔巴迪 · 电脑第一课　|　常州市新北区汤庄桥小学　教师发展处
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>第 28 课 · 切换与动画 —— 蓝兔巴迪·电脑第一课</title>
+<link rel="stylesheet" href="../assets/style.css">
+<script>(function(){try{var t=localStorage.getItem('dn-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('dn-stage');document.documentElement.setAttribute('data-stage',(s==='high'?'high':'low'));}catch(e){})();</script>
+</head>
+<body data-root="../" data-page="L28" data-lesson="28" data-stage="low">
+
+<div class="readbar"></div>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <button class="icon-btn menu-btn" data-menu-toggle aria-label="打开目录">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="brand" href="../index.html">
+      <span class="brand-logo">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <ellipse cx="9" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(-14 9 6)"/>
+          <ellipse cx="17" cy="6" rx="2.1" ry="4.4" fill="#fff" transform="rotate(14 17 6)"/>
+          <circle cx="13" cy="15.5" r="7.2" fill="#fff"/>
+          <circle cx="10.3" cy="14.4" r="1.15" fill="#1565C0"/>
+          <circle cx="15.7" cy="14.4" r="1.15" fill="#1565C0"/>
+          <path d="M13 17.4c-.9 0-1.6.5-1.6.5s.7.9 1.6.9 1.6-.9 1.6-.9-.7-.5-1.6-.5z" fill="#F0864F"/>
+        </svg>
+      </span>
+      <span class="brand-txt"><strong>蓝兔巴迪 · 电脑第一课</strong><span>COMPUTER FIRST LESSON</span></span>
+    </a>
+    <div class="topbar-spacer"></div>
+    <div class="stage-switch" role="group" aria-label="选择学段">
+      <button data-set-stage="low">🌱 三四年级</button>
+      <button data-set-stage="high">🚀 五六年级</button>
+    </div>
+    <button class="icon-btn" data-theme-toggle aria-label="切换深浅色"></button>
+  </div>
+</header>
+
+<div class="mask"></div>
+
+<div class="shell">
+  <aside class="sidebar" data-render="sidebar"></aside>
+
+  <main class="main">
+
+    <nav class="crumb">
+      <a href="../index.html">首页</a><span class="sep">/</span>
+      <a href="../juan6.html">第六辑</a><span class="sep">/</span>第 28 课
+    </nav>
+
+    <div class="lesson-head">
+      <div class="lesson-no">📦 第六辑 · 第 28 课</div>
+      <h1>切换与动画</h1>
+      <div class="lesson-meta">
+        <span>🕐 约 6 分钟</span>
+        <span>🎯 数字化表达与交流 · 审美</span>
+        <span>🧰 一台能开机的电脑</span>
+      </div>
+    </div>
+
+    <!-- 🎯 目标 -->
+    <div class="block">
+      <div class="goal">
+        <div class="k">🎯 一句话目标</div>
+        <p data-stage="low">学完这课，你能给「页与页之间」加一种切换效果，并让幻灯片里的某个对象（如标题）「出现」时带一点动画。</p>
+        <p data-stage="high">学完这课，你还能排好多个动画的「先后顺序」、设出现的速度，并懂得「动画是帮理解，不是凑热闹」——过多反而晃眼。</p>
+      </div>
+    </div>
+
+    <!-- 📖 故事 -->
+    <div class="block">
+      <div class="block-h"><span class="em">📖</span>小故事</div>
+      <div class="story">
+        <p class="narr">巴迪的幻灯片内容齐了，可一放映，页面「啪」地硬跳，毫无惊喜。它想让汇报「会动起来」。</p>
+        <div class="dialog">
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">页面换来换去太生硬了，能不能像动画片一样「变」过去？</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">能！页与页之间用<b>「切换」</b>——选「推入」「淡出」这种效果，翻页就顺了。点一张幻灯片，再点「切换」选一种。</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">想让某样东西「自己动」，用<b>「动画」</b>：选中标题→「动画」→「出现／飞入」。放映时它才跳出来，能吊住大家胃口。</div></div>
+          </div>
+          <div class="bubble">
+            <div class="avatar">🤖</div>
+            <div class="bd"><div class="name">巴迪</div><div class="say">那我每个字都加旋转、每个图都加爆炸，是不是超酷？</div></div>
+          </div>
+          <div class="bubble me">
+            <div class="avatar">🐰</div>
+            <div class="bd"><div class="name">蓝兔</div><div class="say">恰恰相反！<b>动画一多就晃眼、显乱</b>。一条规则：切换全套统一一种、重点对象才加动画。动，是为了让人看清先后，不是开派对。</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🖼️ 图解 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖼️</span>一张图看懂</div>
+      <figure class="figure">
+        <svg viewBox="0 0 680 300" role="img" aria-label="切换(页与页之间，箭头+淡入)与动画(对象出现，星星闪烁)的区别，并标注「统一、别太多」">
+          <defs>
+            <style>
+              .cn{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+              .cname{font-size:14px;font-weight:700;fill:var(--ink)}
+              .ctag{font-size:12px;font-weight:600;fill:var(--ink2)}
+            </style>
+            <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="var(--g600)"/></marker>
+          </defs>
+          <!-- 切换 -->
+          <rect x="20" y="40" width="310" height="180" rx="14" style="fill:var(--g100);stroke:var(--g400)" stroke-width="2"/>
+          <text x="40" y="72" class="cn cname" style="fill:var(--g700)">① 切换（页与页之间）</text>
+          <rect x="44" y="92" width="110" height="70" rx="8" style="fill:var(--g50);stroke:var(--g300)" stroke-width="1.6"/>
+          <text x="99" y="132" text-anchor="middle" class="cn ctag">第1页</text>
+          <path d="M166 127 H206" stroke="var(--g600)" stroke-width="3" marker-end="url(#ar)"/>
+          <rect x="214" y="92" width="100" height="70" rx="8" style="fill:#fff;stroke:var(--g300)" stroke-width="1.6;opacity:.5"/>
+          <text x="264" y="132" text-anchor="middle" class="cn ctag">第2页</text>
+          <text x="40" y="200" class="cn ctag">→ 翻页效果：推入 / 淡出</text>
+          <!-- 动画 -->
+          <rect x="350" y="40" width="310" height="180" rx="14" style="fill:var(--g100);stroke:var(--g400)" stroke-width="2"/>
+          <text x="370" y="72" class="cn cname" style="fill:var(--orange)">② 动画（对象出现）</text>
+          <rect x="374" y="92" width="262" height="60" rx="8" style="fill:#fff;stroke:var(--g300)" stroke-width="1.6"/>
+          <text x="394" y="128" class="cn cname" style="fill:var(--orange)">★ 标题飞入</text>
+          <text x="500" y="128" class="cn ctag">⟳ 出现</text>
+          <text x="370" y="200" class="cn ctag">→ 放映时对象才动</text>
+          <rect x="20" y="240" width="640" height="48" rx="12" style="fill:var(--yellow-soft);stroke:var(--yellow)" stroke-width="2"/>
+          <text x="40" y="270" class="cn ctag">⚠ 规矩：切换全套统一一种；动画只给重点，多了就晃眼。</text>
+        </svg>
+        <figcaption class="figcap">
+          切换＝页与页之间的翻页效果；动画＝单个对象出现/移动的效果。两者都「少而精」，才显专业。
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- 🖱️ 动手做 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🖱️</span>动手做</div>
+      <div class="steps" data-stage="low">
+        <div class="step"><b>加切换。</b>点一张幻灯片→「切换」→选「淡出」或「推入」。</div>
+        <div class="step"><b>加动画。</b>选中标题→「动画」→选「出现」或「飞入」。</div>
+        <div class="step"><b>试放映。</b>按 F5 看看效果，不合适就改。</div>
+      </div>
+      <div class="steps" data-stage="high">
+        <div class="step"><b>统一切换。</b>在切换里点「全部应用」，全套用同一种翻页，整齐。</div>
+        <div class="step"><b>排顺序。</b>在「动画窗格」把多个动画调先后，让要点一个个出来。</div>
+        <div class="step"><b>控速度。</b>把动画时长设 0.5–1 秒，别太慢拖节奏。</div>
+        <div class="step"><b>小挑战。</b>给全套设统一切换、只给每页标题加「飞入」，放映一遍。</div>
+      </div>
+    </div>
+
+    <!-- 💡 贴士 -->
+    <div class="block">
+      <div class="block-h"><span class="em">💡</span>素养小贴士</div>
+      <div class="tip">
+        <div class="hd">动得克制，才显高级</div>
+        <p>小朋友最爱把每种动画都试一遍，结果汇报像闯关游戏，观众光看特效忘了内容。记住：<b>切换统一、动画点睛</b>。一套只用一种翻页，只给真正想强调的对象加动画，其余静静待着。</p>
+        <p>好的动画像好老师——它把你的注意力，轻轻引到该看的地方。多了，就谁都引不动了。</p>
+      </div>
+    </div>
+
+    <!-- 🏆 闯关 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🏆</span>闯关任务</div>
+      <div class="quest">
+        <div class="hd">关卡：让汇报会动</div>
+        <p data-stage="low">给幻灯片加一种切换效果，再给标题加一个「出现」动画，放映看看。闯关成功。</p>
+        <p data-stage="high">全套统一切换、给重点对象排好动画顺序，并讲出「为什么动画不能太多」。闯关成功。</p>
+      </div>
+    </div>
+
+    <!-- 小测验 -->
+    <div class="block">
+      <div class="block-h"><span class="em">🧩</span>试试看</div>
+      <div class="quiz">
+        <div class="hd">两道小题，选一个你觉得对的</div>
+        <div class="q" data-hint="想让「这一页翻到下一页」更顺，用哪个？">
+          <div class="qt">1. 让幻灯片「翻页」时带效果，该用？</div>
+          <div class="qopts">
+            <button class="qopt">动画</button>
+            <button class="qopt" data-ok="1" data-fb="「切换」管页与页之间的翻页效果；「动画」管单个对象。">切换</button>
+            <button class="qopt">文本框</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+        <div class="q" data-hint="动画是不是加得越多越酷？">
+          <div class="qt">2. 关于动画，下面哪句对？</div>
+          <div class="qopts">
+            <button class="qopt">每样都加最酷</button>
+            <button class="qopt" data-ok="1" data-fb="动画多了晃眼显乱；只给重点加、全套统一，才显专业。">动画少而精，只给重点</button>
+            <button class="qopt">完全不用动画</button>
+          </div>
+          <div class="qfb"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ⭐ 自评 -->
+    <div class="block">
+      <div class="block-h"><span class="em">⭐</span>自评卡</div>
+      <div class="selfcheck">
+        <div class="hd">做到了就打勾（打勾会被记住，下次打开还在）</div>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会加幻灯片切换效果</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会给对象加动画</span></label>
+        <label class="check"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我分得清切换和动画</span></label>
+        <label class="check" data-stage="high"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span>我会统一切换、排动画顺序</span></label>
+      </div>
+    </div>
+
+    <div class="done-wrap">
+      <button class="done-btn" data-done-btn></button>
+    </div>
+
+    <div class="lesson-nav" data-nav="auto"></div>
+
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="fl">
+    <a href="../index.html">首页</a>
+    <a href="../juan6.html">第六辑导读</a>
+    <a href="../teacher.html">给老师和家长</a>
+    <a href="../about.html">关于本课</a>
+  </div>
+  蓝兔巴迪 · 电脑第一课　|　常州市新北区汤庄桥小学　教师发展处
+</footer>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>
