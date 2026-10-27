@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>扫码上课 · 蓝兔巴迪电脑第一课</title>
+<style>
+  :root{
+    --blue:#1565C0; --teal:#0F766E; --ink:#12243b; --muted:#5b7189;
+    --line:#dbe6f2; --bg:#f4f8fd;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.7;
+    min-height:100vh; display:flex; align-items:center; justify-content:center;
+    padding:32px 20px;
+  }
+  .wrap{max-width:820px; width:100%; text-align:center}
+
+  .badge{
+    display:inline-block; font-size:13px; font-weight:600; letter-spacing:.18em;
+    color:var(--teal); background:#e3f4f2; border:1px solid #bfe4df;
+    padding:5px 14px; border-radius:999px; margin-bottom:20px;
+  }
+  h1{font-size:34px; font-weight:800; letter-spacing:-.02em; line-height:1.3}
+  h1 span{color:var(--blue)}
+  .sub{font-size:16px; color:var(--muted); margin-top:12px; margin-bottom:36px}
+
+  .cards{display:grid; grid-template-columns:1fr 1fr; gap:22px}
+  .card{
+    background:#fff; border:1px solid var(--line); border-radius:18px;
+    padding:26px 22px 22px; box-shadow:0 1px 2px rgba(18,36,59,.04),0 12px 30px -18px rgba(18,36,59,.25);
+  }
+  .card img{width:100%; max-width:230px; height:auto; display:block; margin:0 auto 18px; image-rendering:pixelated}
+  .card h2{font-size:19px; font-weight:700; margin-bottom:6px}
+  .card .tag{font-size:14px; color:var(--muted); line-height:1.6}
+  .c-blue h2{color:var(--blue)}
+  .c-teal h2{color:var(--teal)}
+  .c-blue{border-top:4px solid var(--blue)}
+  .c-teal{border-top:4px solid var(--teal)}
+
+  .url{
+    margin-top:34px; background:#fff; border:1px dashed var(--line); border-radius:12px;
+    padding:16px 20px; font-size:14px; color:var(--muted);
+  }
+  .url b{display:block; font-size:12px; letter-spacing:.1em; color:#93a7bb;
+         text-transform:uppercase; margin-bottom:6px; font-weight:600}
+  .url code{
+    font-family:ui-monospace,SFMono-Regular,Consolas,monospace;
+    font-size:15px; color:var(--ink); word-break:break-all;
+  }
+  .url + .url{margin-top:10px}
+
+  .tips{
+    margin-top:30px; display:flex; gap:26px; justify-content:center; flex-wrap:wrap;
+    font-size:14px; color:var(--muted);
+  }
+  .tips span{display:flex; align-items:center; gap:7px}
+  .dot{width:6px; height:6px; border-radius:50%; background:var(--teal); flex:0 0 auto}
+
+  footer{margin-top:38px; font-size:13px; color:#9fb0c2}
+
+  @media(max-width:640px){
+    h1{font-size:25px}
+    .cards{grid-template-columns:1fr}
+    .card{padding:22px 18px}
+  }
+
+  @media print{
+    body{background:#fff; padding:0}
+    .card{box-shadow:none; border-color:#ccc}
+    .tips, footer .no-print{display:none}
+    h1{font-size:26px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <span class="badge">电脑第一课</span>
+  <h1>扫码，<span>开始上电脑课</span></h1>
+  <p class="sub">用手机扫一扫就能看，<strong>不用注册、不用装软件、不用登录</strong></p>
+
+  <div class="cards">
+    <div class="card c-blue">
+      <img src="qr-main.png" alt="在线自学版二维码">
+      <h2>在线自学版</h2>
+      <p class="tag">一页一课，跟着点着学<br>会自动记住学到哪儿了</p>
+    </div>
+    <div class="card c-teal">
+      <img src="qr-jianyi.png" alt="讲义版二维码">
+      <h2>讲义版</h2>
+      <p class="tag">一页一课，排版清爽<br>适合投屏和打印</p>
+    </div>
+  </div>
+
+  <div class="url">
+    <b>自学版网址</b>
+    <code>lantu2026.github.io/diannao-diyike</code>
+  </div>
+  <div class="url">
+    <b>讲义版网址</b>
+    <code>lantu2026.github.io/diannao-diyike/jianyi</code>
+  </div>
+
+  <div class="tips">
+    <span><i class="dot"></i>手机、平板、电脑都能开</span>
+    <span><i class="dot"></i>不用下载任何东西</span>
+    <span><i class="dot"></i>断网也能用（离线版另发）</span>
+  </div>
+
+  <footer>常州市新北区汤庄桥小学 · 教师发展处<span class="no-print"> · 蓝兔 &amp; 巴迪</span></footer>
+
+</div>
+</body>
+</html>

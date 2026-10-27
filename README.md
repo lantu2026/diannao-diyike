@@ -15,19 +15,18 @@
 
 ## 在线访问
 
-部署到 GitHub Pages 后，直接打开下面这个地址即可，**无需登录、无需安装**：
+直接打开下面这个地址即可，**无需登录、无需安装**：
 
 ```
-https://你的用户名.github.io/diannao-diyike/
+https://lantu2026.github.io/diannao-diyike/
 ```
-
-> 首次发布时请把上面地址中的 `你的用户名` 换成自己的 GitHub 用户名，再删掉本段提示。
 
 | 形态 | 地址 | 用途 |
 |---|---|---|
-| 🌐 在线自学版 | `/` | 学生自己点着学，有目录、进度记忆、小测验判分 |
-| 📄 讲义版 | `/jianyi/` | 投屏、打印、单课下发，单文件自包含 |
-| 🧑‍🏫 教师家长版 | `/teacher.html` | 用法、课时安排、评价量表、外部资源 |
+| 🌐 在线自学版 | https://lantu2026.github.io/diannao-diyike/ | 学生自己点着学，有目录、进度记忆、小测验判分 |
+| 📄 讲义版 | https://lantu2026.github.io/diannao-diyike/jianyi/ | 投屏、打印、单课下发，单文件自包含 |
+| 🧑‍🏫 教师家长版 | https://lantu2026.github.io/diannao-diyike/teacher.html | 用法、课时安排、评价量表、外部资源 |
+| 📱 扫码入口 | https://lantu2026.github.io/diannao-diyike/qr.html | 教室投屏用的二维码页，学生扫一下就进 |
 
 ---
 
